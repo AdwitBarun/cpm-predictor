@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const api = axios.create({
-  baseURL: "https://cpm-predictor-production.up.railway.app/api/predict"
+  baseURL: "https://cpm-predictor-production.up.railway.app/"
 })
 
 export async function predictCPM(payload: any) {
