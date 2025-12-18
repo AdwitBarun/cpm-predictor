@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 web: uvicorn cpm_predictor.backend.api.main:app --host 0.0.0.0 --port $PORT
+=======
+web: uvicorn cpm_predictor.backend.main:app --host 0.0.0.0 --port $PORT
+>>>>>>> 77669ec (added railway deploy)
