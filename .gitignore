@@ -7,8 +7,7 @@ __pycache__/
 env/
 .env
 
-# Artifacts (optional – remove if you WANT them in repo)
-*.pkl
+
 
 # Node
 node_modules/
