@@ -7,3 +7,4 @@ shap
 python-dotenv
 google-genai
 scikit-learn
+xgboost
