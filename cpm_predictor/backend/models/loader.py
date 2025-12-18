@@ -12,8 +12,8 @@ def load_models():
     global _MODELS, _FEATURE_COLUMNS
 
     if _MODELS is None:
-        model_path = os.path.join(ARTIFACT_DIR, "cpm_quantile_models_v1.pkl")
-        feature_path = os.path.join(ARTIFACT_DIR, "feature_columns_v1.pkl")
+        model_path = os.path.join(ARTIFACT_DIR, "cpm_quantile_models.pkl")
+        feature_path = os.path.join(ARTIFACT_DIR, "feature_columns.pkl")
 
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"Model file not found: {model_path}")
