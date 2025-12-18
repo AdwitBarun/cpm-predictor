@@ -1,53 +1,95 @@
 import { useState } from "react"
-import { featureSchema } from "./schema/featureSchema"
-import InputField from "./components/InputField"
-import Loader from "./components/Loader"
-import ResultCard from "./components/ResultCard"
 import { predictCPM } from "./services/api"
 
+import InputField from "./components/InputField"
+import ResultCard from "./components/ResultCard"
+import Loader from "./components/Loader"
+import { featureSchema } from "./schema/featureSchema"
+
 export default function App() {
-  const [form, setForm] = useState<any>({})
+  const [formData, setFormData] = useState<Record<string, any>>({})
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<any>(null)
+  const [error, setError] = useState<string | null>(null)
 
-  const updateField = (key: string, value: any) => {
-    setForm({ ...form, [key]: value })
+  const handleChange = (key: string, value: any) => {
+    setFormData((prev) => ({
+      ...prev,
+      [key]: value,
+    }))
   }
 
-  const submit = async () => {
+  const handleSubmit = async () => {
     setLoading(true)
+    setError(null)
     setResult(null)
-    const res = await predictCPM(form)
-    setResult(res)
-    setLoading(false)
+
+    try {
+      const response = await predictCPM(formData)
+      setResult(response)
+    } catch (err) {
+      console.error(err)
+      setError("Failed to predict CPM. Please try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
+  // ✅ IMPORTANT: JSX MUST BE RETURNED
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-6">
-        CPM Prediction Tool
-      </h1>
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="mx-auto max-w-4xl space-y-6">
 
-      <div className="grid grid-cols-2 gap-4">
-        {featureSchema.map((f) => (
-          <InputField
-            key={f.key}
-            field={f}
-            value={form[f.key]}
-            onChange={updateField}
-          />
-        ))}
+        {/* Header */}
+        <header className="rounded-lg bg-white p-6 shadow">
+          <h1 className="text-2xl font-semibold text-gray-900">
+            CPM Predictor
+          </h1>
+          <p className="mt-1 text-sm text-gray-600">
+            Estimate campaign CPM using historical data and AI adjustment
+          </p>
+        </header>
+
+        {/* Input Section */}
+        <section className="rounded-lg bg-white p-6 shadow">
+          <h2 className="mb-4 text-lg font-medium text-gray-800">
+            Campaign Inputs
+          </h2>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {featureSchema.map((field) => (
+              <InputField
+                key={field.key}
+                field={field}
+                value={formData[field.key]}
+                onChange={(value) => handleChange(field.key, value)}
+              />
+            ))}
+          </div>
+
+          <div className="mt-6">
+            <button
+              onClick={handleSubmit}
+              disabled={loading}
+              className="w-full rounded-md bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 disabled:opacity-50"
+            >
+              {loading ? "Predicting..." : "Predict CPM"}
+            </button>
+          </div>
+
+          {error && (
+            <p className="mt-3 text-sm text-red-600">
+              {error}
+            </p>
+          )}
+        </section>
+
+        {/* Loading */}
+        {loading && <Loader />}
+
+        {/* Result */}
+        {result && <ResultCard result={result} />}
       </div>
-
-      <button
-        onClick={submit}
-        className="mt-6 px-6 py-2 bg-primary text-white rounded"
-      >
-        Predict CPM
-      </button>
-
-      {loading && <Loader />}
-      {result && <ResultCard result={result} />}
     </div>
   )
 }
