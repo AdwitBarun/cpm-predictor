@@ -47,8 +47,8 @@ def _initialize():
         )
 
     for _, row in df.iterrows():
-        cid = row.get("criteria_id")
-        name = row.get("name")
+        cid = row.get("Criteria ID")
+        name = row.get("Name")
 
         if not isinstance(name, str):
             continue  # skip NaN / floats / bad rows
@@ -75,24 +75,44 @@ def _initialize():
 # Encode: NAMES → GEO IDS (ML)
 # -------------------------------------------------
 def encode_geography(geo_names) -> str:
+    """
+    Convert geography NAMES → semicolon-separated GEO CODES (for ML)
+
+    Example:
+    "Jamshedpur; Patna; Ranchi"
+    → "1010284;1010186;1010201"
+    """
     _initialize()
 
     if not geo_names or not isinstance(geo_names, str):
         return ""
 
-    names = [
-        n.strip().lower()
-        for n in geo_names.split(";")
-        if isinstance(n, str) and n.strip()
-    ]
+    # Support ; or , as separators
+    raw_names = geo_names.replace(",", ";").split(";")
 
-    codes = [
-        _geo_name_to_id[n]
-        for n in names
-        if n in _geo_name_to_id
-    ]
+    codes = []
+    seen = set()
+
+    for name in raw_names:
+        if not isinstance(name, str):
+            continue
+
+        clean_name = name.strip().lower()
+        if not clean_name:
+            continue
+
+        if clean_name in _geo_name_to_id:
+            code = _geo_name_to_id[clean_name]
+
+            # Avoid duplicates
+            if code not in seen:
+                codes.append(code)
+                seen.add(code)
+        else:
+            logger.warning("Unknown geography name: %s", clean_name)
 
     return ";".join(codes)
+
 
 
 # -------------------------------------------------
