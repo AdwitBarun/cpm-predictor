@@ -40,7 +40,7 @@ def _initialize():
 
     df = pd.read_csv(GEO_DATA_PATH)
 
-    required_cols = {"criteria_id", "name"}
+    required_cols = {"Criteria ID", "Name"}
     if not required_cols.issubset(df.columns):
         raise ValueError(
             f"Geo CSV must contain columns {required_cols}, found {df.columns}"
