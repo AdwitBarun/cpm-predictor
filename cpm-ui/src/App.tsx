@@ -2,7 +2,7 @@ import { useState } from "react";
 import InputField from "./components/InputField";
 import Loader from "./components/Loader";
 import ResultCard from "./components/ResultCard";
-import { numericFields, categoricalFields } from "./schema/FeatureSchema";
+import { numericFields, categoricalFields } from "./schema/featureSchema";
 import { predictCPM } from "./services/api";
 
 export default function App() {
