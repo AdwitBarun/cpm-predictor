@@ -29,12 +29,12 @@ def _initialize():
     df = pd.read_csv(GEO_DATA_PATH)
 
     _geo_id_to_name = dict(
-        zip(df["criteria_id"].astype(str), df["name"].str.lower())
+        zip(df["Criteria ID"].astype(str), df["Name"].str.lower())
     )
 
     _geo_name_to_id = {
         name.lower(): str(cid)
-        for cid, name in zip(df["criteria_id"], df["name"])
+        for cid, name in zip(df["Criteria ID"], df["Name"])
     }
 
     _initialized = True
