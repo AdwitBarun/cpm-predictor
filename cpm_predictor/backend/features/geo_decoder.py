@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 GEO_DATA_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "data",
-    "geo_master.csv"
+    "geotargets-2025-10-29.csv"
 )
 
 _geo_id_to_name = {}
