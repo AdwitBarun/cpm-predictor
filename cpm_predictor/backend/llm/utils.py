@@ -1,7 +1,4 @@
 def decode_tg(tg: str) -> str:
-    """
-    Decode TG string like F25-44 into human readable description
-    """
     if not tg:
         return "Unknown audience"
 

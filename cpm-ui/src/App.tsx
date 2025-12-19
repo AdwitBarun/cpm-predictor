@@ -19,21 +19,29 @@ export default function App() {
     }))
   }
 
-  const handleSubmit = async () => {
-    setLoading(true)
-    setError(null)
-    setResult(null)
+const handleSubmit = async () => {
+  setLoading(true)
+  setError(null)
+  setResult(null)
 
-    try {
-      const response = await predictCPM(formData)
-      setResult(response)
-    } catch (err) {
-      console.error(err)
-      setError("Failed to predict CPM. Please try again.")
-    } finally {
-      setLoading(false)
-    }
+  try {
+    // 🔑 Convert numeric fields here
+    const payload = { ...formData }
+
+    featureSchema.forEach((f) => {
+      if (f.type === "number" && payload[f.key] !== "") {
+        payload[f.key] = Number(payload[f.key])
+      }
+    })
+
+    const response = await predictCPM(payload)
+    setResult(response)
+  } catch (err) {
+    setError("Failed to predict CPM.")
+  } finally {
+    setLoading(false)
   }
+}
 
   // ✅ IMPORTANT: JSX MUST BE RETURNED
   return (
@@ -93,3 +101,4 @@ export default function App() {
     </div>
   )
 }
+console.log(import.meta.env.VITE_API_BASE_URL)

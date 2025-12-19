@@ -1,155 +1,72 @@
 import os
-import json
-import re
 from typing import Dict, Any, Tuple, List
 
 from dotenv import load_dotenv
 from google import genai
 
+from cpm_predictor.backend.llm.prompts import (
+    build_gemini_prompt,
+    parse_gemini_response,
+)
+
 # -------------------------------------------------
-# Load environment variables
+# Load env
 # -------------------------------------------------
 load_dotenv(override=True)
 
-# -------------------------------------------------
-# Initialize Gemini client (NEW SDK – CORRECT)
-# -------------------------------------------------
+CLIENT = None
 try:
     api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set")
-
-    CLIENT = genai.Client(api_key=api_key)
-
+    if api_key:
+        CLIENT = genai.Client(api_key=api_key)
 except Exception as e:
-    print(f"⚠️ Gemini client init failed: {e}")
-    CLIENT = None
+    print(f"⚠️ Gemini init failed: {e}")
 
 
 # -------------------------------------------------
-# Main Gemini range function
+# Public API
 # -------------------------------------------------
 def gemini_range(
     features: Dict[str, Any],
     historical_range: Tuple[float, float, float],
-    shap_summary: List[Tuple[str, float]],
+    shap_summary: List[Tuple[str, float]],  # kept for future extension
 ) -> Dict[str, Any]:
-    """
-    Get LLM-enhanced CPM range prediction.
-    """
+
     p10, p50, p90 = historical_range
 
-    # Hard fallback if Gemini unavailable
     if CLIENT is None:
-        return {
-            "low": p10,
-            "high": p90,
-            "explanation": "Gemini unavailable — using historical CPM range.",
-        }
+        return fallback(p10, p90, "Gemini unavailable")
 
     try:
-        prompt = build_prompt(features, historical_range, shap_summary)
+        prompt = build_gemini_prompt(
+            input_data=features,
+            historical_range={"p10": p10, "p50": p50, "p90": p90},
+            decoded_geo=features.get("decoded_geo", []),
+        )
 
         response = CLIENT.models.generate_content(
             model="gemini-2.0-flash",
-            contents=[{
-                "role": "user",
-                "parts": [{"text": prompt}]
-            }],
+            contents=prompt,
         )
 
-        raw_text = response.text
-        result = safe_json(raw_text)
-
-        # Validate structure
-        if not all(k in result for k in ("low", "high", "explanation")):
-            raise ValueError(f"Invalid Gemini response keys: {result}")
+        parsed = parse_gemini_response(response.text)
+        adj = parsed["adjusted_range"]
 
         return {
-            "low": float(result["low"]),
-            "high": float(result["high"]),
-            "explanation": str(result["explanation"]),
+            "low": float(adj["low"]),
+            "high": float(adj["high"]),
+            "explanation": parsed["explanation"],
+            "key_factors": parsed.get("key_factors", []),
         }
 
     except Exception as e:
-        print(f"❌ Error in gemini_range: {e}")
-        return {
-            "low": p10,
-            "high": p90,
-            "explanation": "Gemini error — falling back to historical CPM range.",
-        }
+        return fallback(p10, p90, str(e))
 
 
-# -------------------------------------------------
-# Prompt builder
-# -------------------------------------------------
-def build_prompt(
-    features: Dict[str, Any],
-    historical_range: Tuple[float, float, float],
-    shap_summary: List[Tuple[str, float]],
-) -> str:
-    p10, p50, p90 = historical_range
-
-    top_features = "\n".join(
-        f"- {feat}: {imp:.4f}" for feat, imp in shap_summary[:5]
-    )
-
-    return f"""
-You are a senior media buying expert.
-
-Historical CPM Range:
-- P10: {p10:.2f}
-- P50: {p50:.2f}
-- P90: {p90:.2f}
-
-Campaign Details:
-- Device: {features.get('Device', 'N/A')}
-- Target Group: {features.get('TG', 'N/A')}
-- Geography: {features.get('Geography_Targeting_Include', 'N/A')}
-- Budget: {features.get('Planned_Budget', 'N/A')}
-- Impressions: {features.get('Planned_Impressions', 'N/A')}
-- Frequency: {features.get('Planned_Freq', 'N/A')}
-- Inventory Mode: {features.get('Inventory_Mode', 'N/A')}
-- Ad Format: {features.get('Video_Ad_Format', 'N/A')}
-- Month Range: {features.get('month_range', 'N/A')}
-- Campaign Duration: {features.get('campaign_duration_days', 'N/A')} days
-
-Top Influential Features:
-{top_features}
-
-STRICT INSTRUCTIONS:
-- Respond with ONLY valid JSON
-- No markdown
-- No explanations outside JSON
-- No backticks
-
-Return EXACTLY this format:
-{{
-  "low": number,
-  "high": number,
-  "explanation": string
-}}
-""".strip()
-
-
-# -------------------------------------------------
-# Safe JSON parsing (ROBUST)
-# -------------------------------------------------
-def safe_json(text: str) -> Dict[str, Any]:
-    """
-    Safely extract JSON object from LLM output.
-    """
-    if not text:
-        raise ValueError("Empty Gemini response")
-
-    text = text.strip()
-
-    # Remove markdown fences
-    text = re.sub(r"```json|```", "", text).strip()
-
-    # Extract first JSON object
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if not match:
-        raise ValueError(f"No JSON found in Gemini output: {text[:200]}")
-
-    return json.loads(match.group())
+def fallback(low: float, high: float, reason: str) -> Dict[str, Any]:
+    return {
+        "low": low,
+        "high": high,
+        "explanation": f"Fallback to ML CPM range. Reason: {reason}",
+        "key_factors": [],
+    }

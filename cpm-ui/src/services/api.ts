@@ -1,18 +1,12 @@
 import axios from "axios"
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
-})
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5173"
 
-/**
- * Call backend CPM prediction API
- */
-export async function predictCPM(payload: Record<string, any>) {
-  const response = await api.post("/api/predict", payload)
-  return response.data
+export async function predictCPM(payload: any) {
+  const res = await axios.post(
+    `${API_BASE_URL}/api/predict`,
+    payload
+  )
+  return res.data
 }
-
-export default api
