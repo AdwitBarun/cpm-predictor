@@ -2,10 +2,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Union
 
-
-# ---------------------------------------------------------
-# Columns by type (MUST match training-time logic)
-# ---------------------------------------------------------
+TARGET_COL = "Del Cpm/\nBidvid  cpm"
 
 NUMERIC_COLS = [
     "Planned Reach 1+",
@@ -39,54 +36,27 @@ CATEGORICAL_COLS = [
     "month_range",
 ]
 
-
-# ---------------------------------------------------------
-# Main preprocessing function
-# ---------------------------------------------------------
-
-def preprocess(
+# =====================================================
+# 🔹 COMMON FEATURE PROCESSING (NO TARGET)
+# =====================================================
+def preprocess_features(
     input_data: Union[Dict, pd.DataFrame],
     feature_columns: List[str],
 ) -> pd.DataFrame:
-    """
-    Preprocess raw input into model-ready dataframe.
 
-    Args:
-        input_data: dict (single prediction) or DataFrame
-        feature_columns: exact feature list used during training
-
-    Returns:
-        pd.DataFrame with columns exactly matching feature_columns
-    """
-
-    # ---------------------------
-    # 1️⃣ Convert input to DataFrame
-    # ---------------------------
     if isinstance(input_data, dict):
         df = pd.DataFrame([input_data])
     else:
         df = input_data.copy()
 
-    # ---------------------------
-    # 2️⃣ Ensure all expected base columns exist
-    # ---------------------------
     for col in NUMERIC_COLS + CATEGORICAL_COLS:
         if col not in df.columns:
             df[col] = np.nan
 
-    # ---------------------------
-    # 3️⃣ Numeric handling
-    # ---------------------------
     for col in NUMERIC_COLS:
         df[col] = pd.to_numeric(df[col], errors="coerce")
+        df[col] = df[col].fillna(df[col].median())
 
-        # Median imputation (robust for skewed CPM data)
-        median_val = df[col].median()
-        df[col] = df[col].fillna(median_val)
-
-    # ---------------------------
-    # 4️⃣ Categorical handling
-    # ---------------------------
     for col in CATEGORICAL_COLS:
         df[col] = (
             df[col]
@@ -95,29 +65,41 @@ def preprocess(
             .fillna("Unknown")
         )
 
-    # ---------------------------
-    # 5️⃣ One-hot encode categoricals
-    # ---------------------------
-    df_encoded = pd.get_dummies(
-        df,
-        columns=CATEGORICAL_COLS,
-        drop_first=False,
+    df = pd.get_dummies(df, columns=CATEGORICAL_COLS, drop_first=False)
+
+    for col in feature_columns:
+        if col not in df.columns:
+            df[col] = 0
+
+    return df[feature_columns].replace([np.inf, -np.inf], 0).fillna(0.001)
+
+# =====================================================
+# 🔹 TRAINING PREPROCESS (WITH TARGET)
+# =====================================================
+def preprocess_training(df: pd.DataFrame):
+    TARGET_COL = "Del Cpm/\nBidvid  cpm"
+
+    if TARGET_COL not in df.columns:
+        raise ValueError(f"Target column missing: {TARGET_COL}")
+
+    # --- Clean target ---
+    y_raw = pd.to_numeric(df[TARGET_COL], errors="coerce")
+
+    # Drop invalid CPM rows
+    mask = (
+        y_raw.notna() &
+        np.isfinite(y_raw) &
+        (y_raw > 0) &
+        (y_raw < 1_000)   # sanity cap, adjust if needed
     )
 
-    # ---------------------------
-    # 6️⃣ Align with training features
-    # ---------------------------
-    for col in feature_columns:
-        if col not in df_encoded.columns:
-            df_encoded[col] = 0
+    df = df.loc[mask].reset_index(drop=True)
+    y_raw = y_raw.loc[mask]
 
-    # Remove extra columns (from unseen categories)
-    df_encoded = df_encoded[feature_columns]
+    # Log-transform target
+    y = np.log1p(y_raw)
 
-    # ---------------------------
-    # 7️⃣ Final safety checks
-    # ---------------------------
-    df_encoded = df_encoded.replace([np.inf, -np.inf], 0)
-    df_encoded = df_encoded.fillna(0)
+    # Drop target from features
+    X_raw = df.drop(columns=[TARGET_COL])
 
-    return df_encoded
+    return X_raw, y

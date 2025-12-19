@@ -1,0 +1,9 @@
+{
+  "model_version": "v1",
+  "trained_on": "2025-12-19T17:12:14.610796",
+  "rows_used": 127,
+  "features_count": 148,
+  "target": "log(Del Cpm / Bidvid CPM)",
+  "coverage_p10_p90": 0.654,
+  "median_absolute_error_cpm": 8.75
+}

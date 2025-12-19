@@ -1,28 +1,47 @@
 import joblib
 import numpy as np
 import pandas as pd
-from cpm_predictor.backend.features.preprocess import preprocess
 
-ARTIFACT_DIR = "../backend/artifacts"
-MODEL_VERSION = "v1"
+from cpm_predictor.backend.features.preprocess import (
+    preprocess_training,
+    preprocess_features,
+)
 
-df = pd.read_csv("../data/data_input.csv")
-X, y = preprocess(df)
+ARTIFACT_DIR = "cpm_predictor/backend/artifacts"
 
-models = joblib.load(f"{ARTIFACT_DIR}/cpm_quantile_models_{MODEL_VERSION}.pkl")
+# -----------------------
+# Load data
+# -----------------------
+df = pd.read_csv("cpm_predictor/data/data_input.csv")
 
-p10 = models[0.1].predict(X)
-p50 = models[0.5].predict(X)
-p90 = models[0.9].predict(X)
+# Split raw features and log target
+X_raw, y_log = preprocess_training(df)
 
-# Back-transform
-p10 = np.expm1(p10)
-p50 = np.expm1(p50)
-p90 = np.expm1(p90)
+# -----------------------
+# Load artifacts
+# -----------------------
+models = joblib.load(f"{ARTIFACT_DIR}/cpm_quantile_models.pkl")
+feature_columns = joblib.load(f"{ARTIFACT_DIR}/feature_columns.pkl")
 
-y_true = np.expm1(y)
+# -----------------------
+# Build model-ready features
+# -----------------------
+X = preprocess_features(X_raw, feature_columns=feature_columns)
 
+# -----------------------
+# Predict (LOG space → CPM)
+# -----------------------
+p10 = np.expm1(models[0.1].predict(X))
+p50 = np.expm1(models[0.5].predict(X))
+p90 = np.expm1(models[0.9].predict(X))
+
+y_true = np.expm1(y_log)
+
+# -----------------------
+# Metrics
+# -----------------------
 coverage = ((y_true >= p10) & (y_true <= p90)).mean()
+median_abs_error = np.median(np.abs(y_true - p50))
 
-print("Range coverage (P10–P90):", round(coverage, 3))
-print("Median absolute error (P50):", round(np.median(abs(y_true - p50)), 2))
+print(f"📊 Range Coverage (P10–P90): {coverage:.3f}")
+print(f"📊 Median Absolute Error (₹ CPM): {median_abs_error:.2f}")
