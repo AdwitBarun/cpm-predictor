@@ -5,6 +5,20 @@ from cpm_predictor.backend.features.preprocess import preprocess_features
 from cpm_predictor.backend.models.shap_explainer import explain_prediction
 from cpm_predictor.backend.llm.gemini_client import gemini_range
 
+import numpy as np
+
+def make_json_safe(obj):
+    if isinstance(obj, np.generic):
+        return obj.item()
+
+    if isinstance(obj, dict):
+        return {k: make_json_safe(v) for k, v in obj.items()}
+
+    if isinstance(obj, (list, tuple)):
+        return [make_json_safe(v) for v in obj]
+
+    return obj
+
 
 def predict_cpm_range(
     models,
@@ -55,7 +69,7 @@ def predict_cpm_range(
     final_low = 0.85 * p10 + 0.15 * llm_range["low"]
     final_high = 0.85 * p90 + 0.15 * llm_range["high"]
 
-    return {
+    result = {
         "historical": {
             "p10": round(p10, 2),
             "p50": round(p50, 2),
@@ -68,3 +82,7 @@ def predict_cpm_range(
         },
         "shap_top_features": shap_summary,
     }
+
+
+    # 🔥 MAKE RESPONSE JSON SAFE
+    return make_json_safe(result)

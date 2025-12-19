@@ -5,7 +5,7 @@ import numpy as np
 import joblib
 import os
 
-from cpm_predictor.backend.features.preprocess import preprocess
+from cpm_predictor.backend.features.preprocess import preprocess_features
 from cpm_predictor.backend.models.shap_explainer import explain_prediction
 from cpm_predictor.backend.llm.gemini_client import gemini_range
 
@@ -44,7 +44,7 @@ def inverse_log(x: float) -> float:
 @app.post("/predict")
 def predict_cpm(input_data: Dict[str, Any]):
 
-    X = preprocess(input_data, FEATURE_COLUMNS)
+    X = preprocess_features(input_data, FEATURE_COLUMNS)
 
     # ---- LOG CPM (model output)
     p10_log = float(MODELS[0.1].predict(X)[0])

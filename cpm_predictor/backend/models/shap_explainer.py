@@ -11,80 +11,24 @@ import pandas as pd
 import shap
 
 
-def explain_prediction(
-    model,
-    X: pd.DataFrame,
-    top_k: int = 5,
-) -> List[Tuple[str, float]]:
-    """
-    Generate SHAP-based feature importance for a single prediction.
-
-    Args:
-        model:
-            Trained tree-based model (XGBoost / LightGBM / CatBoost).
-        X:
-            Preprocessed input features as a pandas DataFrame
-            with shape (1, n_features).
-        top_k:
-            Number of top contributing features to return.
-
-    Returns:
-        A list of (feature_name, importance) tuples sorted
-        by absolute SHAP importance (descending).
-
-    Example:
-        >>> shap_summary = explain_prediction(model, X)
-        >>> print(shap_summary)
-        [
-            ('Inventory Mode_Limited', 1.23),
-            ('TG_F25-44', 0.87),
-            ('Planned Budget', 0.41),
-            ...
-        ]
-    """
-
-    # ----------------------------
-    # Input validation
-    # ----------------------------
-    if not isinstance(X, pd.DataFrame):
-        raise ValueError("X must be a pandas DataFrame")
-
-    if X.shape[0] != 1:
-        raise ValueError(
-            f"SHAP explanation expects a single-row DataFrame, got {X.shape[0]} rows"
-        )
-
-    # ----------------------------
-    # Initialize SHAP explainer
-    # ----------------------------
-    # TreeExplainer is fast and stable for tree-based models
+def explain_prediction(model, X, top_k=5):
     explainer = shap.TreeExplainer(model)
-
-    # ----------------------------
-    # Compute SHAP values
-    # ----------------------------
     shap_values = explainer.shap_values(X)
 
-    # Some models return a list (e.g., multi-output); handle safely
     if isinstance(shap_values, list):
         shap_values = shap_values[0]
 
-    # Extract values for the single row
-    shap_vals = shap_values[0]
+    vals = shap_values[0]
+    cols = X.columns.tolist()
 
-    feature_names = X.columns.tolist()
+    result = sorted(
+        zip(cols, vals),
+        key=lambda x: abs(x[1]),
+        reverse=True
+    )[:top_k]
 
-    # ----------------------------
-    # Compute absolute importance
-    # ----------------------------
-    feature_importance = sorted(
-        zip(feature_names, np.abs(shap_vals)),
-        key=lambda x: x[1],
-        reverse=True,
-    )
-
-    return feature_importance[:top_k]
-
+    # 🔥 FORCE python floats
+    return [(str(k), float(v)) for k, v in result]
 
 # -------------------------------------------------
 # Optional utility: pretty format for LLM / logs
