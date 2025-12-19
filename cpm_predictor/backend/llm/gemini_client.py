@@ -1,6 +1,5 @@
 import os
 from typing import Dict, Any, Tuple, List
-
 from dotenv import load_dotenv
 from google import genai
 
@@ -9,9 +8,6 @@ from cpm_predictor.backend.llm.prompts import (
     parse_gemini_response,
 )
 
-# -------------------------------------------------
-# Load env
-# -------------------------------------------------
 load_dotenv(override=True)
 
 CLIENT = None
@@ -23,13 +19,10 @@ except Exception as e:
     print(f"⚠️ Gemini init failed: {e}")
 
 
-# -------------------------------------------------
-# Public API
-# -------------------------------------------------
 def gemini_range(
     features: Dict[str, Any],
     historical_range: Tuple[float, float, float],
-    shap_summary: List[Tuple[str, float]],  # kept for future extension
+    shap_summary: List[Tuple[str, float]],
 ) -> Dict[str, Any]:
 
     p10, p50, p90 = historical_range
@@ -45,9 +38,12 @@ def gemini_range(
         )
 
         response = CLIENT.models.generate_content(
-            model="gemini-1.5-pro",
+            model="gemini-2.0-flash",
             contents=prompt,
         )
+
+        if not response.text or not response.text.strip():
+            raise ValueError("Empty Gemini response")
 
         parsed = parse_gemini_response(response.text)
         adj = parsed["adjusted_range"]

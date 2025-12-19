@@ -1,7 +1,8 @@
 from typing import Dict, Any, List
 import logging
-from datetime import datetime
 import json
+import re
+from datetime import datetime
 
 from cpm_predictor.backend.llm.utils import (
     decode_tg,
@@ -26,10 +27,6 @@ def build_gemini_prompt(
 
     tg_description = decode_tg(tg)
 
-    historical_low = historical_range.get("p10", 0.0)
-    historical_mid = historical_range.get("p50", 0.0)
-    historical_high = historical_range.get("p90", 0.0)
-
     current_month = datetime.now().strftime("%B")
 
     return f"""
@@ -43,18 +40,17 @@ Campaign Details:
 - Month Range: {month_range} (Current Month: {current_month})
 - Geography: {", ".join(decoded_geo) if decoded_geo else "Global"}
 
-Historical CPM Range (Based on similar campaigns):
-- 10th Percentile (Low): ${historical_low:.2f}
-- 50th Percentile (Median): ${historical_mid:.2f}
-- 90th Percentile (High): ${historical_high:.2f}
+Historical CPM Range:
+- Low: ${historical_range["p10"]:.2f}
+- Mid: ${historical_range["p50"]:.2f}
+- High: ${historical_range["p90"]:.2f}
 
 Market Context:
 - Seasonal Factors: {get_seasonal_factors(month_range, current_month)}
 - Inventory Pressure: {"High" if inventory_mode.lower() == "limited" else "Moderate"}
 - TG Premium Factor: {get_tg_premium_factor(tg)}
 
-Task:
-Return ONLY valid JSON (no markdown, no explanations outside JSON):
+Return ONLY valid JSON:
 
 {{
   "adjusted_range": {{
@@ -72,16 +68,33 @@ Return ONLY valid JSON (no markdown, no explanations outside JSON):
 
 def parse_gemini_response(text: str) -> Dict[str, Any]:
     try:
-        if "```" in text:
-            text = text.split("```")[1]
+        data = safe_json(text)
 
-        result = json.loads(text)
+        if "adjusted_range" not in data:
+            raise ValueError("Missing adjusted_range")
 
-        if not all(k in result["adjusted_range"] for k in ("low", "mid", "high")):
-            raise ValueError("Missing adjusted_range keys")
+        for k in ("low", "mid", "high"):
+            if k not in data["adjusted_range"]:
+                raise ValueError(f"Missing adjusted_range.{k}")
 
-        return result
+        return data
 
     except Exception as e:
         logger.error(f"Gemini response parse failed: {e}")
         raise
+
+
+def safe_json(text: str) -> Dict[str, Any]:
+    """
+    Robust JSON extractor for LLM output.
+    """
+    if not text or not text.strip():
+        raise ValueError("Empty Gemini response")
+
+    text = re.sub(r"```json|```", "", text, flags=re.IGNORECASE).strip()
+
+    match = re.search(r"\{[\s\S]*\}", text)
+    if not match:
+        raise ValueError(f"No JSON found in response: {text[:200]}")
+
+    return json.loads(match.group())
