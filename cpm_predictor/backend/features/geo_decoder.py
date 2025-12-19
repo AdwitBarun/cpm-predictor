@@ -5,8 +5,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
+
 GEO_DATA_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    BASE_DIR,
     "data",
     "geotargets-2025-10-29.csv"
 )
