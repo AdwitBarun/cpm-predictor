@@ -9,9 +9,12 @@ _FEATURE_COLUMNS = None
 
 
 def load_models():
+    """
+    Load ML artifacts once and cache them.
+    """
     global _MODELS, _FEATURE_COLUMNS
 
-    if _MODELS is None:
+    if _MODELS is None or _FEATURE_COLUMNS is None:
         model_path = os.path.join(ARTIFACT_DIR, "cpm_quantile_models.pkl")
         feature_path = os.path.join(ARTIFACT_DIR, "feature_columns.pkl")
 

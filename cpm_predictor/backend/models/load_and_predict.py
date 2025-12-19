@@ -1,6 +1,6 @@
 from typing import Dict, Any
 
-from cpm_predictor.backend.models.loader import load_artifacts
+from cpm_predictor.backend.models.loader import load_models
 from cpm_predictor.backend.models.predictor import predict_cpm_range
 from cpm_predictor.backend.features.geo_decoder import (
     encode_geography,
@@ -10,16 +10,16 @@ from cpm_predictor.backend.features.geo_decoder import (
 
 def load_and_predict(payload: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Public entry point for API / services.
+    Public entry point used by API / services.
     """
 
     # -------------------------------------------------
-    # 1. Load artifacts (cached)
+    # 1. Load artifacts
     # -------------------------------------------------
-    models, feature_columns = load_artifacts()
+    models, feature_columns = load_models()
 
     # -------------------------------------------------
-    # 2. Split ML vs LLM features
+    # 2. Geography handling
     # -------------------------------------------------
     geo_names = payload.get("Geography_Targeting_Include")
 
@@ -32,9 +32,11 @@ def load_and_predict(payload: Dict[str, Any]) -> Dict[str, Any]:
     )
 
     # -------------------------------------------------
-    # 3. Delegate to predictor
+    # 3. Predict
     # -------------------------------------------------
     return predict_cpm_range(
+        models=models,
+        feature_columns=feature_columns,
         ml_features=ml_features,
         llm_features=llm_features,
     )
