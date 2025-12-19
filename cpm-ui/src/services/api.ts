@@ -1,12 +1,8 @@
-import axios from "axios"
+import axios from "axios";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5173"
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
 
-export async function predictCPM(payload: any) {
-  const res = await axios.post(
-    `${API_BASE_URL}/api/predict`,
-    payload
-  )
-  return res.data
+export async function predictCPM(payload: Record<string, any>) {
+  const res = await axios.post(`${API_BASE}/predict`, payload);
+  return res.data;
 }

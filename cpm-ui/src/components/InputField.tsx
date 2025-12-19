@@ -1,57 +1,28 @@
-import React from "react"
+type Props = {
+  label: string;
+  value: any;
+  onChange: (v: any) => void;
+  type?: string;
+  placeholder?: string;
+};
 
-interface FieldSchema {
-  key: string
-  label: string
-  type: "number" | "select" | "text"
-  options?: string[]
-  placeholder?: string
-}
-
-interface Props {
-  field: FieldSchema
-  value: any
-  onChange: (value: any) => void
-}
-
-export default function InputField({ field, value, onChange }: Props) {
-  // 🔑 Always pass a string to inputs
-  const safeValue = value ?? ""
-
-  if (field.type === "select") {
-    return (
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          {field.label}
-        </label>
-        <select
-          value={safeValue}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full rounded-md border px-3 py-2 text-sm"
-        >
-          <option value="">Select</option>
-          {field.options?.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt}
-            </option>
-          ))}
-        </select>
-      </div>
-    )
-  }
-
+export default function InputField({
+  label,
+  value,
+  onChange,
+  type = "text",
+  placeholder,
+}: Props) {
   return (
-    <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
-        {field.label}
-      </label>
+    <div className="flex flex-col gap-1">
+      <label className="text-sm font-medium text-gray-700">{label}</label>
       <input
-        type={field.type}
-        value={safeValue}
-        placeholder={field.placeholder}
-        onChange={(e) => onChange(e.target.value)} // 👈 DO NOT Number() here
-        className="w-full rounded-md border px-3 py-2 text-sm"
+        type={type}
+        value={value ?? ""}
+        placeholder={placeholder}
+        onChange={(e) => onChange(type === "number" ? Number(e.target.value) : e.target.value)}
+        className="border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
       />
     </div>
-  )
+  );
 }

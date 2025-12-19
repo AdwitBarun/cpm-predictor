@@ -1,104 +1,68 @@
-import { useState } from "react"
-import { predictCPM } from "./services/api"
-
-import InputField from "./components/InputField"
-import ResultCard from "./components/ResultCard"
-import Loader from "./components/Loader"
-import { featureSchema } from "./schema/featureSchema"
+import { useState } from "react";
+import InputField from "./components/InputField";
+import Loader from "./components/Loader";
+import ResultCard from "./components/ResultCard";
+import { numericFields, categoricalFields } from "./schema/FeatureSchema";
+import { predictCPM } from "./services/api";
 
 export default function App() {
-  const [formData, setFormData] = useState<Record<string, any>>({})
-  const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState<any>(null)
-  const [error, setError] = useState<string | null>(null)
+  const [form, setForm] = useState<Record<string, any>>({});
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
 
-  const handleChange = (key: string, value: any) => {
-    setFormData((prev) => ({
-      ...prev,
-      [key]: value,
-    }))
-  }
+  const update = (key: string, value: any) =>
+    setForm({ ...form, [key]: value });
 
-const handleSubmit = async () => {
-  setLoading(true)
-  setError(null)
-  setResult(null)
+  const submit = async () => {
+    setLoading(true);
+    setResult(null);
+    try {
+      const res = await predictCPM(form);
+      setResult(res);
+    } catch (e) {
+      alert("Prediction failed. Check backend logs.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  try {
-    // 🔑 Convert numeric fields here
-    const payload = { ...formData }
-
-    featureSchema.forEach((f) => {
-      if (f.type === "number" && payload[f.key] !== "") {
-        payload[f.key] = Number(payload[f.key])
-      }
-    })
-
-    const response = await predictCPM(payload)
-    setResult(response)
-  } catch (err) {
-    setError("Failed to predict CPM.")
-  } finally {
-    setLoading(false)
-  }
-}
-
-  // ✅ IMPORTANT: JSX MUST BE RETURNED
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="mx-auto max-w-4xl space-y-6">
+    <div className="min-h-screen bg-gray-100 p-8">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-2xl font-bold mb-6">CPM Prediction Tool</h1>
 
-        {/* Header */}
-        <header className="rounded-lg bg-white p-6 shadow">
-          <h1 className="text-2xl font-semibold text-gray-900">
-            CPM Predictor
-          </h1>
-          <p className="mt-1 text-sm text-gray-600">
-            Estimate campaign CPM using historical data and AI adjustment
-          </p>
-        </header>
+        <div className="bg-white p-6 rounded shadow grid grid-cols-3 gap-4">
+          {numericFields.map((f) => (
+            <InputField
+              key={f.key}
+              label={f.label}
+              type="number"
+              value={form[f.key]}
+              onChange={(v) => update(f.key, v)}
+            />
+          ))}
 
-        {/* Input Section */}
-        <section className="rounded-lg bg-white p-6 shadow">
-          <h2 className="mb-4 text-lg font-medium text-gray-800">
-            Campaign Inputs
-          </h2>
+          {categoricalFields.map((f) => (
+            <InputField
+              key={f.key}
+              label={f.label}
+              value={form[f.key]}
+              placeholder={f.placeholder}
+              onChange={(v) => update(f.key, v)}
+            />
+          ))}
+        </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {featureSchema.map((field) => (
-              <InputField
-                key={field.key}
-                field={field}
-                value={formData[field.key]}
-                onChange={(value) => handleChange(field.key, value)}
-              />
-            ))}
-          </div>
+        <button
+          onClick={submit}
+          className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        >
+          Predict CPM
+        </button>
 
-          <div className="mt-6">
-            <button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="w-full rounded-md bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 disabled:opacity-50"
-            >
-              {loading ? "Predicting..." : "Predict CPM"}
-            </button>
-          </div>
-
-          {error && (
-            <p className="mt-3 text-sm text-red-600">
-              {error}
-            </p>
-          )}
-        </section>
-
-        {/* Loading */}
         {loading && <Loader />}
-
-        {/* Result */}
-        {result && <ResultCard result={result} />}
+        {result && <ResultCard data={result} />}
       </div>
     </div>
-  )
+  );
 }
-console.log(import.meta.env.VITE_API_BASE_URL)
