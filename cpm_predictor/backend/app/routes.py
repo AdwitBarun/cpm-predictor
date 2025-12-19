@@ -1,36 +1,35 @@
-from fastapi import APIRouter, HTTPException
-from cpm_predictor.backend.models.loader import load_models
-from cpm_predictor.backend.features.preprocess import preprocess
-from cpm_predictor.backend.llm.gemini_client import gemini_range
+from fastapi import APIRouter
+from cpm_predictor.backend.features.geo_decoder import encode_geography
+from cpm_predictor.backend.models.load_and_predict import predict_cpm_range
 
 router = APIRouter()
 
-
-@router.post("/api/predict")
+@router.post("/predict")
 def predict(payload: dict):
-    try:
-        MODELS, FEATURE_COLUMNS = load_models()
 
-        X = preprocess(payload, FEATURE_COLUMNS)
+    # ------------------------------------------------
+    # 1. Geography from frontend = NAMES
+    # ------------------------------------------------
+    geo_names = payload.get("Geography_Targeting_Include", "")
 
-        p10 = float(MODELS[0.1].predict(X)[0])
-        p50 = float(MODELS[0.5].predict(X)[0])
-        p90 = float(MODELS[0.9].predict(X)[0])
+    # ------------------------------------------------
+    # 2. Encode for ML
+    # ------------------------------------------------
+    geo_codes = encode_geography(geo_names)
 
-        llm = gemini_range(
-            features=payload,
-            historical_range=(p10, p50, p90),
-            shap_summary=[]
-        )
+    ml_features = payload.copy()
+    ml_features["Geography_Targeting_Include"] = geo_codes
 
-        return {
-            "historical_range": {"low": p10, "mid": p50, "high": p90},
-            "llm_range": llm,
-            "final_range": {
-                "low": round(0.65 * p10 + 0.35 * llm["low"], 2),
-                "high": round(0.65 * p90 + 0.35 * llm["high"], 2),
-            },
-        }
+    # ------------------------------------------------
+    # 3. LLM uses names directly
+    # ------------------------------------------------
+    llm_features = payload.copy()
+    llm_features["decoded_geo"] = geo_names.split(";") if geo_names else []
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    # ------------------------------------------------
+    # 4. Predict
+    # ------------------------------------------------
+    return predict_cpm_range(
+        ml_features=ml_features,
+        llm_features=llm_features,
+    )

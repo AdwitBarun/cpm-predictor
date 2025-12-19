@@ -33,7 +33,11 @@ def gemini_range(
     try:
         prompt = build_gemini_prompt(
             input_data=features,
-            historical_range={"p10": p10, "p50": p50, "p90": p90},
+            historical_range={
+                "p10": historical_range[0],
+                "p50": historical_range[1],
+                "p90": historical_range[2],
+            },
             decoded_geo=features.get("decoded_geo", []),
         )
 
@@ -41,9 +45,6 @@ def gemini_range(
             model="gemini-2.0-flash",
             contents=prompt,
         )
-
-        if not response.text or not response.text.strip():
-            raise ValueError("Empty Gemini response")
 
         parsed = parse_gemini_response(response.text)
         adj = parsed["adjusted_range"]
