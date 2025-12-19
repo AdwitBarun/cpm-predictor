@@ -28,8 +28,8 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(__file__)
 ARTIFACT_DIR = os.path.join(BASE_DIR, "..", "artifacts")
 
-MODELS = joblib.load(os.path.join(ARTIFACT_DIR, "cpm_quantile_models_v1.pkl"))
-FEATURE_COLUMNS = joblib.load(os.path.join(ARTIFACT_DIR, "feature_columns_v1.pkl"))
+MODELS = joblib.load(os.path.join(ARTIFACT_DIR, "cpm_quantile_models.pkl"))
+FEATURE_COLUMNS = joblib.load(os.path.join(ARTIFACT_DIR, "feature_columns.pkl"))
 
 # -------------------------------------------------
 # Helpers
