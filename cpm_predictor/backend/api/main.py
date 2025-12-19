@@ -58,8 +58,8 @@ def predict_cpm(input_data: Dict[str, Any]):
         shap_summary=shap_summary,
     )
 
-    final_low = 0.65 * p10 + 0.35 * llm_range["low"]
-    final_high = 0.65 * p90 + 0.35 * llm_range["high"]
+    final_low = 0.85 * p10 + 0.15 * llm_range["low"]
+    final_high = 0.85 * p90 + 0.15 * llm_range["high"]
 
     return {
         "historical": {"p10": p10, "p50": p50, "p90": p90},
