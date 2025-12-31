@@ -99,21 +99,7 @@ export default function App() {
             <input type="file" accept=".csv" onChange={handleCSV} />
           </div>
 
-          <div>
-            <p className="font-medium mb-1">Quick Templates</p>
-            <select
-              className="border rounded px-3 py-2"
-              onChange={(e) => applyTemplate(e.target.value)}
-            >
-              <option value="">Select…</option>
-              <option value="nsk_awareness">
-                YouTube Non-Skippable — Awareness
-              </option>
-              <option value="trueview_performance">
-                TrueView — Performance
-              </option>
-            </select>
-          </div>
+          
         </div>
 
         {/* Form */}
