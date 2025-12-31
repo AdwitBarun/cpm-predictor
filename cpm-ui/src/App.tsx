@@ -16,15 +16,26 @@ export default function App() {
   const submit = async () => {
     setLoading(true);
     setResult(null);
+
+    const payload: Record<string, any> = {};
+
+    Object.entries(form).forEach(([k, v]) => {
+      // Convert empty values to null
+      if (v === "" || v === undefined) payload[k] = null;
+      else payload[k] = v;
+    });
+
     try {
-      const res = await predictCPM(form);
+      const res = await predictCPM(payload);
       setResult(res);
     } catch (e) {
+      console.error(e);
       alert("Prediction failed. Check backend logs.");
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">

@@ -11,7 +11,7 @@ import pandas as pd
 import shap
 
 
-def explain_prediction(model, X, top_k=5):
+def explain_prediction(model, X, top_k=15):
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X)
 
@@ -60,10 +60,6 @@ def format_shap_for_llm(
 
     return formatted
 
-
-# -------------------------------------------------
-# Example usage (for local testing only)
-# -------------------------------------------------
 
 if __name__ == "__main__":
     import joblib

@@ -90,7 +90,7 @@ def preprocess_training(df: pd.DataFrame):
         y_raw.notna() &
         np.isfinite(y_raw) &
         (y_raw > 0) &
-        (y_raw < 1_000)   # sanity cap, adjust if needed
+        (y_raw < 1_000)   
     )
 
     df = df.loc[mask].reset_index(drop=True)
