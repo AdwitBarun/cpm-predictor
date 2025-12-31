@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 type Props = {
   data: any;
 };
@@ -24,10 +26,28 @@ export default function ResultCard({ data }: Props) {
         </p>
       </div>
 
-      {llm?.commentary && (
-        <p className="text-sm text-gray-700 italic">
-          {llm.commentary}
-        </p>
+      {/* LLM Section */}
+      {llm && (
+        <div className="mt-6 border-t pt-4">
+          <h3 className="text-lg font-semibold mb-2">Why this CPM?</h3>
+
+          <ReactMarkdown className="prose max-w-none">
+            {llm.explanation}
+          </ReactMarkdown>
+
+          {llm.key_factors?.length > 0 && (
+            <>
+              <h4 className="mt-4 font-medium">Key Factors Considered</h4>
+              <ul className="list-disc pl-6">
+                {llm.key_factors.map((f: any, i: number) => (
+                  <li key={i}>
+                    <strong>{f.factor}</strong> — {f.effect}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
       )}
     </div>
   );
