@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+const API = "https://cpm-predictor-production.up.railway.app";
 
-export async function predictCPM(payload: Record<string, any>) {
-  const res = await axios.post(`${API_BASE}/predict`, payload);
+export const predictCPM = async (payload: any) => {
+  const res = await axios.post(`${API}/predict`, payload);
   return res.data;
-}
+};
