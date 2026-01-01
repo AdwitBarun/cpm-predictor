@@ -12,11 +12,32 @@ def run_llm_reasoning(
     similarity_output: list,
     decoded_tg: str
 ):
-    model_context = {
-        "model_prediction": model_output,
-        "decoded_tg": decoded_tg
+    """
+    LLM reasoning layer that adjusts ML CPM range using tool-based context.
+    """
+
+    # -------------------------------------------------
+    # 1️⃣ Normalize model output → base CPM range
+    # -------------------------------------------------
+    model_range = model_output["model_range"]
+    conformal_range = model_output["conformal_range"]
+
+    base_range = {
+        "low": conformal_range["low"],
+        "mid": model_range["p50"],
+        "high": conformal_range["high"],
+        "confidence": conformal_range.get("coverage_target", 0.9),
     }
 
+    model_context = {
+        "model_prediction": base_range,
+        "decoded_tg": decoded_tg,
+        "similar_campaigns": similarity_output,
+    }
+
+    # -------------------------------------------------
+    # 2️⃣ Run tools
+    # -------------------------------------------------
     tool_results = []
 
     tool_results.append(run_tg_tool(raw_input, model_context))
@@ -34,26 +55,41 @@ def run_llm_reasoning(
         run_residual_context_tool(raw_input, used_keys)
     )
 
-    # Aggregate adjustments
+    # -------------------------------------------------
+    # 3️⃣ Aggregate multiplicative adjustments
+    # -------------------------------------------------
     adjustment_factor = 1.0
     impacts = []
-    
+
     for res in tool_results:
         adjustment_factor *= res.get("adjustment_factor", 1.0)
         impacts.append(res)
 
-    base = model_output
-    llm_low = base["low"] * adjustment_factor
-    llm_mid = base["mid"] * adjustment_factor
-    llm_high = base["high"] * adjustment_factor
+    # -------------------------------------------------
+    # 4️⃣ Apply adjustment
+    # -------------------------------------------------
+    llm_low = round(base_range["low"] * adjustment_factor, 2)
+    llm_mid = round(base_range["mid"] * adjustment_factor, 2)
+    llm_high = round(base_range["high"] * adjustment_factor, 2)
 
+    # -------------------------------------------------
+    # 5️⃣ Final response
+    # -------------------------------------------------
     return {
         "llm_predicted_cpm": {
             "low": llm_low,
             "mid": llm_mid,
-            "high": llm_high
+            "high": llm_high,
         },
+        "base_model_range": base_range,
+        "adjustment_factor": round(adjustment_factor, 3),
         "tool_impacts": impacts,
-        "explanation": "LLM adjusted CPM based on market, audience and seasonal context.",
-        "confidence_note": f"Base model confidence: {base['confidence']:.2f}"
+        "explanation": (
+            "LLM adjusted CPM based on audience quality, geography, "
+            "seasonality, inventory pressure, and brand context."
+        ),
+        "confidence_note": (
+            f"Base model conformal coverage: "
+            f"{base_range['confidence']:.2f}"
+        ),
     }
