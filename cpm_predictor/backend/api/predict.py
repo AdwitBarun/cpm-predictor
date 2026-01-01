@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException
 from cpm_predictor.backend.models.predictor import predict_cpm_range
 from cpm_predictor.backend.models.similiarity import find_similar_campaigns
 from cpm_predictor.backend.models.historical_store import get_historical_data
-from cpm_predictor.backend.llm.orchestrator import run_llm_analysis
+from cpm_predictor.backend.llm.orchestrator import run_llm_reasoning
 from cpm_predictor.backend.app.schemas import CampaignInput
 
 router = APIRouter()
@@ -38,7 +38,7 @@ def predict_cpm(payload: CampaignInput):
         # -----------------------------
         # 4. LLM reasoning
         # -----------------------------
-        llm_result = run_llm_analysis(
+        llm_result = run_llm_reasoning(
             raw_input=raw_input,
             model_output=pred,
             similar_campaigns=similar,
