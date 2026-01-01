@@ -1,5 +1,5 @@
-from backend.llm.prompts import tool_prompt
-from backend.llm.gemini_client import call_gemini
+from cpm_predictor.backend.llm.prompts import tool_prompt
+from cpm_predictor.backend.llm.gemini_client import call_gemini
 
 task = """
 Evaluate how the target group's age, gender, and socio-economic indicators
