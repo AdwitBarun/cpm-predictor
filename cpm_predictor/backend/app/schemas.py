@@ -1,41 +1,31 @@
+# backend/app/schemas.py
+
 from pydantic import BaseModel
-from typing import Optional
+from typing import Dict, Any, List
 
 
-class CPMRequest(BaseModel):
-    # -------------------------
-    # Numeric Features
-    # -------------------------
-    Planned_Reach_1_plus: Optional[float] = None
-    Planned_Freq: Optional[float] = None
-    Planned_Budget: Optional[float] = None
-    Planned_Impressions: Optional[int] = None
-    Pacing_Rate: Optional[float] = None
-    Pacing_Amount: Optional[float] = None
-    Frequency_Exposures: Optional[float] = None
-    TrueView_View_Frequency_Exposures: Optional[float] = None
-    Partner_Revenue_Amount: Optional[float] = None
-    campaign_duration_days: Optional[int] = None
+class CampaignInput(BaseModel):
+    Device: str | None = None
+    TG: str | None = None
+    Mobile_CTV: str | None = None
+    Markets: str | None = None
+    Start_Date: str | None = None
+    End_Date: str | None = None
 
-    # -------------------------
-    # Categorical Features
-    # -------------------------
-    Device: Optional[str] = None
-    TG: Optional[str] = None
-    Type: Optional[str] = None
-    Subtype: Optional[str] = None
-    Budget_Type: Optional[str] = None
-    Pacing: Optional[str] = None
-    Frequency_Enabled: Optional[str] = None
-    Frequency_Period: Optional[str] = None
-    TrueView_View_Frequency_Enabled: Optional[str] = None
-    TrueView_View_Frequency_Period: Optional[str] = None
-    Partner_Revenue_Model: Optional[str] = None
+    Planned_Reach_1_plus: float | None = None
+    Planned_Freq: float | None = None
+    Planned_Budget: float | None = None
+    Planned_Impressions: float | None = None
 
-    # Frontend sends NAME → backend encodes to ID for ML
-    Geography_Targeting_Include: Optional[str] = None  
+    class Config:
+        extra = "allow"  
 
-    TrueView_Video_Ad_Formats: Optional[str] = None
-    Inventory_Mode: Optional[str] = None
-    Video_Ad_Format: Optional[str] = None
-    month_range: Optional[str] = None
+
+class CPMResponse(BaseModel):
+    model_range: Dict[str, float]
+    conformal_range: Dict[str, float]
+
+    shap_top_features: List[Dict[str, Any]]
+    similar_campaigns: List[Dict[str, Any]]
+
+    llm_adjusted_range: Dict[str, Any]

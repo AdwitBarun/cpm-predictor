@@ -1,88 +1,63 @@
-import numpy as np
+# backend/models/predictor.py
+
 from typing import Dict, Any
-
-from cpm_predictor.backend.features.preprocess import preprocess_features
+from cpm_predictor.backend.models.loader import load_models
+from cpm_predictor.backend.features.preprocess import preprocess_input
 from cpm_predictor.backend.models.shap_explainer import explain_prediction
-from cpm_predictor.backend.llm.gemini_client import gemini_range
-
-import numpy as np
-
-def make_json_safe(obj):
-    if isinstance(obj, np.generic):
-        return obj.item()
-
-    if isinstance(obj, dict):
-        return {k: make_json_safe(v) for k, v in obj.items()}
-
-    if isinstance(obj, (list, tuple)):
-        return [make_json_safe(v) for v in obj]
-
-    return obj
 
 
 def predict_cpm_range(
-    models,
-    feature_columns,
-    ml_features: Dict[str, Any],
-    llm_features: Dict[str, Any],
+    raw_input: Dict[str, Any],
+    return_shap: bool = True,
 ) -> Dict[str, Any]:
-    """
-    End-to-end CPM prediction (₹ CPM).
-    """
+
+    models, feature_columns = load_models()
+
+    model_p10 = models["p10"]
+    model_p50 = models["p50"]
+    model_p90 = models["p90"]
+    q_hat = models["q_hat"]
 
     # -----------------------------
-    # 1. ML preprocessing
+    # Preprocess
     # -----------------------------
-    X = preprocess_features(ml_features, feature_columns)
-
-    # -----------------------------
-    # 2. Quantile predictions (LOG)
-    # -----------------------------
-    p10_log = models[0.1].predict(X)[0]
-    p50_log = models[0.5].predict(X)[0]
-    p90_log = models[0.9].predict(X)[0]
-
-    # -----------------------------
-    # 3. Back-transform → ₹ CPM
-    # -----------------------------
-    p10 = float(np.expm1(p10_log))
-    p50 = float(np.expm1(p50_log))
-    p90 = float(np.expm1(p90_log))
-
-    # -----------------------------
-    # 4. SHAP explanation
-    # -----------------------------
-    shap_summary = explain_prediction(models[0.5], X)
-
-    # -----------------------------
-    # 5. LLM adjustment
-    # -----------------------------
-    llm_range = gemini_range(
-        features=llm_features,
-        historical_range=(p10, p50, p90),
-        shap_summary=shap_summary,
+    X_model, X_similarity, llm_payload = preprocess_input(
+        raw_input=raw_input,
+        feature_columns=feature_columns,
     )
 
     # -----------------------------
-    # 6. Final blend
+    # Quantile predictions
     # -----------------------------
-    final_low = 0.85 * p10 + 0.15 * llm_range["low"]
-    final_high = 0.85 * p90 + 0.15 * llm_range["high"]
+    p10 = float(model_p10.predict(X_model)[0])
+    p50 = float(model_p50.predict(X_model)[0])
+    p90 = float(model_p90.predict(X_model)[0])
 
-    result = {
-        "historical": {
+    # -----------------------------
+    # Conformal adjustment
+    # -----------------------------
+    cpm_low = max(0.0, p10 - q_hat)
+    cpm_high = p90 + q_hat
+
+    # -----------------------------
+    # SHAP
+    # -----------------------------
+    shap_summary = []
+    if return_shap:
+        shap_summary = explain_prediction(model_p50, X_model, top_k=5)
+
+    return {
+        "model_range": {
             "p10": round(p10, 2),
             "p50": round(p50, 2),
             "p90": round(p90, 2),
         },
-        "llm": llm_range,
-        "final": {
-            "low": round(final_low, 2),
-            "high": round(final_high, 2),
+        "conformal_range": {
+            "low": round(cpm_low, 2),
+            "high": round(cpm_high, 2),
+            "coverage_target": 0.90,
         },
         "shap_top_features": shap_summary,
+        "X_similarity": X_similarity,
+        "llm_payload": llm_payload,
     }
-
-
-    # 🔥 MAKE RESPONSE JSON SAFE
-    return make_json_safe(result)

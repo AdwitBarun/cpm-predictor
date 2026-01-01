@@ -1,81 +1,59 @@
-from fastapi import APIRouter
-from typing import Dict, Any
+# backend/api/predict.py
 
+from fastapi import APIRouter, HTTPException
 from cpm_predictor.backend.models.predictor import predict_cpm_range
-from cpm_predictor.backend.features.geo_decoder import encode_geo_name
-from cpm_predictor.backend.app.schemas import CPMRequest
+from cpm_predictor.backend.models.similiarity import find_similar_campaigns
+from cpm_predictor.backend.models.historical_store import get_historical_data
+from cpm_predictor.backend.llm.orchestrator import run_llm_analysis
+from cpm_predictor.backend.app.schemas import CampaignInput
 
 router = APIRouter()
 
-# -------------------------------------------------
-# Schema → Training column mapping
-# -------------------------------------------------
-SCHEMA_TO_MODEL_COLS = {
-    "Planned_Reach_1_plus": "Planned Reach 1+",
-    "Budget_Type": "Budget Type",
-    "Pacing_Rate": "Pacing Rate",
-    "Pacing_Amount": "Pacing Amount",
-    "Frequency_Exposures": "Frequency Exposures",
-    "TrueView_View_Frequency_Exposures": "TrueView View Frequency Exposures",
-    "TrueView_View_Frequency_Enabled": "TrueView View Frequency Enabled",
-    "TrueView_View_Frequency_Period": "TrueView View Frequency Period",
-    "Partner_Revenue_Amount": "Partner Revenue Amount",
-    "Partner_Revenue_Model": "Partner Revenue Model",
-    "Geography_Targeting_Include": "Geography Targeting - Include",
-    "TrueView_Video_Ad_Formats": "TrueView Video Ad Formats",
-    "Inventory_Mode": "Inventory Mode",
-    "Video_Ad_Format": "Video Ad Format",
-}
 
-
-# -------------------------------------------------
-# Utility: normalize incoming payload
-# -------------------------------------------------
-def normalize_payload(data: Dict[str, Any]) -> Dict[str, Any]:
-    normalized = {}
-
-    for key, value in data.items():
-        mapped_key = SCHEMA_TO_MODEL_COLS.get(key, key)
-        normalized[mapped_key] = value
-
-    return normalized
-
-
-# -------------------------------------------------
-# Prediction endpoint
-# -------------------------------------------------
 @router.post("/predict")
-def predict_cpm(req: CPMRequest):
-    """
-    Predict CPM range.
-    Frontend sends:
-      - Geography name (e.g. "Hyderabad")
+def predict_cpm(payload: CampaignInput):
+    try:
+        raw_input = payload.dict()
 
-    Backend:
-      - Converts name → geo code for ML
-      - Keeps name for Gemini LLM
-    """
+        # -----------------------------
+        # 1. ML prediction
+        # -----------------------------
+        pred = predict_cpm_range(raw_input)
 
-    payload = req.model_dump(exclude_none=True)
+        # -----------------------------
+        # 2. Load historical data
+        # -----------------------------
+        X_hist, meta_df = get_historical_data()
 
-    # -------------------------
-    # Geography handling
-    # -------------------------
-    geo_name = payload.get("Geography_Targeting_Include")
+        # -----------------------------
+        # 3. Similarity search
+        # -----------------------------
+        similar = find_similar_campaigns(
+            X_new=pred["X_similarity"],
+            X_hist=X_hist,
+            meta_df=meta_df,
+            k=5,
+        )
 
-    if geo_name:
-        geo_code = encode_geo_name(geo_name)
-        payload["Geography_Targeting_Include"] = geo_code
-        payload["decoded_geo"] = [geo_name]   # for LLM context
+        # -----------------------------
+        # 4. LLM reasoning
+        # -----------------------------
+        llm_result = run_llm_analysis(
+            raw_input=raw_input,
+            model_output=pred,
+            similar_campaigns=similar,
+        )
 
-    # -------------------------
-    # Normalize column names
-    # -------------------------
-    normalized_payload = normalize_payload(payload)
+        # -----------------------------
+        # 5. Final response
+        # -----------------------------
+        return {
+            "model_range": pred["model_range"],
+            "conformal_range": pred["conformal_range"],
+            "shap_top_features": pred["shap_top_features"],
+            "similar_campaigns": similar,
+            "llm_adjusted_range": llm_result,
+        }
 
-    # -------------------------
-    # Run prediction pipeline
-    # -------------------------
-    result = predict_cpm_range(normalized_payload)
-
-    return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
