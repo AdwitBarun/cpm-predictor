@@ -6,7 +6,7 @@ import pandas as pd
 from typing import Tuple
 
 from cpm_predictor.backend.features.preprocess import preprocess_input
-import gspread
+
 from google.oauth2.service_account import Credentials
 import json
 # -----------------------------
@@ -142,7 +142,7 @@ def _build_meta_df(df: pd.DataFrame) -> pd.DataFrame:
 
 def _load_from_gsheet() -> pd.DataFrame:
     
-
+    import gspread
     creds_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
     if not creds_json:
         raise RuntimeError("Missing GOOGLE_SERVICE_ACCOUNT_JSON")
