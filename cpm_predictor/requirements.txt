@@ -12,4 +12,4 @@ google-generativeai
 gspread
 google-auth
 google-auth-oauthlib
-lightgbm
+lightgbm==4.3.0
