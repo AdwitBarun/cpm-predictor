@@ -16,8 +16,8 @@ Do NOT over-adjust unless historical evidence supports it.
 
 def run_tg_tool(raw_input: dict, model_context: dict):
     payload = {
-        "TG": raw_input.get("TG"),
-        "decoded_TG": model_context.get("decoded_tg"),
+        "TG_raw": raw_input.get("TG"),
+        "TG_summary": model_context.get("decoded_tg"),  # STRING, descriptive
         "model_range": model_context["model_prediction"]
     }
 
@@ -28,3 +28,4 @@ def run_tg_tool(raw_input: dict, model_context: dict):
     )
 
     return call_gemini(prompt)
+

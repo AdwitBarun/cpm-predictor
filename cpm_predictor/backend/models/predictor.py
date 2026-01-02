@@ -12,19 +12,34 @@ def predict_cpm_range(
 ) -> Dict[str, Any]:
 
     models, feature_columns = load_models()
+    city_tier_lookup = models.get("city_tier_lookup")
 
-    model_p10 = models["p10"]
-    model_p50 = models["p50"]
-    model_p90 = models["p90"]
-    q_hat = models["q_hat"]
+   
+
+    required_keys = {"p10", "p50", "p90", "q_hat"}
+    missing = required_keys - set(models.keys())
+    if missing:
+        raise KeyError(f"Model bundle missing keys: {missing}")
+
+    model_p10 = models.get("p10")
+    model_p50 = models.get("p50")
+    model_p90 = models.get("p90")
+    q_hat = models.get("q_hat")
+
 
     # -----------------------------
     # Preprocess
     # -----------------------------
-    X_model, X_similarity, llm_payload = preprocess_input(
-        raw_input=raw_input,
-        feature_columns=feature_columns,
-    )
+    X_model, X_similarity, _, llm_payload = preprocess_input(
+            raw_input=raw_input,
+            feature_columns=feature_columns,
+            city_tier_lookup=city_tier_lookup   
+        )
+    print("🔥 X_MODEL DTYPES")
+    print(X_model.dtypes)
+
+    print("🔥 X_MODEL SAMPLE")
+    print(X_model.iloc[0].to_dict())
 
     # -----------------------------
     # Quantile predictions

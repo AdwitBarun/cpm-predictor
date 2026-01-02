@@ -14,8 +14,8 @@ If brand context is unclear, remain neutral.
 
 def run_brand_tool(raw_input: dict):
     payload = {
-        "campaign_name": raw_input.get("Campaign Name"),
-        "advertiser": raw_input.get("Advertiser")
+        "campaign_name": str(raw_input.get("Campaign Name", "")),
+        "advertiser": str(raw_input.get("Advertiser", ""))
     }
 
     prompt = tool_prompt(

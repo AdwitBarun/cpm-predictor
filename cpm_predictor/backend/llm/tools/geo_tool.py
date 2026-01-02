@@ -15,10 +15,10 @@ Prefer historical delivered CPMs over assumptions.
 """
 
 
-def run_geo_tool(raw_input: dict, similarity_context: dict):
+def run_geo_tool(raw_input: dict, similar_campaigns: list):
     payload = {
         "Markets": raw_input.get("Markets"),
-        "similar_campaigns": similarity_context
+        "similar_campaigns": similar_campaigns  # treat as LIST
     }
 
     prompt = tool_prompt(
@@ -28,3 +28,4 @@ def run_geo_tool(raw_input: dict, similarity_context: dict):
     )
 
     return call_gemini(prompt)
+

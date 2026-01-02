@@ -15,8 +15,8 @@ Otherwise, remain neutral.
 
 def run_residual_context_tool(raw_input: dict, used_keys: list):
     residual_data = {
-        k: v for k, v in raw_input.items()
-        if k not in used_keys
+        k: str(v) for k, v in raw_input.items()
+        if k not in used_keys and v is not None
     }
 
     payload = {
@@ -30,3 +30,4 @@ def run_residual_context_tool(raw_input: dict, used_keys: list):
     )
 
     return call_gemini(prompt)
+

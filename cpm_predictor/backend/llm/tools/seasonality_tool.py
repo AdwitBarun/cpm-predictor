@@ -17,8 +17,8 @@ apply a moderate adjustment. Otherwise, remain neutral.
 
 def run_seasonality_tool(raw_input: dict):
     payload = {
-        "start_date": raw_input.get("Start Date"),
-        "end_date": raw_input.get("End Date"),
+        "start_date": str(raw_input.get("Start Date", "")),
+        "end_date": str(raw_input.get("End Date", "")),
         "market": "India"
     }
 
@@ -29,3 +29,4 @@ def run_seasonality_tool(raw_input: dict):
     )
 
     return call_gemini(prompt)
+

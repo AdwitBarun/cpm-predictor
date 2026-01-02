@@ -15,9 +15,9 @@ Inventory effects are typically incremental, not dominant.
 
 def run_inventory_tool(raw_input: dict):
     payload = {
-        "Device": raw_input.get("Device"),
-        "Mobile/CTV": raw_input.get("Mobile / CTV"),
-        "Format": raw_input.get("Video_Ad_Format")
+        "Device": str(raw_input.get("Device", "")),
+        "Mobile/CTV": str(raw_input.get("Mobile / CTV", "")),
+        "Format": str(raw_input.get("Video_Ad_Format", ""))
     }
 
     prompt = tool_prompt(
@@ -27,3 +27,4 @@ def run_inventory_tool(raw_input: dict):
     )
 
     return call_gemini(prompt)
+

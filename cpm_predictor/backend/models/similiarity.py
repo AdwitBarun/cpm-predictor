@@ -15,26 +15,6 @@ def find_similar_campaigns(
 ):
     """
     Find top-k most similar historical campaigns.
-
-    Parameters
-    ----------
-    X_new : pd.DataFrame
-        Single-row engineered feature dataframe
-    X_hist : pd.DataFrame
-        Engineered features of historical campaigns
-    meta_df : pd.DataFrame
-        Metadata for historical campaigns (same index as X_hist)
-    k : int
-        Number of similar campaigns to return
-    min_similarity : float
-        Threshold to avoid junk matches
-    verbose : bool
-        Print diagnostics
-
-    Returns
-    -------
-    List[dict]
-        UI-ready list of similar campaigns
     """
 
     # -----------------------------
@@ -47,12 +27,20 @@ def find_similar_campaigns(
     # Align feature space
     # -----------------------------
     X_hist = X_hist.reindex(columns=X_new.columns, fill_value=0)
-    X_new_vec = X_new.values
+
+    # -----------------------------
+    # 🔥 CRITICAL FIX: cosine similarity cannot handle NaN
+    # -----------------------------
+    X_new_clean = X_new.fillna(0)
+    X_hist_clean = X_hist.fillna(0)
 
     # -----------------------------
     # Cosine similarity
     # -----------------------------
-    similarities = cosine_similarity(X_new_vec, X_hist.values)[0]
+    similarities = cosine_similarity(
+        X_new_clean.values,
+        X_hist_clean.values
+    )[0]
 
     sim_df = meta_df.copy()
     sim_df["similarity_score"] = similarities
@@ -65,7 +53,7 @@ def find_similar_campaigns(
         "similarity_score", ascending=False
     ).head(k)
 
-    if verbose:
+    if verbose and not sim_df.empty:
         print("\nTop similar campaigns:")
         print(sim_df[["campaign_name", "similarity_score", "delivered_cpm"]])
 
@@ -75,21 +63,37 @@ def find_similar_campaigns(
     results = []
 
     for _, row in sim_df.iterrows():
+
+        delivered = pd.to_numeric(
+            row.get("delivered_cpm", np.nan),
+            errors="coerce"
+        )
+
+        intensity = pd.to_numeric(
+            row.get("campaign_intensity", np.nan),
+            errors="coerce"
+        )
+
         results.append({
             "campaign_id": row.get("campaign_id"),
             "campaign_name": row.get("campaign_name"),
-            "similarity_score": round(row["similarity_score"], 3),
+            "similarity_score": round(float(row["similarity_score"]), 3),
 
-            "delivered_cpm": round(row.get("delivered_cpm", np.nan), 2),
+            "delivered_cpm": (
+                round(float(delivered), 2)
+                if not pd.isna(delivered) else None
+            ),
 
             "markets": row.get("markets"),
             "device_summary": row.get("device_summary"),
             "tg_summary": row.get("tg_summary"),
 
             "start_month": row.get("start_month"),
-            "campaign_intensity": round(
-                row.get("campaign_intensity", np.nan), 2
-            )
+
+            "campaign_intensity": (
+                round(float(intensity), 2)
+                if not pd.isna(intensity) else None
+            ),
         })
 
     return results

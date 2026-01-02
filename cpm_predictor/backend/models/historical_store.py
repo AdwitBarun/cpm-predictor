@@ -9,6 +9,7 @@ from cpm_predictor.backend.features.preprocess import preprocess_input
 
 from google.oauth2.service_account import Credentials
 import json
+import numpy as np
 # -----------------------------
 # Config
 # -----------------------------
@@ -59,17 +60,17 @@ def _load_historical_data():
     global _CACHE
 
     try:
-        # 🔹 Step 1: Load data (fallback CSV for now)
-        df = _load_from_csv()
+        # 🔹 Step 1: Load raw historical CSV
+        df_raw = _load_from_csv()
 
-        # 🔹 Step 2: Preprocess
-        X_model, X_similarity, _ = preprocess_input(
-            raw_input=df,
+        # 🔹 Step 2: Run preprocess ONCE
+        X_model, X_similarity, df_processed, _ = preprocess_input(
+            raw_input=df_raw,
             feature_columns=_load_feature_columns(),
         )
 
-        # 🔹 Step 3: Metadata for UI / similarity
-        meta_df = _build_meta_df(df)
+        # 🔹 Step 3: Build metadata
+        meta_df = _build_meta_df(df_raw, df_processed)
 
         _CACHE.update(
             {
@@ -112,33 +113,24 @@ def _load_feature_columns():
     return feature_columns
 
 
-def _build_meta_df(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Keep ONLY UI-relevant fields here.
-    """
-    cols = [
-        "Campaign Name",
-        "Markets",
-        "Device",
-        "TG",
-        "start_month",
-        "campaign_intensity",
-        "Del Cpm/\nBidvid  cpm",
-    ]
+def _build_meta_df(df_raw: pd.DataFrame, df_processed: pd.DataFrame) -> pd.DataFrame:
+    meta = pd.DataFrame(index=df_processed.index)
 
-    meta = df.copy()
-    meta = meta[[c for c in cols if c in meta.columns]]
-
-    meta = meta.rename(
-        columns={
-            "Del Cpm/\nBidvid  cpm": "delivered_cpm",
-            "Markets": "markets",
-            "Device": "device_summary",
-            "TG": "tg_summary",
-        }
+    meta["campaign_name"] = df_raw.get("Campaign Name", "")
+    meta["markets"] = df_raw.get("Markets", "")
+    meta["device_summary"] = df_raw.get("Device", "")
+    meta["tg_summary"] = df_raw.get("TG", "")
+    meta["delivered_cpm"] = pd.to_numeric(
+        df_raw.get("Del Cpm/\nBidvid  cpm", np.nan),
+        errors="coerce"
     )
 
+    # 🔥 derived features from processed DF (SAFE)
+    meta["start_month"] = df_processed["start_month"]
+    meta["campaign_intensity"] = df_processed["campaign_intensity"]
+
     return meta.reset_index(drop=True)
+
 
 def _load_from_gsheet() -> pd.DataFrame:
     

@@ -1,147 +1,436 @@
-Device,TG,Planned Reach 1+,Planned Freq,Planned Budget,Planned Impressions,"Del Cpm/
-Bidvid  cpm",Type,Subtype,Budget Type,Pacing,Pacing Rate,Pacing Amount,Frequency Enabled,Frequency Exposures,Frequency Period,TrueView View Frequency Enabled,TrueView View Frequency Exposures,TrueView View Frequency Period,Partner Revenue Model,Partner Revenue Amount,Geography Targeting - Include,TrueView Video Ad Formats,Inventory Mode,Video Ad Format,month_range,campaign_duration_days
-All,,,,,,86.0,,,,,,,,,,,,,,,Lucknow,,,,Jul 2025,20.0
-All,,,,,,115.0,,,,,,,,,,,,,,,Kalcutta,,,,Jul 2025,20.0
-All,,,,,,118.0,,,,,,,,,,,,,,,Lucknow,,,,Jul 2025,20.0
-All,,,,,,130.0,,,,,,,,,,,,,,,Kalcutta,,,,Jul 2025,20.0
-All,,,,,,114.0,,,,,,,,,,,,,,,Delhi NCR,,,,Jul 2025,20.0
-All,,,,,,112.6,,,,,,,,,,,,,,,,,,,,
-YT CTV,F 25-44 NCCS AB,248901.0,6.0,164275.0,1493406.0,,TrueView,Target Frequency,TrueView Budget,Daily,,43384.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhubaneswar, Kolkata, Cuttack, Howrah",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,348827.0,6.0,156972.0,2092962.0,,TrueView,Target Frequency,TrueView Budget,Daily,,41803.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Visakhapatnam",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,143241.0,6.0,63599.0,859446.0,,TrueView,Target Frequency,TrueView Budget,Daily,,7007.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi, Agra",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,383525.0,6.0,227814.0,2301150.0,,TrueView,Target Frequency,TrueView Budget,Daily,,17969.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Surat, Vadodara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,99042.0,6.0,39815.0,594252.0,,TrueView,Target Frequency,TrueView Budget,Daily,,2381.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jaipur, Jodhpur",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,83777.0,6.0,36192.0,502662.0,,TrueView,Target Frequency,TrueView Budget,Daily,,15657.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jamshedpur, Patna, Ranchi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,163214.0,6.0,67571.0,979284.0,,TrueView,Target Frequency,TrueView Budget,Daily,,30767.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhopal, Indore, Jabalpur, Raipur, Bhilai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT CTV,F 25-44 NCCS AB,118340.0,6.0,46862.0,710040.0,,TrueView,Target Frequency,TrueView Budget,Daily,,5799.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ludhiana, Jalandhar",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,3454173.0,6.5,4005903.0,22452124.5,,TrueView,Target Frequency,TrueView Budget,Daily,,5000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolhapur, Mumbai, Nagpur, Pune, Thane, Navi Mumbai, Bhiwandi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,1306732.0,6.5,993770.0,8493758.0,,TrueView,Target Frequency,TrueView Budget,Daily,,85241.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhubaneswar, Kolkata, Cuttack, Howrah",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,1046480.0,6.5,904682.0,6802120.0,,TrueView,Target Frequency,TrueView Budget,Daily,,58735.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Visakhapatnam",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,752016.0,6.5,483922.0,4888104.0,,TrueView,Target Frequency,TrueView Budget,Daily,,107406.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi, Agra",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,1442784.0,6.5,1228531.0,9378096.0,,TrueView,Target Frequency,TrueView Budget,Daily,,153380.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Surat, Vadodara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,1007994.0,6.5,917275.0,6551961.0,,TrueView,Target Frequency,TrueView Budget,Daily,,120000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Chennai,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,483558.0,6.5,301740.0,3143127.0,,TrueView,Target Frequency,TrueView Budget,Daily,,100208.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jaipur, Jodhpur",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,482468.0,6.5,291652.0,3136042.0,,TrueView,Target Frequency,TrueView Budget,Daily,,55441.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jamshedpur, Patna, Ranchi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,1191448.0,6.5,1239106.0,7744412.0,,TrueView,Target Frequency,TrueView Budget,Daily,,89808.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,853787.0,6.5,505015.0,5549615.5,,TrueView,Target Frequency,TrueView Budget,Daily,,35723.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhopal, Indore, Jabalpur, Raipur, Bhilai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,54.0
-YT NSK,F 25-44 NCCS AB,2204393.0,4.0,1146285.0,8817572.0,105.0,TrueView,Target Frequency,TrueView Budget,Daily,,12783.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Maharashtra,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,44.0
-YT NSK,MF 25-34 NCCS A,940903.0,4.0,355416.0,3763612.0,84.0,TrueView,Target Frequency,TrueView Budget,Daily,,16903.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Hyderabad",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,34.0
-YT NSK,MF 25-34 NCCS A,1211316.0,4.0,513599.0,4845264.0,89.0,TrueView,Target Frequency,TrueView Budget,Daily,,15188.31,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 25-34 NCCS A,476119.0,4.0,200830.0,1904476.0,86.0,TrueView,Target Frequency,TrueView Budget,Daily,,11592.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Pune,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 25-34 NCCS A,422308.0,4.0,163991.0,1689232.0,85.0,TrueView,Target Frequency,TrueView Budget,Daily,,14145.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolkata, Kolkata",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 18-24 NCCS A,687071.0,4.0,288570.0,2748284.0,85.0,TrueView,Target Frequency,TrueView Budget,Daily,,10605.37,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Hyderabad",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 18-24 NCCS A,441790.0,4.0,195552.0,1767160.0,87.0,TrueView,Target Frequency,TrueView Budget,Daily,,9709.43,False,0.0,Days,False,0.0,Days,TMCM,0.0,Pune,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 18-24 NCCS A,844348.0,4.0,354627.0,3377392.0,91.0,TrueView,Target Frequency,TrueView Budget,Daily,,7.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 18-24 NCCS A,208812.0,4.0,81855.0,835248.0,72.0,TrueView,Target Frequency,TrueView Budget,Daily,,6653.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Indore, Jaipur",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT NSK,MF 18-24 NCCS A,552003.0,4.0,251842.0,2208012.0,102.0,TrueView,Target Frequency,TrueView Budget,Daily,,6000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Ahmedabad,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Jul–Sep 2025,43.0
-YT Mobile (VAS),"25-44, M/F, P1 + P2, Affinities & Inmarket audiences",8006500.0,2.0,2001625.0,16013000.0,80.0,,,,,,,,,,,,,,,Please refer to Aditya Birla LI media plan,,,,Aug–Sep 2025,29.0
-YT Mobile (VAS),"25-44, M/F, P1 + P2, Affinities & Inmarket audiences",8006500.0,2.0,2001625.0,16013000.0,50.0,,,,,,,,,,,,,,,Please refer to Aditya Birla LI media plan,,,,Aug–Sep 2025,29.0
-YT CTV non skip,Female 25 - 45,554435.0,4.0,165000.0,2217742.0,67.0,,,,,,,,,,,,,,,Delhi NCR,,,,Aug–Sep 2025,14.0
-YT CTV non skip,Female 25 - 45,694444.0,4.0,240000.0,2777778.0,55.0,,,,,,,,,,,,,,,UP,,,,Aug–Sep 2025,13.0
-YT CTV non skip,Female 25 - 45,213542.0,4.0,82000.0,854167.0,54.0,,,,,,,,,,,,,,,Bihar,,,,Aug–Sep 2025,13.0
-YT CTV non skip,Female 25 - 45,274175.0,4.0,93000.0,1096698.0,49.0,,,,,,,,,,,,,,,Punjab,,,,Aug–Sep 2025,13.0
-YT CTV non skip,Female 25 - 45,228125.0,4.0,73000.0,912500.0,51.0,,,,,,,,,,,,,,,Haryana,,,,Aug–Sep 2025,13.0
-YT NSK (All Devices),F 25-44 NCCS AB,995554.0,4.0,438044.0,3982216.0,92.0,TrueView,Target Frequency,TrueView Budget,Daily,,14130.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,West Bengal,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep 2025,29.0
-YT NSK (All Devices),F 25-44 NCCS AB,1377034.0,4.0,974940.0,5508136.0,159.0,TrueView,Target Frequency,TrueView Budget,Daily,,180450.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kolkata,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep 2025,29.0
-YT NSK,F 18-44 NCCS AB,769617.0,4.8,480240.0,3694162.0,98.0,TrueView,Target Frequency,TrueView Budget,Daily,,777.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 18-44 NCCS AB,3341116.0,4.5,2946898.0,15035022.0,164.0,TrueView,Target Frequency,TrueView Budget,Daily,,162907.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Ambernath, Ulhasnagar, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Badlapur, Bhiwandi, Nala Sopara, Panvel, Karjat, Vasai, Karjat",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 18-44 NCCS AB,1159646.0,4.5,726668.0,5218407.0,123.0,TrueView,Target Frequency,TrueView Budget,Daily,,41825.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolkata, Siliguri",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 18-44 NCCS AB,236946.0,4.5,144276.0,1066257.0,111.0,TrueView,Target Frequency,TrueView Budget,Daily,,222.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Patna, Gaya",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT CTV,F 25-44 NCCS AB,692403.0,4.0,304657.0,2769612.0,93.0,TrueView,Target Frequency,TrueView Budget,Daily,,10388.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Bhiwandi, Nala Sopara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 25-44 NCCS AB,2885013.0,4.0,2019509.0,11540052.0,149.0,TrueView,Target Frequency,TrueView Budget,Daily,,60000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Bhiwandi, Nala Sopara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT CTV,F 25-44 NCCS AB,437883.0,3.5,168585.0,1532591.0,93.0,TrueView,Target Frequency,TrueView Budget,Daily,,12000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 25-44 NCCS AB,1018332.0,3.5,481162.0,3564162.0,118.0,TrueView,Target Frequency,TrueView Budget,Daily,,12448.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-YT NSK,F 25-44 NCCS AB,2646368.0,4.0,1217329.0,10585472.0,99.0,TrueView,Target Frequency,TrueView Budget,Daily,,29127.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Andhra Pradesh, Telangana",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Sep–Oct 2025,29.0
-Non Skipable,F 25 - 44,268750.0,4.0,86000.0,1075000.0,76.0,,,,,,,,,,,,,,,Bihar,,,,Sep–Oct 2025,13.0
-Non Skipable,F 25 - 44,1342975.0,4.0,520000.0,5371901.0,99.0,,,,,,,,,,,,,,,DelhiNCR,,,,Sep–Oct 2025,13.0
-Non Skipable,F 25 - 44,1139323.0,4.0,350000.0,4557292.0,76.0,,,,,,,,,,,,,,,UP,,,,Sep–Oct 2025,13.0
-Non Skipable,F 25 - 44,138393.0,4.0,62000.0,553571.0,86.0,,,,,,,,,,,,,,,Kolkata siliguri + malda asansol,,,,Sep–Oct 2025,14.0
-Non Skipable,F 25 - 44,96154.0,4.0,40000.0,384615.0,50.0,,,,,,,,,,,,,,,Orissa,,,,Sep–Oct 2025,14.0
-Non Skipable,F 25 - 44,106838.0,4.0,40000.0,427350.0,76.0,,,,,,,,,,,,,,,asansol,,,,Sep–Oct 2025,14.0
-Non Skipable,F 25 - 44,1083669.0,4.0,430000.0,4334677.0,110.0,,,,,,,,,,,,,,,Kolkata,,,,Sep–Oct 2025,14.0
-Non Skipable,F 25 - 44,272529.0,4.0,75000.0,1090116.0,66.0,,,,,,,,,,,,,,,orissa,,,,Sep–Oct 2025,14.0
-Non Skipable,F 25 - 44,59401.0,4.0,23000.0,237603.0,81.0,,,,,,,,,,,,,,,siliguri + malda ,,,,Sep–Oct 2025,14.0
-YT CTV,F 25-44 NCCS AB,218703.0,5.0,180430.0,1093515.0,67.0,TrueView,Target Frequency,TrueView Budget,Daily,,1042.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolhapur, Nagpur, Pune",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,1150797.0,4.8,939050.0,5523826.0,91.0,TrueView,Target Frequency,TrueView Budget,Daily,,40299.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolhapur, Nagpur, Pune",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,689878.0,5.0,603643.0,3449390.0,125.0,TrueView,Target Frequency,TrueView Budget,Daily,,111195.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Thane, Navi Mumbai, Bhiwandi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,2028569.0,4.8,1801369.0,9737131.0,135.0,TrueView,Target Frequency,TrueView Budget,Daily,,101972.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Dombivli, Kalyan, Vasai-Virar, Navi Mumbai, Bhiwandi, Nala Sopara, Thane, Kalyan, Vasai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,26880.0,5.0,20160.0,134400.0,63.0,TrueView,Target Frequency,TrueView Budget,Daily,,4500.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhubaneswar, Cuttack, Howrah, Chinsurah",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,183040.0,4.8,131789.0,878592.0,70.0,TrueView,Target Frequency,TrueView Budget,Daily,,12500.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhubaneswar, Kolkata, Cuttack, Howrah",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,184892.0,5.0,143291.0,924460.0,91.0,TrueView,Target Frequency,TrueView Budget,Daily,,6787.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kolkata,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,1106990.0,4.8,738584.0,5313552.0,159.0,TrueView,Target Frequency,TrueView Budget,Daily,,6500.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kolkata,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,345407.0,5.0,267690.0,1727035.0,58.0,TrueView,Target Frequency,TrueView Budget,Daily,,15204.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Visakhapatnam",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,888531.0,4.8,592828.0,4264949.0,80.0,TrueView,Target Frequency,TrueView Budget,Daily,,45310.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Visakhapatnam",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,152527.0,5.0,91516.0,762635.0,56.0,TrueView,Target Frequency,TrueView Budget,Daily,,5208.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi, Agra",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,634257.0,4.8,319665.0,3044434.0,65.0,TrueView,Target Frequency,TrueView Budget,Daily,,15431.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi, Agra",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,1189166.0,5.0,915657.0,5945830.0,92.0,TrueView,Target Frequency,TrueView Budget,Daily,,68510.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Delhi, New Delhi, Faridabad, Gurugram, Ghaziabad, Noida, Greater Noida, Delhi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,2050704.0,4.8,1919459.0,9843379.0,109.0,TrueView,Target Frequency,TrueView Budget,Daily,,130187.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Delhi, New Delhi, Faridabad, Gurugram, Ghaziabad, Noida, Greater Noida, Delhi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,426079.0,5.0,362167.0,2130395.0,66.0,TrueView,Target Frequency,TrueView Budget,Daily,,7006.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Surat, Vadodara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,1300213.0,4.8,967359.0,6241022.0,88.0,TrueView,Target Frequency,TrueView Budget,Daily,,64852.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Surat, Vadodara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,293497.0,5.0,187838.0,1467485.0,79.0,TrueView,Target Frequency,TrueView Budget,Daily,,23972.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Chennai,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,862006.0,4.8,662021.0,4137629.0,85.0,TrueView,Target Frequency,TrueView Budget,Daily,,47880.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Chennai,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,100298.0,5.0,60179.0,501490.0,51.0,TrueView,Target Frequency,TrueView Budget,Daily,,2972.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jaipur, Jodhpur",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,411786.0,4.8,217423.0,1976573.0,66.0,TrueView,Target Frequency,TrueView Budget,Daily,,13801.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jaipur, Jodhpur",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,85239.0,5.0,51996.0,426195.0,53.0,TrueView,Target Frequency,TrueView Budget,Daily,,2656.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jamshedpur, Patna, Ranchi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,407057.0,4.8,205157.0,1953874.0,69.0,TrueView,Target Frequency,TrueView Budget,Daily,,31048.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jamshedpur, Patna, Ranchi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,300651.0,5.0,237514.0,1503255.0,84.0,TrueView,Target Frequency,TrueView Budget,Daily,,7648.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,1044655.0,4.8,902582.0,5014344.0,103.0,TrueView,Target Frequency,TrueView Budget,Daily,,64701.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,192727.0,5.0,113709.0,963635.0,46.0,TrueView,Target Frequency,TrueView Budget,Daily,,4672.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhopal, Indore, Jabalpur, Raipur, Bhilai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,712544.0,4.8,365962.0,3420211.0,60.0,TrueView,Target Frequency,TrueView Budget,Daily,,28560.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bhopal, Indore, Jabalpur, Raipur, Bhilai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT CTV,F 25-44 NCCS AB,84318.0,5.0,44267.0,421590.0,39.0,TrueView,Target Frequency,TrueView Budget,Daily,,542.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ludhiana, Jalandhar",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 25-44 NCCS AB,314157.0,4.8,180955.0,1507954.0,62.0,TrueView,Target Frequency,TrueView Budget,Daily,,11928.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ludhiana, Jalandhar",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,52.0
-YT NSK,F 18-44 NCCS AB,4184123.0,4.5,2447712.0,18828554.0,97.0,TrueView,Target Frequency,TrueView Budget,Daily,,100603.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Rajasthan,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct 2025,30.0
-YT NSK,F 18-44 NCCS AB,4713275.0,4.2,2672427.0,19795755.0,104.0,TrueView,Target Frequency,TrueView Budget,Daily,,25000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Gujarat,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct 2025,30.0
-Non-skip,F 25- 44 + HHI Top 50%,2350000.0,4.0,1034000.0,9400000.0,110.0,TrueView,Non Skippable,TrueView Budget,Daily,,105420.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Surat, Vadodara",Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,40.0
-Non-skip,F 25- 44 + HHI Top 50%,120000.0,4.0,55200.0,480000.0,110.0,TrueView,Target Frequency,TrueView Budget,Daily,,2956.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Gurugram, Fatehabad, Jind",Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,40.0
-Non-skip,F 25- 44 + HHI Top 50%,400000.0,4.0,184000.0,1600000.0,70.0,TrueView,Target Frequency,TrueView Budget,Daily,,2465.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Chandigarh, Ludhiana, Sangrur, Patiala, Gurdaspur",Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,40.0
-Non-skip,F 25- 44 + HHI Top 50%,540000.0,4.0,237600.0,2160000.0,65.0,TrueView,Non Skippable,TrueView Budget,Daily,,501.0,True,2.0,Months,False,0.0,Days,TMCM,0.0,"Jaipur, Kota, Jodhpur",Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,40.0
-Non-Skip,Female 25 - 45 ,1051683.0,4.0,350000.0,4206731.0,74.0,,,,,,,,,,,,,,,"Uttar Pradesh - Lucknow, Gorakhpur, Faizabad, Basti, Prayagraj, Varanasi, Kanpur, Agra",,,,Oct 2025,20.0
-Non-Skip,Female 25 - 45 ,224515.0,4.0,74000.0,898058.0,67.0,,,,,,,,,,,,,,,"Bihar - Patna, Muzaffarpur, Purnia",,,,Oct 2025,20.0
-Non-Skip,Female 25 - 45 ,47488.0,4.0,15500.0,189951.0,75.0,,,,,,,,,,,,,,,Uttrakhand - Dehradun,,,,Oct 2025,20.0
-YT NSK,F 25-44 NCCS AB,2521303.0,4.0,1169884.0,10085212.0,93.0,TrueView,Target Frequency,TrueView Budget,Daily,,19498.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kerala,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 25-44 NCCS AB,995554.0,4.0,477866.0,3982216.0,96.0,TrueView,Target Frequency,TrueView Budget,Daily,,7964.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,West Bengal,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 25-44 NCCS AB,1475394.0,4.0,1003268.0,5901576.0,120.0,TrueView,Target Frequency,TrueView Budget,Daily,,45000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kolkata,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 18-44 NCCS ABC,3446526.0,4.5,2962289.0,15509367.0,157.0,TrueView,Target Frequency,TrueView Budget,Daily,,173801.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Delhi, New Delhi, Faridabad, Gurugram, Ghaziabad, Noida, Greater Noida, Delhi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 18-44 NCCS ABC,2717614.0,4.5,1345219.0,12229263.0,72.0,TrueView,Target Frequency,TrueView Budget,Daily,,1122.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bihar, Jharkhand",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 18-44 NCCS ABC,3080936.0,4.0,2279892.0,12323744.0,121.0,TrueView,Target Frequency,TrueView Budget,Daily,,2218.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Nagpur, Pune, Nashik, Thane, Bhiwandi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 18-44 NCCS ABC,1230636.0,4.0,713769.0,4922544.0,97.0,TrueView,Target Frequency,TrueView Budget,Daily,,2180.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Bengaluru, Mysuru, Hubballi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT CTV,F25-44 AB,865504.0,5.0,313745.0,4327520.0,92.0,TrueView,Target Frequency,TrueView Budget,Daily,,5881.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Ambernath, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Badlapur, Bhiwandi, Nala Sopara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F25-44 AB,2885013.0,4.0,1197280.0,11540052.0,135.0,TrueView,Target Frequency,TrueView Budget,Daily,,24529.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Ambernath, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Badlapur, Bhiwandi, Nala Sopara",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT Shorts,F25-44 AB,1917878.0,5.0,479470.0,9589390.0,24.0,TrueView,Target Frequency,TrueView Budget,Daily,,8985.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Ambernath, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Badlapur, Bhiwandi, Nala Sopara",,Limited,,Oct–Nov 2025,31.0
-YT NSK/Reach,F25-44 AB,1331616.0,5.0,466066.0,6658080.0,90.0,TrueView,Target Frequency,TrueView Budget,Daily,,4844.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Hyderabad, Vijayawada, Warangal, Kurnool, Medchal",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-YT NSK,F 25-44 AB,1073946.0,5.0,805460.0,5369730.0,116.0,TrueView,Target Frequency,TrueView Budget,Daily,,26848.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kochi, Kozhikode, Thiruvananthapuram, Kollam, Palakkad, Changanassery",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Oct–Nov 2025,31.0
-,F 25- 44 + HHI Top 50%,485000.0,2.0,97000.0,970000.0,66.0,TrueView,Non Skippable,TrueView Budget,Daily,,1.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Ahmedabad, Rajkot, Vadodara",Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,44.0
-,F 25- 44 + HHI Top 50%,427835.0,2.0,83000.0,855670.0,73.0,TrueView,Non Skippable,TrueView Budget,Daily,,9000.0,True,1.0,Months,False,0.0,Days,TMCM,0.0,"Faridabad, Gurugram, Panipat, Sonipat, Karnal, Hisar, Rohtak",Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,921053.0,4.0,350000.0,3684211.0,59.0,TrueView,Target Frequency,TrueView Budget,Daily,,6000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kerala,Skippable / Bumper / Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,4975728.0,4.0,2050000.0,19902913.0,107.0,TrueView,Target Frequency,TrueView Budget,Daily,,25000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Chhatrapati Sambhajinagar, Mumbai, Nagpur, Pune, Nashik, Thane, Navi Mumbai",Skippable / Bumper / Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,532178.0,4.0,215000.0,2128713.0,72.0,TrueView,Target Frequency,TrueView Budget,Daily,,3000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Amritsar, Ludhiana, Patiala, Jalandhar",Skippable / Bumper / Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,855978.0,4.0,315000.0,3423913.0,62.0,TrueView,Non Skippable,TrueView Budget,Daily,,1.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Jaipur, Kota, Ajmer, Bikaner",Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,1894737.0,4.0,720000.0,7578947.0,64.0,TrueView,Non Skippable,TrueView Budget,Daily,,1.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Prayagraj, Ghaziabad, Kanpur, Lucknow, Varanasi, Meerut, Bareilly, Saharanpur",Non Skippable,Expanded,Non Skippable,,
-,F 25- 44 + HHI Top 50%,1130435.0,4.0,520000.0,4521739.0,83.0,TrueView,Non Skippable,TrueView Budget,Daily,,5000.0,True,1.0,Months,False,0.0,Days,TMCM,0.0,Kolkata,Non Skippable,Expanded,Non Skippable,,
-YT NSK,F 25-44 ABC,288505.0,5.0,180316.0,1442525.0,105.0,,,,,,,,,,,,,,,Bihar 1,,,,Oct–Nov 2025,43.0
-YT NSK,F 25-44 ABC,260627.0,5.0,162892.0,1303135.0,110.0,,,,,,,,,,,,,,,Bihar 2,,,,Oct–Nov 2025,43.0
-YT NSK,F 25-44 ABC,276688.0,5.0,172930.0,1383440.0,106.0,,,,,,,,,,,,,,,Bihar 3,,,,Oct–Nov 2025,43.0
-YT NSK,F 25-44 ABC,383139.0,4.0,191570.0,1532556.0,91.0,,,,,,,,,,,,,,,Bihar 4,,,,Oct–Nov 2025,43.0
-Non-skippable,TG: F 25-44 + HHI 50%,1549479.0,4.0,595000.0,6197917.0,63.0,TrueView,Target Frequency,TrueView Budget,Daily,,13157.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bihar,Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,608696.0,4.0,280000.0,2434783.0,75.0,TrueView,Target Frequency,TrueView Budget,Daily,,6419.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bihar,Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,2382813.0,4.0,915000.0,9531250.0,70.0,TrueView,Target Frequency,TrueView Budget,Daily,,28000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,West Bengal,Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,6132813.0,4.0,2355000.0,24531250.0,77.0,TrueView,Non Skippable,TrueView Budget,Daily,,120000.0,True,1.0,Months,False,0.0,Days,TMCM,0.0,Uttar Pradesh,Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,2956522.0,4.0,1360000.0,11826087.0,76.0,TrueView,Non Skippable,TrueView Budget,Daily,,3525.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,West Bengal,Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,1351563.0,4.0,519000.0,5406250.0,65.0,TrueView,Target Frequency,TrueView Budget,Daily,,14426.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Andhra Pradesh, Telangana",Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,TG: F 25-44 + HHI 50%,1419271.0,4.0,545000.0,5677083.0,78.0,TrueView,Target Frequency,TrueView Budget,Daily,,25000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Karnataka,Skippable / Bumper / Non Skippable,Expanded,Non Skippable,Oct–Nov 2025,30.0
-Non-skippable,HHI Top 21% to 50%,1053895.0,3.2,397950.0,3372464.0,80.27,TrueView,Target Frequency,TrueView Budget,Daily,,19897.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Andhra Pradesh, Telangana",Skippable / Bumper / Non Skippable,Standard,Non Skippable,Nov 2025,27.0
-,HHI Top 21% to 50%,413392.0,3.2,123025.0,103025.0,64.72,TrueView,Target Frequency,TrueView Budget,Daily,,6151.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Kerala,Skippable / Bumper / Non Skippable,Standard,Non Skippable,Nov 2025,27.0
-Bumper + Shorts,HHI Top 21% to 50%,1093747.0,2.7,88725.0,2945824.0,19.37,TrueView,Target Frequency,TrueView Budget,Daily,,2516.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Nagpur, Nanded, Solapur, Nashik, Aurangabad",Skippable / Bumper / Non Skippable,Standard,,Nov 2025,27.0
-Bumper + Shorts,HHI Top 21% to 50%,657194.0,2.7,60786.0,1779533.0,22.15,TrueView,Reach,TrueView Budget,Daily,,866.0,True,2.0,Months,False,0.0,Days,TMCM,0.0,"Kanpur, Lucknow, Varanasi, Moradabad, Meerut, Agra, Aligarh, Bareilly, Allahabad",,Standard,,Nov 2025,27.0
-Non-skippable + Bumper + YT shorts,YT Rural,37033337.0,3.0,1412544.0,11170142.0,90.49,TrueView,Reach,TrueView Budget,Daily,,540.0,True,4.0,Months,False,0.0,Days,TMCM,0.0,"Bihar, Jharkhand",,Standard,,Nov 2025,27.0
-Non-skippable + Bumper + YT shorts,YT Rural,4108242.0,3.0,1793830.0,1793830.0,108.43,TrueView,Target Frequency,TrueView Budget,Daily,,20000.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Madhya Pradesh, Chhattisgarh",Skippable / Bumper / Non Skippable,Standard,Non Skippable,Nov 2025,27.0
-YT NSK,F18-34 AB,839582.0,5.0,503749.0,4197910.0,67.0,TrueView,Target Frequency,TrueView Budget,Daily,,160823.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Lucknow, Varanasi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F18-34 AB,3341116.0,5.0,3090532.0,16705580.0,146.0,TrueView,Target Frequency,TrueView Budget,Daily,,85890.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Pune, Ambernath, Ulhasnagar, Dombivli, Kalyan, Virar, Vasai-Virar, Mira Bhayandar, Thane, Navi Mumbai, Badlapur, Bhiwandi, Nala Sopara, Panvel, Karjat, Vasai, Karjat",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F18-34 AB,1391575.0,5.0,904523.0,6957875.0,87.0,TrueView,Target Frequency,TrueView Budget,Daily,,16500.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Kolkata, Siliguri",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F18-34 AB,284335.0,5.0,177709.0,1421675.0,104.0,TrueView,Target Frequency,TrueView Budget,Daily,,4009.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Patna, Gaya",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F25-44,739155.0,5.0,591324.0,3695775.0,69.0,TrueView,Target Frequency,TrueView Budget,Daily,,6123.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Kalyan, Virar, Thane, Navi Mumbai, Bhiwandi, Vasai",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F25-44,1019285.0,5.0,815428.0,5096425.0,65.0,TrueView,Target Frequency,TrueView Budget,Daily,,5946.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Delhi, Faridabad, Gurugram, Ghaziabad, Noida, Greater Noida",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,Demo (F 25-44) | Geo | NCCS AB,1189166.0,4.0,784849.0,4756664.0,96.0,TrueView,Target Frequency,TrueView Budget,Daily,,49905.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Delhi, New Delhi, Faridabad, Gurugram, Ghaziabad, Noida, Greater Noida, Delhi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,Demo (F 25-44) | Geo | NCCS AB,689878.0,4.0,441522.0,2759512.0,99.0,TrueView,Target Frequency,TrueView Budget,Daily,,2927.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,"Mumbai, Dombivli, Kalyan, Virar, Vasai-Virar, Thane, Navi Mumbai, Bhiwandi",Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,Demo (F 25-44) | Geo | NCCS AB,300651.0,4.0,186403.0,1202604.0,88.0,TrueView,Target Frequency,TrueView Budget,Daily,,2005.0,False,0.0,Days,False,0.0,Days,TMCM,0.0,Bengaluru,Skippable / Bumper / Non Skippable,Limited,Non Skippable,Nov 2025,29.0
-YT NSK,F 25-44 ABCDE,1757158.0,5.0,1054295.0,8785790.0,76.0,,,,,,,,,,,,,,,UP+UTT,,,,Nov 2025,29.0
+Status,Month,Agency,Advertiser,Campaign Name,Device,%Savings,TG,Mobile / CTV,Paid/Test,Campaign id,IO id,Line Item ID,Line Item Name,Start Date,End Date,Markets,Planned Reach 1+,Planned Reach 3+,Del Reach 1+,Planned Freq,Del Freq,Planned Budget,Planned Impressions,Del Impressions,Planned views,Deliverd Views,Pld Complete Views,Del Complete Views,Planned CPV,Del Cpv,Planned CPCV,Deliverd CPCV,Planned CPM - Non Bidvid,"Del Cpm/
+Bidvid  cpm",Media plan Sheet Link,Paused Date,Reason,
+Delivered,July-2025,Social Beat,Adani,Fortune Pehli Dhaar,All,15%,,Mobile ,Paid,,,,,"July 2nd, 2025","July 22nd, 2025",Lucknow,,,,,,,,,,,,,,,,,113,86,,,,
+Delivered,,,,,,,,Mobile ,,,,,,"July 2nd, 2025","July 22nd, 2025",Kalcutta,,,,,,,,,,,,,,,,,121,115,,,,
+Delivered,,,,,,,,CTV,,,,,,"July 2nd, 2025","July 22nd, 2025",Lucknow,,,,,,,,,,,,,,,,,131,118,,,,
+Delivered,,,,,,,,CTV,,,,,,"July 2nd, 2025","July 22nd, 2025",Kalcutta,,,,,,,,,,,,,,,,,156,130,,,,
+Delivered,,,,,,,,CTV,,,,,,"July 2nd, 2025","July 22nd, 2025",Delhi NCR,,,,,,,,,,,,,,,,,141,114,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,132.4,112.6,,,,
+Delivered,July-2025,,Jyothy Labs,Margo Soap,All,,,,Test,,,,,"June 27th, 2025","July 31st, 2025",,,,,,,,,,,,,,,,,,,,,,,
+Delivered,July-2025,,Samsung,Samsung,Mobile,,,,Test,,,,,"July 11th, 2025",Paused,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,July-2025,,Marico,Parachute,YT NSK,,,All Devices,Paid,55903569,1021916835,,,"July 15th, 2025","July 31st, 2025",AP/TL,1600041,660977,,4.5,,1044027,,,,,,,,,,,₹145,,,,Bidvid was not implented to this campaing due to saving of less than 10 percent.,
+Delivered,,,,Parachute,YT NSK,,,All Devices,Paid,55912041,1022282446,,,"July 15th, 2025","July 31st, 2025",Kerala,1073946,425283,,4.4,,685178,,,,,,,,,,,₹145,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,July-2025,Madison,Zouk,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Bangalore,1705000,,,3,,,,,,,,,,,,,₹97,,Zouk Media Plan - 18th July-18th Aug_V6 Bidwid,10 August 2025,DV Backend Issue,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Bangalore,506629,,,1.5,,,,,,,,,₹0.11,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Bangalore,303977,,,2,,,,,,,,,,,,,₹135,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Mumbai,1196250,,,1.5,,,,,,,,,₹0.13,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Mumbai,717750,,,2,,,,,,,,,,,,,₹126,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Delhi,1355131,,,2,,,,,,,,,₹0.11,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Delhi,813079,,,2,,,,,,,,,,,,,₹131,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Chennai,1030000,,,2.5,,,,,,,,,,,,,₹88,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Chennai,193125,,,2,,,,,,,,,₹0.10,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Chennai,115875,,,2,,,,,,,,,,,,,₹131,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Pune,701400,,,2.5,,,,,,,,,,,,,₹77,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Pune,131513,,,2,,,,,,,,,₹0.09,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Pune,78908,,,2,,,,,,,,,,,,,₹136,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Hyderabad,353571,,,2,,,,,,,,,₹0.07,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Hyderabad,212143,,,2,,,,,,,,,,,,,₹128,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Kolkata,621000,,,3,,,,,,,,,,,,,₹94,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Kolkata,159686,,,2,,,,,,,,,₹0.12,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Kolkata,95811,,,2,,,,,,,,,,,,,₹124,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Ahmedabad,686071,,,3,,,,,,,,,,,,,₹84,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Ahmedabad,161717,,,2,,,,,,,,,₹0.10,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Ahmedabad,97030,,,2,,,,,,,,,,,,,₹126,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Coimbatore,143860,,,2,,,,,,,,,,,,,₹71,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Coimbatore,22607,,,2,,,,,,,,,₹0.10,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV- Non Skip,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Coimbatore,13564,,,2,,,,,,,,,,,,,₹131,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Lucknow,292905,,,2,,,,,,,,,,,,,₹94,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Lucknow,50212,,,1.5,,,,,,,,,₹0.12,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Lucknow,30127,,,2,,,,,,,,,,,,,₹124,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Indore,324000,,,2,,,,,,,,,,,,,₹99,,,,,
+Delivered,,,,Zouk ,You Tube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Indore,74057,,,1.5,,,,,,,,,₹0.14,,,,,,,,,
+Delivered,,,,Zouk ,YouTube CTV,,,,Paid,,,,,"July 18th, 2025","Aug 18th, 2025",Indore,44434,,,2,,,,,,,,,,,,,₹129,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55939065,1022061264,,,25-07-2025,17-09-2025,West Bengal + Odisha,248901,122116,,6,,164275,1493406,1493406,,,,,,,,,₹149,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55947642,1022115392,,,25-07-2025,17-09-2025,AndhraPradesh Telangana,348827,175767,,6,,156972,2092962,2092962,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55922810,1022417050,,,25-07-2025,17-09-2025,Uttar Pradesh,143241,"71,178",,6,,63599,859446,859446,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55947255,1022116226,,,25-07-2025,17-09-2025,Gujarat,383525,206982,,6,,227814,2301150,2301150,,,,,,,,,₹141,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55947690,1022082051,,,25-07-2025,17-09-2025,Rajasthan,"99,042","49,521",,6,,39815,594252,594252,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55923644,1022135570,,,25-07-2025,17-09-2025,Bih + JK,"83,777","42,755",,6,,36192,502662,502662,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55924988,1022440780,,,25-07-2025,17-09-2025,MPCG,163214,"80,659",,6,,67571,979284,979284,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,Paid,55924499,1022136794,,,25-07-2025,17-09-2025,Punjab,118340,"59,629",,6,,46862,710040,710040,,,,,,,,,₹102,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55912996,1022132543,,,25-07-2025,17-09-2025,Maharashtra,3454173,1635896,,6.5,,4005903,22452124.5,22452124.5,,,,,,,,,₹200,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55939065,1022058390,,,25-07-2025,17-09-2025,West Bengal + Odisha,1306732,658206,,6.5,,993770,8493758,8493758,,,,,,,,,₹118,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55947642,1022135204,,,25-07-2025,17-09-2025,AndhraPradesh Telangana,1046480,510473,,6.5,,904682,6802120,6802120,,,,,,,,,₹149,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55922810,1022136830,,,25-07-2025,17-09-2025,Uttar Pradesh,752016,326603,,6.5,,483922,4888104,4888104,,,,,,,,,₹99,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55947255,1022416633,,,25-07-2025,17-09-2025,Gujarat,1442784,785567,,6.5,,1228531,9378096,9378096,,,,,,,,,₹136,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55924757,1022135180,,,25-07-2025,17-09-2025,Tamil Nadu,1007994,512626,,6.5,,917275,6551961,6551961,,,,,,,,,₹140,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55947690,1022440867,,,25-07-2025,17-09-2025,Rajasthan,483558,230367,,6.5,,301740,3143127,3143127,,,,,,,,,₹97,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55923644,1022439811,,,25-07-2025,17-09-2025,Bih + JK,482468,214262,,6.5,,291652,3136042,3136042,,,,,,,,,₹93,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55913728,1022135294,,,25-07-2025,17-09-2025,karnataka,1191448,605494,,6.5,,1239106,7744412,7744412,,,,,,,,,₹160,#REF!,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,Mobile,Paid,55924988,1022136524,,,25-07-2025,17-09-2025,MPCG,853787,413725,,6.5,,505015,5549615.5,5549615.5,,,,,,,,,₹95,#REF!,,,,
+,,,,,,,,,,,,,,,,,,,,,,"11,674,696",,,,,,,,,,,₹122,#REF!,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,July-2025,Madison,Marico,SMO,YT NSK,25%,F 25-44 NCCS AB,All Devices except CTV,Paid,55955994,1022451802,,,30-07-2025,12-09-2025,Maharashtra (Minus Mumbai),2204393,914030,,4,,1146285,8817572,8817572,,,,,,,,,130,105,All media plan sheet,,,
+Delivered,,,,SMO,YT NSK,,MF 25-34 NCCS A,All Devices except CTV,Paid,55931038,1022499958,62276.2,,31-07-2025,03-09-2025,Hyderabad,940903,436666,,4,,355416,3763612,3763612,,,,,,,,,104,84,,,,
+Delivered,,,,SMO,YT NSK,,MF 25-34 NCCS A,All Devices except CTV,Paid,55942253,1022499151,,,31-07-2025,12-09-2025,Bangalore,1211316,582207,,4,,513599,4845264,4845264,,,,,,,,,106,89,,,,
+Delivered,,,,SMO,YT NSK,,MF 25-34 NCCS A,All Devices except CTV,Paid,55956462,1022144406,,,31-07-2025,12-09-2025,Pune,476119,190638,,4,,200830,1904476,1904476,,,,,,,,,96,86,,,,
+Delivered,,,,SMO,YT NSK,,MF 25-34 NCCS A,All Devices except CTV,Paid,55969287,1022191178,,,31-07-2025,12-09-2025,Kolkata,422308,169092,,4,,163991,1689232,1689232,,,,,,,,,103,85,,,,
+Delivered,,,,SMO,YT NSK,,MF 18-24 NCCS A,All Devices except CTV,Paid,55951697,1022538046,,,31-07-2025,12-09-2025,Hyderabad,687071,300772,,4,,288570,2748284,2748284,,,,,,,,,105,85,,,,
+Delivered,,,,SMO,YT NSK,,MF 18-24 NCCS A,All Devices except CTV,Paid,55940770,1022222684,,,31-07-2025,12-09-2025,Pune,441790,193398,,4,,195552,1767160,1767160,,,,,,,,,105,87,,,,
+Delivered,,,,SMO,YT NSK,,MF 18-24 NCCS A,All Devices except CTV,Paid,55971954,1022177136,,,31-07-2025,12-09-2025,Bangalore,844348,369622,,4,,354627,3377392,3377392,,,,,,,,,105,91,,,,
+Delivered,,,,SMO,YT NSK,,MF 18-24 NCCS A,All Devices except CTV,Paid,55980486,1022174847,,,31-07-2025,12-09-2025,Jaipur+Indore,208812,91409,,4,,81855,835248,835248,,,,,,,,,98,72,,,,
+Delivered,,,,SMO,YT NSK,,MF 18-24 NCCS A,All Devices except CTV,Paid,55950518,1022178891,,,31-07-2025,12-09-2025,Ahmedabad,552003,241645,,4,,251842,2208012,2208012,,,,,,,,,105,102,,,,
+Delivered,,,,,,,,,,,"For ""*"" in IO ID are not to be taken for Fee calculation ",,,,,,,,,,,3552567,,,,,,,,,,,105.7,88.6,,,,
+Delivered,,,,,,,,,,,"For ""*"" in IO ID agency has requested a minimum of 15% saving",,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Aug-2025,Icubeswire,POPEYES,POPEYES,,,,,,55543679,,,,18-8-2025,31-8-2025,,,,,,,150000,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Aug - 2025,Group M,Aditya Birla LI,ABSLI (BAU),YT Mobile (VAS),37.5%,"25-44, M/F, P1 + P2, Affinities & Inmarket audiences",Mobile,A/B Test,,,,,18-8-2025,16-9-2025,Please refer to Aditya Birla LI media plan,"  8,006,500 ",,,2,,2001625,16013000,,,,,,,,,,₹ 125,80,https://docs.google.com/spreadsheets/d/1UhbKwgS8-wtB7HwVF40w2xortdY2wC7UiF0VjPTdkfw/edit?usp=sharing,,,
+Delivered,,,,ABSLI (BIDVID),YT Mobile (VAS),,"25-44, M/F, P1 + P2, Affinities & Inmarket audiences",Mobile,A/B Test,,,,,18-8-2025,16-9-2025,Please refer to Aditya Birla LI media plan,"  8,006,500 ",,,2,,2001625,16013000,,,,,,,,,,₹ 125,50,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Aug 2025,SocialBeat/Diginfluenz,Adani,Fortune Soya Chunks,YT CTV Skippable,41.03%,Female 25 - 45,CTV,Paid,56060085,1022533401,22932884376,,26-8-2025,16-9-2025,Delhi NCR,"504,348",,,5,,"290,000","2,521,739",2376678,,,,,0.36,0.24,,,,,https://docs.google.com/spreadsheets/d/1R6QLxQ74nqiKUEl5TMlaFE0LOeOmIc5Ba3F25j31PkA/edit?usp=sharing,,,
+Delivered,,,,Fortune Soya Chunks,YT CTV Skippable,,Female 25 - 45,CTV,Paid,56060085,1022533401,22938762617,,26-8-2025,16-9-2025,UP,"696,296",,,5,,"470,000","3,481,481",2615428,,,,,0.42,0.18,,,,,,,,
+Delivered,,,,Fortune Soya Chunks,YT CTV Skippable,,Female 25 - 45,CTV,Paid,56060085,1022533401,22932892254,,26-8-2025,16-9-2025,Jharkhand,"104,000",,,5,,"65,000","520,000",583182,,,,,0.39,0.27,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.39,0.23,,,,,,,,
+Delivered,Aug 2025,Socialbeat,Adani,Fortune KGMO,YT CTV non skip,47.63%,Female 25 - 45,CTV,Paid,56033765,1022616482,22950432910,,28-8-2025,11-9-2025,Delhi NCR,"554,435",,,4,,"165,000","2,217,742",2292834,,,,,,,,,93,67,https://docs.google.com/spreadsheets/d/1tXmz8c7VqORj8au_Mq7caI2qx40jGoKdnYZ0Jr_isEc/edit?usp=sharing,,,
+Delivered,,,,Fortune KGMO,YT CTV non skip,,Female 25 - 45,CTV,Paid,56033765,1022616482,22946506061,,28-8-2025,10-9-2025,UP,"694,444",,,4,,"240,000","2,777,778",2858621,,,,,,,,,108,55,,,,
+Delivered,,,,Fortune KGMO,YT CTV non skip,,Female 25 - 45,CTV,Paid,56033765,1022616482,22940428980,,28-8-2025,10-9-2025,Bihar,"213,542",,,4,,"82,000","854,167",930441,,,,,,,,,120,54,,,,
+Delivered,,,,Fortune KGMO,YT CTV non skip,,Female 25 - 45,CTV,Paid,56033765,1022616482,22940429250,,28-8-2025,10-9-2025,Punjab,"274,175",,,4,,"93,000","1,096,698",1131667,,,,,,,,,₹106,49,,,,
+Delivered,,,,Fortune KGMO,YT CTV non skip,,Female 25 - 45,CTV,Paid,56033765,1022616482,22940429208,,28-8-2025,10-9-2025,Haryana,"228,125",,,4,,"73,000","912,500",985612,,,,,,,,,₹100,51,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,105.4,55.2,,,,
+Delivered,Sept 2025,Madison,Marico,SPO,YT NSK (All Devices),12.65%,F 25-44 NCCS AB,All Devices,Paid,56056809,1022546246,22929402861,,01-09-2025,30-09-2025,West Bengal (Minus Kolkata),"995,554",434954,,4,,438044,"3,982,216","3,982,216",,,,,,,,,110,92,All media plan sheet,,,
+Delivered,,,,SPO,YT NSK (All Devices),,F 25-44 NCCS AB,All Devices,Paid,56020324,1022874505,22939317745,,01-09-2025,30-09-2025,Kolkata * ,"1,377,034",575698,,4,,974940,"5,508,136","5,508,136",,,,,,,,,177,159,,,,
+,,,,SPO Campaign ,,,,,,,,,,,," ""*""since the saving was less than 12% we are not concidering this IO for billing ",,,,,,,,,,,,,,,,,143.5,125.5,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Sep 2025,Socialbeat,Adani,Fortune Atta,YT Skippable,56.82%,F 25-45,Mobile,Paid,56061400,1022752976,22991092534,,05-09-2025,30-09-2025,Delhi NCR,"19,06,250",,,4,,"6,10,000","76,25,000",,"5,931,056",,,,0.28,0.1,,,,,All media plan sheet,,,
+Delivered,,,,Fortune Atta,YT Skippable,,F 25-45,Mobile,Paid,56061400,1022752976,22991096836,,05-09-2025,30-09-2025,Jaipur,"3,71,622",,,4,,"55,000","14,86,486",,"903,249",,,,0.13,0.06,,,,,,,,
+Delivered,,,,Fortune Atta,YT Skippable,,F 25-45,Mobile,Paid,56061400,1022752976,22980740070,,05-09-2025,30-09-2025,Jodhpur,"1,48,810",,,4,,"25,000","5,95,238",,"366,572",,,,0.14,0.07,,,,,,,,
+Delivered,,,,Fortune Atta,YT Skippable,,F 25-45,Mobile,Paid,56061400,1022752976,22980740058,,05-09-2025,30-09-2025,Kota,"1,12,500",,,4,,"18,000","4,50,000",,"271,783",,,,0.14,0.07,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22980629883,,05-09-2025,30-09-2025,Mumbai,"12,64,045",,,4,,"4,50,000","50,56,180",,"2,432,778",,,,0.31,0.18,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22990984696,,05-09-2025,30-09-2025,Pune ,"7,33,333",,,4,,"2,20,000","29,33,333",,"1,109,985",,,,0.26,0.08,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22980631626,,05-09-2025,30-09-2025,Nagpur,"3,03,571",,,4,,"85,000","12,14,286",,"441,559",,,,0.24,0.08,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22990982791,,05-09-2025,30-09-2025,Nashik,"1,90,000",,,4,,"38,000","7,60,000",,"314,458",,,,0.17,0.08,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22980685413,,05-09-2025,30-09-2025,Surat,"7,00,000",,,4,,"1,40,000","28,00,000",,"1,358,028",,,,0.17,0.08,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22986937112,,05-09-2025,30-09-2025,Vadodara,"2,25,000",,,4,,"45,000","9,00,000",,"364,876",,,,0.17,0.07,,,,,,,,
+Delivered,,,,Fortune Atta,YT NON-SKIP,,F 25-45,Mobile,Paid,56061400,1022752976,22980688230,,05-09-2025,30-09-2025,Ahmedabad,"9,09,091",,,4,,"2,00,000","36,36,364",,"1,537,290",,,,0.19,0.08,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.2,0.08636363636,,,,,,,,
+Delivered,Sep 2025,Socialbeat,Adani,Fortune Suji&Maida,YT Skippable,36.62%,F 25-44,Mobile,Paid,56094288,1022766218,22987152704,,05-09-2025,26-09-2025,Bangalore,"11,25,000",,,4,,69000,4500000,,181993,,,,0.14,0.09,,,,,All media plan sheet,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,Mobile,Paid,56094288,1022766218,22987171424,,05-09-2025,26-09-2025,Mumbai,"15,77,381",,,4,,147000,6309524,,1652332,,,,0.14,0.12,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,Mobile,Paid,56094288,1022766218,22987172312,,05-09-2025,26-09-2025,Orissa,"9,01,163",,,4,,14000,3604651,,2093943,,,,0.15,0.07,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,Mobile,Paid,56094288,1022766218,22987172387,,05-09-2025,26-09-2025,Nagpur,"1,89,024",,,4,,30500,756098,,407346,,,,0.14,0.08,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,Mobile,Paid,56094288,1022766218,22987173254,,05-09-2025,26-09-2025,Vizag,"1,62,500",,,4,,25500,650000,,279572,,,,0.14,0.08,,,,,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.142,0.09,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,52.78%,F 25-44,CTV,Paid,56094288,1022769314,22987205678,,05-09-2025,26-09-2025,Bangalore,"1,50,000",,,4,,220000,600000,,244316,,,,0.3,0.15,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,CTV,Paid,56094288,1022769314,22980934554,,05-09-2025,26-09-2025,Mumbai,"3,84,375",,,4,,315000,1537500,,749439,,,,0.25,0.14,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,CTV,Paid,56094288,1022769314,22991292898,,05-09-2025,26-09-2025,Orissa,"1,08,333",,,4,,37000,433333,,234463,,,,0.19,0.11,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,CTV,Paid,56094288,1022769314,22991293138,,05-09-2025,26-09-2025,Nagpur,"44,231",,,4,,190000,176923,,70010,,,,0.2,0.13,,,,,,,,
+Delivered,,,,Fortune Suji&Maida,YT Skippable,,F 25-44,CTV,Paid,56094288,1022769314,22980934938,,05-09-2025,26-09-2025,Vizag,"82,031",,,4,,31000,328125,,143861,,,,0.2,0.12,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.228,0.09627667984,,,,,,,,
+Delivered,Sept,HAVAS MEDIA,Magicbricks,Magicbricks,,60%,,,Test,56082464,,,,12-09-2025,3-10-2025,,,,,,,"2,00,000",,,,,,,₹0.45,0.18,,,,,,,,vtr : 40% 
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Zouk,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022866245,23016154969,,12-09-2025,31-10-2025,Bangalore,"1,466,300",,,4,,"611,594","6,305,090",,"5,044,072",,,,,,,,97,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022866245,23016155269,,12-09-2025,31-10-2025,Bangalore,"794,278",,,2,,"61,159","1,588,555",,"555,994",,,,0.11,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022859681,23015402059,,12-09-2025,31-10-2025,Mumbai,"2,557,800",,,5,,"1,304,478","12,789,000",,"10,231,200",,,,,,,,102,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022859681,23015453929,,12-09-2025,31-10-2025,Mumbai,"1,303,175",,,2,,"130,448","2,866,985",,"1,003,445",,,,0.13,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1023254269,23012287175,,12-09-2025,31-10-2025,Delhi,"4,713,500",,,5.5,,"2,410,955","25,924,250",,"20,739,400",,,,,,,,93,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1023254269,23016270139,,12-09-2025,31-10-2025,Delhi,"2,846,464",,,2,,"241,096","6,262,221",,"2,191,778",,,,0.11,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022894102,23016359998,,12-09-2025,31-10-2025,Chennai,"968,200",,,5,,"306,726","4,356,900",,"3,485,520",,,,,,,,70.4,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022894102,23012376197,,12-09-2025,31-10-2025,Chennai,"497,931",,,2,,"30,673","1,095,449",,"383,407",,,,0.08,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022867562,23006323143,,12-09-2025,31-10-2025,Pune,"1,035,400",,,3,,"239,177","3,106,200",,"2,484,960",,,,,,,,77,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022867562,23006321895,,12-09-2025,31-10-2025,Pune,"345,133",,,2,,"23,918","759,293",,"265,753",,,,0.09,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1023257440,23006471880,,12-09-2025,31-10-2025,Hyderabad,"1,650,000",,,5,,"503,250","8,250,000",,"6,600,000",,,,,,,,61,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1023257440,23006471994,,12-09-2025,31-10-2025,Hyderabad,"933,673",,,2,,"50,325","2,054,082",,"718,929",,,,0.07,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022895113,23006546367,,12-09-2025,31-10-2025,Kolkata,"759,000",,,4,,"285,384","3,036,000",,"2,428,800",,,,,,,,94,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022895113,23012736131,,12-09-2025,31-10-2025,Kolkata,"339,743",,,2,,"28,538","679,486",,"237,820",,,,0.12,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022896763,23006635422,,12-09-2025,31-10-2025,Ahmedabad,"786,123",,,3.5,,"231,120","2,751,431",,"2,201,145",,,,,,,,84,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022896763,23012818469,,12-09-2025,31-10-2025,Ahmedabad,"330,172",,,2,,"23,112","660,344",,"231,120",,,,0.1,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022872161,23013049361,,12-09-2025,31-10-2025,Coimbatore,"136,667",,,3,,"29,110","410,002",,"328,002",,,,,,,,71,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022872161,23006848765,,12-09-2025,31-10-2025,Coimbatore,"41,586",,,2,,"2,911","83,172",,"29,110",,,,0.1,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022967332,23021103546,,12-09-2025,31-10-2025,Lucknow,"598,545",,,4,,"202,548","2,154,762",,"1,723,810",,,,,,,,94,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022967332,23031168223,,12-09-2025,31-10-2025,Lucknow,"241,128",,,2,,"20,255","482,256.26",,"168,790",,,,0.12,,,,,,,,,
+Delivered,,,,Zouk Bagful Festive,Non-Skip,,,CTV,,56112048,1022872146,23006839167,,12-09-2025,31-10-2025,Indore,"486,000",,,3,,"163,588","1,652,400.00",,"1,321,920",,,,,,,,99,,,,,
+Delivered,,,,Zouk Bagful Festive,Skip,,,CTV,,56112048,1022872146,23013042707,,12-09-2025,31-10-2025,Indore,"166,926",,,2,,"16,359","333,852.24",,"116,848",,,,0.14,,,,,,,,,
+,,,,Opted out of Zouk Bagful Festive campaign as we were unable to deliver minimum 15% savings,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1203188553,23069843914,,30-09-2025,24-10-2025,Banglore,"928,571",,,2,,"222,857","1,857,142",,"742,857",,,,₹ 0.11,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023190424,23069151100,,30-09-2025,24-10-2025,Mumbai,"2,172,309",,,2,,"521,354","4,344,617",,"1,737,847",,,,₹ 0.14,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023196295,23065822952,,30-09-2025,24-10-2025,Delhi,"2,772,741",,,2,,"765,277","6,377,305",,"2,550,922",,,,₹ 0.12,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023186096,23065901417,,30-09-2025,24-10-2025,Chennai,"1,046,746",,,2,,"251,219","2,093,491",,"837,396",,,,₹ 0.12,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023571519,23060001321,,30-09-2025,24-10-2025,Pune,"602,569",,,2,,"144,617","1,205,138",,"482,055",,,,₹ 0.10,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023197276,23070097804,,30-09-2025,24-10-2025,Hyderabad,"937,484",,,2,,"224,996","1,874,967",,"749,987",,,,₹ 0.12,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023573586,23070250063,,30-09-2025,24-10-2025,Kolkata,"115,500",,,2,,"27,720","231,000",,"92,400",,,,₹ 0.12,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023205695,23073290761,,30-09-2025,24-10-2025,Ahmedabad,"428,795",,,2,,"102,911","857,589",,"343,036",,,,₹ 0.10,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023208788,23069483672,,30-09-2025,24-10-2025,Coimbatore,"80,548",,,2,,"17,398","144,986",,"57,994",,,,₹ 0.10,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023205821,23069507027,,30-09-2025,24-10-2025,Lucknow,"111,774",,,2,,"24,143","201,193",,"80,477",,,,₹ 0.09,,,,,,,,,
+Delivered,,,,Zouk Diwali Festive,,,,,,56126017,1023208479,23073644875,,30-09-2025,24-10-2025,Indore,"106,314",,,2,,"22,964","191,366",,"76,546",,,,₹ 0.08,,,,,,,,,
+,,,,Zouk Diwali Festive To OPT OUT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison ,Marico,Saffola PAJAS,YT NSK,20.60%,F 18-44 NCCS AB,All Devices,,56096324,1022929536,,,17-09-2025,16-10-2025,UP,"769,617",339124,,4.8,,"480,240","3,694,162",,,,,,,,,,130,98,All media plan sheet,,,
+Delivered,,Madison ,,Saffola PAJAS,YT NSK,,F 18-44 NCCS AB,All Devices,,56088871,1022949713,,,17-09-2025,16-10-2025,Mah,"3,341,116",1411287,,4.5,,"2,946,898","15,035,022",,,,,,,,,,197,164,,,,
+Delivered,,Madison ,,Saffola PAJAS,YT NSK,,F 18-44 NCCS AB,All Devices,,56118873,1023312700,,,17-09-2025,16-10-2025,WB,"1,159,646",464322,,4.5,,"726,668","5,218,407",,,,,,,,,,145,123,,,,
+Delivered,,Madison ,,Saffola PAJAS,YT NSK,,F 18-44 NCCS AB,All Devices,,56096768,1022931561,,,17-09-2025,16-10-2025,Bihar,"236,946",92131,,4.5,,"144,276","1,066,257",,,,,,,,,,140,111,,,,
+,,,,Minium 15% savings to be delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,153,124,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison ,Marico,Saffola Honey,YT CTV,14.42%,F 25-44 NCCS AB,CTV,,56084941,1022909382,,,16-09-2025,15-10-2025,Mumbai+Pune,"692,403",299754,,4.0,,"304,657","2,769,612",,,,,,,,,,110,93,All media plan sheet,,,
+Delivered,,Madison ,,Saffola Honey,YT NSK,,F 25-44 NCCS AB,All Devices,,56084941,1022906781,,,16-09-2025,15-10-2025,Mumbai+Pune,"2,885,013",1262943,,4.0,,"2,019,509","11,540,052",,,,,,,,,,175,149,,,,
+Delivered,,Madison ,,Saffola Honey,YT CTV,,F 25-44 NCCS AB,CTV,,56108628,1023293011,,,16-09-2025,15-10-2025,Bangalore,"437,883",179245,,3.5,,"168,585","1,532,591",,,,,,,,,,110,93,,,,
+Delivered,,Madison ,,Saffola Honey,YT NSK,,F 25-44 NCCS AB,All Devices,,56108628,1022932787,,,16-09-2025,15-10-2025,Bangalore,"1,018,332",415842,,3.5,,"481,162","3,564,162",,,,,,,,,,135,118,,,,
+Delivered,,Madison ,,Saffola Honey,YT NSK,,F 25-44 NCCS AB,All Devices,,56084866,1022908809,,,16-09-2025,15-10-2025,APTL,"2,646,368",1237653,,4.0,,"1,217,329","10,585,472",,,,,,,,,,115,99,,,,
+,,,,Minium 15% savings to be delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,129,110.4,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Sept,Socialbeat,Adani,Fortune KGMO Burst 2,Non Skipable,34.68%,F 25 - 44,All devices except CTV,,56134136,1023160316,23057620556,,26-9-2025,9-10-2025,Bihar,268750,,,4,,86000,1075000,1061534,,,,,,,,,100,76,All media plan sheet,,,
+Delivered,,,,Fortune KGMO Brust 2,Non Skipable,,F 25 - 44,All devices except CTV,,56134136,1023160316,23057621030,,26-9-2025,9-10-2025,DelhiNCR,1342975,,,4,,520000,5371901,4414947,,,,,,,,,121,99,,,,
+Delivered,,,,Fortune KGMO Brust 2,Non Skipable,,F 25 - 44,All devices except CTV,,56134136,1023160316,23057620724,,26-9-2025,9-10-2025,UP,1139323,,,4,,350000,4557292,4359618,,,,,,,,,96,76.0,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,121.8571429,76.71428571,,,,
+Delivered,oct,Socialbeat,Adani,Fortune Suji&Maida,Non Skipable,49.63%,F 25 - 44,CTV,,56160795,1023153690,23052650061,,27-9-2025,11-10-2025,Kolkata siliguri + malda asansol,138393,,,4,,62000,553571,561001,,,,,,,,,140,86,All media plan sheet,,,
+Delivered,,,,Fortune Suji&Maida,Non Skipable,,F 25 - 44,CTV,,56160795,1023153690,23062742287,,27-9-2025,11-10-2025,Orissa,96154,,,4,,40000,384615,357285,,,,,,,,,130,50,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,135,68,,,,
+Delivered,,,Adani,Fortune Suji&Maida,Non Skipable,25.67%,F 25 - 44,All devices except CTV,,56160795,1023152031,23062703014,,27-9-2025,11-10-2025,asansol,106838,,,4,,40000,427350,430960,,,,,,,,,117,76,,,,
+Delivered,,,,Fortune Suji&Maida,Non Skipable,,F 25 - 44,All devices except CTV,,56160795,1023152031,23058589364,,27-9-2025,11-10-2025,Kolkata,1083669,,,4,,430000,4334677,3994996,,,,,,,,,124,110,,,,
+Delivered,,,,Fortune Suji&Maida,Non Skipable,,F 25 - 44,All devices except CTV,,56160795,1023152031,23062726207,,27-9-2025,11-10-2025,orissa,272529,,,4,,75000,1090116,1182597,,,,,,,,,86,66,,,,
+Delivered,,,,Fortune Suji&Maida,Non Skipable,,F 25 - 44,All devices except CTV,,56160795,1023152031,23052584343,,27-9-2025,11-10-2025,siliguri + malda ,59401,,,4,,23000,237603,239785,,,,,,,,,121,81,,,,
+,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,112,83.25,,,,
+Delivered,OCT,Madison,Marico,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56142194,1023233499,23117370378,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_CTV|Oct-Nov_2025 - TF Pun, Nag, Kol##standard",1-10-2025,22-11-2025,Maharashtra,"218,703","1,34,765",,5,,180430,"1,093,515",,,,,,,,,,165,67,All media plan sheet,,,
+Delivered,,,,,,,,,,56142194,1023233499,23066723439,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_CTV|Oct-Nov_2025 - TF Pun, Nag, Kol",,22-11-2025,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56142194,1023235047,23072693645,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_Mob/Desktop|Oct-Nov_2025 - TF Pun, Nag, Kol",1-10-2025,22-11-2025,Maharashtra,"1,150,797","6,90,938",,4.8,,939050,"5,523,826",,,,,,,,,,170,91,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56142194,1023237416,23066847537,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_CTV|Oct-Nov_2025 - TF Mum, BHi, Tha",1-10-2025,22-11-2025,Maharashtra,"689,878","4,25,103",,5,,603643,"3,449,390",,,,,,,,,,175,125,,,,
+Delivered,,,,,,,,,,56142194,1023236535,23076864148,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_Mob/Desktop|Oct-Nov_2025 - TF Mum, BHi, Tha",,22-11-2025,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,,,56142194,1023236535,23128550315,"YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_MH_Mob/Desktop|Oct-Nov_2025 - TF Mum, BHi, Tha -Standard",1-10-2025,22-11-2025,Maharashtra,"2,028,569","12,17,953",,4.8,,1801369,"9,737,131",,,,,,,,,,185,135,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56135275,1023235053,23066725080,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_WB+OR_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,West Bengal + Orissa  ,"26,880","16,563",,5,,20160,"134,400",,,,,,,,,,150,63,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56135275,1023234500,23066724849,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_WB+OR_Mob/Desktop Oct-Nov_2025 - TF,1-10-2025,22-11-2025,West Bengal + Orissa  ,"183,040","1,09,897",,4.8,,131789,"878,592",,,,,,,,,,150,70,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56137267,1023619120,23073001133,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_WB_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,West Bengal  ,"184,892","1,13,930",,5,,143291,"924,460",,,,,,,,,,155,91,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56137267,1023236823,23067040944,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_WB_Mob/Desktop Oct-Nov_2025 - TF,1-10-2025,22-11-2025,West Bengal  ,"1,106,990","6,64,637",,4.8,,738584,"5,313,552",,,,,,,,,,139,159,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56133562,1023215667,23064184221,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_AP+TL_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Andhra + Telangana ,"345,407","2,12,840",,5,,267690,"1,727,035",,,,,,,,,,155,58,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56133562,1023213834,23064186606,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_AP+TL_Mobile/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Andhra + Telangana ,"888,531","5,33,474",,4.8,,592828,"4,264,949",,,,,,,,,,139,80,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56142197,1023235050,23066724204,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_UP_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Uttar Pradesh ,"152,527","93,987",,5,,91516,"762,635",,,,,,,,,,120,56,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56142197,1023235883,23076739138,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_UP_Mob/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Uttar Pradesh ,"634,257","3,80,808",,4.8,,319665,"3,044,434",,,,,,,,,,105,65,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56134438,1023218517,23070551954,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_Delhi NCR_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Delhi NCR ,"1,189,166","7,32,764",,5,,915657,"5,945,830",,,,,,,,,,154,92,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56134438,1023221693,23070552473,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_Delhi NCR_Mobile/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Delhi NCR ,"2,050,704","12,31,243",,4.8,,1919459,"9,843,379",,,,,,,,,,195,109,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56141873,1023608713,23066722680,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec__GUJ_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Gujarat ,"426,079","2,62,550",,5,,362167,"2,130,395",,,,,,,,,,170,66,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56141873,1023608710,23076736969,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_GUJ_Mob/Desktop_Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Gujarat ,"1,300,213","7,80,648",,4.8,,967359,"6,241,022",,,,,,,,,,155,88,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56133532,1023599641,23074188898,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_TN_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Tamil Nadu ,"293,497","1,80,853",,5,,187838,"1,467,485",,,,,,,,,,128,79,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56133532,1023577657,23070089213,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_TN_Mobile/desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Tamil Nadu ,"862,006","5,17,548",,4.8,,662021,"4,137,629",,,,,,,,,,160,85,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56135584,1023235880,23076737716,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_Raj_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Rajasthan ,"100,298","61,804",,5,,60179,"501,490",,,,,,,,,,120,51,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56135584,1023232014,23066724675,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_Raj_Mob/Desktop|Oct-Nov2025 - TF,1-10-2025,22-11-2025,Rajasthan ,"411,786","2,47,236",,4.8,,217423,"1,976,573",,,,,,,,,,110,66,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56169360,1023217413,23070420686,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec__BI+JH_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Bihar + Jharkhand ,"85,239","52,524",,5,,51996,"426,195",,,,,,,,,,122,53,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56169360,1023218507,23064446154,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec__BI+JH_Mobile/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Bihar + Jharkhand ,"407,057","2,44,397",,4.8,,205157,"1,953,874",,,,,,,,,,105,69,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56173704,1023236483,23066722797,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_KAR_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Karnataka ,"300,651","1,85,261",,5,,237514,"1,503,255",,,,,,,,,,158,84,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56173704,1023618247,23072690525,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_KAR_Mobile/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Karnataka ,"1,044,655","6,27,211",,4.8,,902582,"5,014,344",,,,,,,,,,180,103,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56142452,1023235044,23066723451,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec__MP+CG_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Madhya Pradesh + Chattigarh ,"192,727","1,18,759",,5,,113709,"963,635",,,,,,,,,,118,46,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56142452,1023203634,23076738646,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec__MP+CG_Mob/Desktop|Oct-Nov2025 - TF,1-10-2025,22-11-2025,Madhya Pradesh + Chattigarh ,"712,544","4,27,811",,4.8,,365962,"3,420,211",,,,,,,,,,107,60,,,,
+Delivered,,,,SGO,YT CTV,,F 25-44 NCCS AB,CTV,,56136691,1023235886,23076739396,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_PNJ_CTV|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Punjab ,"84,318","51,957",,5,,44267,"421,590",,,,,,,,,,105,39,,,,
+Delivered,,,,SGO,YT NSK,,F 25-44 NCCS AB,All Devices,,56136691,1023235889,23072692751,YT|Non Skip|Saffola|Oil|F|25|45|HHI Top 50%|Foods|RnF|Reach|Sustenance|MAD-20Sec_PNJ_Mob/Desktop|Oct-Nov_2025 - TF,1-10-2025,22-11-2025,Punjab ,"314,157","1,88,620",,4.8,,180955,"1,507,954",,,,,,,,,,120,62,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Oct,Madison,Marico,Hair&care,YT NSK,24% Savings,F 18-44 NCCS AB,All Devices,,56165544,1023506800,,,1-10-2025,31-10-2025,Rajasthan,4184123,"20,173",,4.5,,2447712,18828554,,,,,,,,,,130,97,All media plan sheet,,,
+Delivered,,,,Hair&care,YT NSK,,F 18-44 NCCS AB,All Devices,,56126038,1023184680,,,1-10-2025,31-10-2025,Gujarat,4713275,"17,91,798",,4.2,,2672427,19795755,,,,,,,,,,135,104,,,,
+Delivered,,,,Minium 15% savings to be delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,132.5,100.5,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,oct,Madison ,Jyothy Labs,MAXO_Aerosol,Non-skip,,F 25- 44 + HHI Top 50%,Mobile,,56153221,1023749272,23095830175,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Gujarat - Reach,8-10-2025,17-11-2025,Gujarat Reach,"2,350,000",,,4,,"1,034,000","9,400,000",,,,,,,,,,110,110,All media plan sheet,,,
+Delivered,,,,,,,,,,,,23095875298,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Gujarat - TF,8-10-2025,17-11-2025,Gujarat TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,MAXO_Aerosol,Non-skip,,F 25- 44 + HHI Top 50%,Mobile,,56153221,1023367026,23095878679,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Haryana - Reach,8-10-2025,17-11-2025,Haryana Reach,"120,000",,,4,,"55,200","480,000",,,,,,,,,,115,110,,,,
+Delivered,,,,,,,,,,,,23085850749,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Haryana - TF,8-10-2025,17-11-2025,Haryana TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,MAXO_Aerosol,Non-skip,,F 25- 44 + HHI Top 50%,Mobile,,56153221,1023368226,23091856295,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Punjab - Reach,8-10-2025,17-11-2025,Punjab Reach,"400,000",,,4,,"184,000","1,600,000",,,,,,,,,,115,70,,,,
+Delivered,,,,,,,,,,,,23091855782,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Punjab - TF,8-10-2025,17-11-2025,Punjab TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,MAXO_Aerosol,Non-skip,,F 25- 44 + HHI Top 50%,Mobile,,56153221,1023752734,23086010595,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - Reach,8-10-2025,17-11-2025,Rajasthan Reach,"540,000",,,4,,"237,600","2,160,000",,,,,,,,,,110,65,,,,
+Delivered,,,,,,,,,,,,23086011021,Est 210_Maxo Aerosol_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - TF,8-10-2025,17-11-2025,Rajasthan TF,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,oct,Socialbeat,Adani,Fortune Besan Diwali ,Non-Skip,30.10%,Female 25 - 45 ,Mobile,,56192451,1023393752,23090037261,,8-10-2025,28-10-2025,"Uttar Pradesh - Lucknow, Gorakhpur, Faizabad, Basti, Prayagraj, Varanasi, Kanpur, Agra",1051683,,,4,,350000,4206731,,,,,,,,,,104,74,All media plan sheet,,,
+Delivered,,,,Fortune Besan Diwali ,Non-Skip,,Female 25 - 45 ,Mobile,,56192451,1023393752,23096016653,,8-10-2025,28-10-2025,"Bihar - Patna, Muzaffarpur, Purnia",224515,,,4,,74000,898058,,,,,,,,,,103,67,,,,
+Delivered,,,,Fortune Besan Diwali ,Non-Skip,,Female 25 - 45 ,Mobile,,56192451,1023393752,23090191359,,8-10-2025,28-10-2025,Uttrakhand - Dehradun,47488,,,4,,15500,189951,,,,,,,,,,102,75,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,103,72,,,,
+Delivered,Oct,Madison,Marico (Saffola),SPO,YT NSK,,F 25-44 NCCS AB,All Devices,,56171458,1023506619,23120153010,KER|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|11.69L|Reach|Sustenance|MAD| Oct-Nov 2025,15-10-2025,15-11-2025,Kerala,2521303,"14,19,806",,4,,1169884,10085212,,,,,,,,,,116,93,All media plan sheet,,,
+Delivered,,,,,,,,,,56171458,1023506619,23129520223,KER|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|11.69L|Reach|Sustenance|MAD| Oct-Nov_ 2025 CTV,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Saffola),SPO,YT NSK,,F 25-44 NCCS AB,All Devices,,56209917,1023887296,23120718159,WB (-Kol)|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|4.77L|Reach|Sustenance|MAD| Oct-Nov 2025 CTV TF,15-10-2025,15-11-2025,West Bengal (Minus Kolkata),995554,"4,73,995",,4,,477866,3982216,,,,,,,,,,120,96,,,,
+Delivered,,,,,,,,,,56209917,1023887296,23188014141,WB (-Kol)|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|4.77L|Reach|Sustenance|MAD| Oct-Nov-2025 Reach,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,,,,,,,56209917,1023887296,23120718642,WB (-Kol)|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|4.77L|Reach|Sustenance|MAD| Oct-Nov-2025 TF,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Saffola),SPO,YT NSK,,F 25-44 NCCS AB,All Devices,,56181155,1023514910,23154255046,Kolkata|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|10.03L|Reach|Sustenance|MAD|Oct-Nov_2025_Reach,15-10-2025,15-11-2025,Kolkata,1475394,"7,74,287",,4,,1003268,5901576,,,,,,,,,,170,120,,,,
+Delivered,,,,,,,,,,56181155,1023514910,23126472368,Kolkata|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|10.03L|Reach|Sustenance|MAD|Oct-Nov_2025_TF,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Oct,Madison,Marico (Parachute),PA GOLD,YT NSK,,F 18-44 NCCS ABC,All Devices,,56181037,1023539894,23138841781,YT|Non-Skip||F|25|44||DelhiNCR||LTV+ABC||PA Gold|Auction|Sustenance|MAD|29.62L|Oct-Nov'25,15-10-2025,15-11-2025,Delhi NCR,3446526,"15,71,065",,4.5,,2962289,15509367,,,,,,,,,,191,157,All media plan sheet,,,
+Delivered,,,,,,,,,,56181037,1023539894,23129016642,YT|Non-Skip||F|25|44||DelhiNCR||LTV+HHI Top 50%||PA Gold|Auction|Sustenance|MAD|29.62L|Oct-Nov_2025,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Parachute),PA GOLD,YT NSK,,F 18-44 NCCS ABC,All Devices,,56181814,1023537024,23135418377,YT|Non-Skip||F|25|44||Bih+JH||ABC||PA Gold|Auction|13.45L||Sustenance|MAD|Oct-Nov_2025,15-10-2025,15-11-2025,Bihar Jharkhand,2717614,"14,06,020",,4.5,,1345219,12229263,,,,,,,,,,110,72,,,,
+Delivered,,,,,,,,,,56181814,1023537024,23139496786,YT|Non-Skip||F|25|44||Bih+JH||LTV+HHI Top 50%||PA Gold|Auction|Sustenance|MAD|13.45L|Oct-Nov_2025,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Parachute),PA GOLD,YT NSK,,F 18-44 NCCS ABC,All Devices,,56216016,1023912445,23139555286,YT|Non-Skip||F|25|44||MH||ABC||PA Gold|Auction|22.79L||Sustenance|MAD|Oct-Nov_2025,15-10-2025,15-11-2025,Maharashtra,3080936,"12,24,487",,4,,2279892,12323744,,,,,,,,,,185,121,,,,
+Delivered,,,,,,,,,,56216016,1023912445,23139555730,YT|Non-Skip||F|25|44||MH||LTV+HHI Top 50%||PA Gold|Auction|Sustenance|MAD|22.79L|2025,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Parachute),PA GOLD,YT NSK,,F 18-44 NCCS ABC,All Devices,,56217216,1023544256,23139647980,YT|Non-Skip||F|25|44||Karnataka ||LTV+ABC||PA Gold|Auction|Sustenance|MAD|7.13L|Oct-Nov'25,15-10-2025,15-11-2025,Karnataka,1230636,"5,13,423",,4,,713769,4922544,,,,,,,,,,145,97,,,,
+Delivered,,,,,,,,,,56217216,1023544256,23135569106,YT|Non-Skip||F|25|44||Karnataka||LTV+HHI Top 50%||PA Gold|Auction|Sustenance|MAD|7.13L|Oct-Nov'25,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Oct,Madison,Marico (Parachute),PAAV,YT CTV,,F25-44 AB,CTV,,56197050,1023411732,,,15-10-2025,15-11-2025,Maharashtra,865504,"3,63,512",,5,,313745,4327520,,,,,,,,,,145,92,All media plan sheet,,,
+Delivered,,,Marico (Parachute),PAAV,YT CTV,,F25-44 AB,CTV2,,56197050,1023895462,,,15-10-2025,15-11-2025,Maharashtra,,,,5,,313745,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Parachute),PAAV,YT NSK,,F25-44 AB,All devices,,56197050,1023414476,,,15-10-2025,15-11-2025,Maharashtra,2885013,"11,95,549",,4,,1197280,11540052,,,,,,,,,,200,135,,,,
+Delivered,,,Marico (Parachute),PAAV,YT NSK,,F25-44 AB,All devices 2,,56197050,1023520139,,,15-10-2025,15-11-2025,Maharashtra,,,,4,,1197280,,,,,,,,,,,,,,,,
+Delivered,,,Marico (Parachute),PAAV,YT Shorts,,F25-44 AB,Shorts,,56197050,1023414644,,,15-10-2025,15-11-2025,Maharashtra,1917878,"3,49,054",,5,,479470,9589390,,,,,,,,,,50,24,,,,
+Delivered,,,Marico (Parachute),PAAV,YT NSK/Reach,,F25-44 AB,All devices,,56173630,1023511113,,,15-10-2025,15-11-2025,AP+TL,1331616,"5,96,564",,5,,466066,6658080,,,,,,,,,,140,90,,,,
+Delivered,,,Marico (Parachute),PAAV,YT NSK/TF,,F25-44 AB,All devices 2,,56173630,1023517607,,,15-10-2025,15-11-2025,AP+TL,,,,5,,466066,,,,,,,,,,,,,,,,
+Delivered,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Oct ,Madison,Marico (Parachute),PAAHO,YT NSK,,F 25-44 AB,All Devices,,56157796,1023410859,23094063732,Kerala | F18-44 AB | Parachute Advansed Ayurvedic | Sustenance_Oct-Nov_2025,15-10-2025,15-11-2025,Kerala,1073946,"4,22,866",,5,,805460,5369730,,,,,,,,,,150,116,"All media plan sheet
+
+
+
+
+
+
+
+
+
+
+
+
+",,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,Opting out of Delhi Market due to negligible efficiency / savings,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Oct,Madison,Jyothy Labs,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023562983,23141775290,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Gujarat - Reach - 10 Secs,17-10-2025,30-11-2025,Gujarat,"485,000",,,2,,97000,970000,,,,,,,,,,100,66,All media plan sheet,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023562983,23136425955,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Gujarat - Reach - 20 Secs,,,Gujarat,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023562983,23136426846,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Gujarat - TF - 10 Secs,,,Gujarat,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023562983,23136427338,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Gujarat - TF - 20 Secs,,,Gujarat,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023926329,23135463357,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Haryana- Reach - 10 Secs,17-10-2025,10-12-2025,Haryana,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023926329,23135471241,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Haryana- Reach - 20 Secs,,,Haryana,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023926329,23135470686,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Haryana- TF - 10 Secs,,,Haryana,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023926329,23135470491,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Haryana- TF - 20 Secs,,,Haryana,"427,835",,,2,,83000,855670,,,,,,,,,,97,73,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023941704,23142081737,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Kerala- Reach - 10 Secs,17-10-2025,30-11-2025,Kerala,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941704,23146490638,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Kerala- Reach - 20 Secs,,,Kerala,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941704,23146489594,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Kerala- TF - 10 Secs,,,Kerala,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941704,23136776598,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Kerala- TF - 20 Secs,,,Kerala,"921,053",,,4,,350000,3684211,,,,,,,,,,95,59,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023935866,23141521337,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Maharashtra- Reach - 10 Secs,17-10-2025,30-11-2025,Maharashtra,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935866,23141518934,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Maharashtra- Reach - 20 Secs,,,Maharashtra,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935866,23136106029,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Maharashtra- TF- 10 Secs,,,Maharashtra,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935866,23141320940,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Maharashtra- TF - 20 Secs,,,Maharashtra,"4,975,728",,,4,,2050000,19902913,,,,,,,,,,103,107,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023935722,23140893965,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Punjab - Reach - 10 Secs,17-10-2025,30-11-2025,Punjab,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935722,23145204217,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Punjab - Reach - 20 Secs,,,Punjab,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935722,23135451537,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Punjab - TF - 10 Secs,,,Punjab,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023935722,23145189064,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Punjab - TF - 20 Secs,,,Punjab,"532,178",,,4,,215000,2128713,,,,,,,,,,101,72,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023561567,23136225837,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - Reach - 10 Secs,17-10-2025,30-11-2025,Rajasthan,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023561567,23141592611,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - Reach - 20 Secs,,,Rajasthan,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023561567,23141593424,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - TF - 10 Secs,,,Rajasthan,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023561567,23136226011,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Rajasthan - TF - 20 Secs,,,Rajasthan,"855,978",,,4,,315000,3423913,,,,,,,,,,92,62,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023504245,23140988378,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Uttar Pradesh - Reach - 10 Secs,17-10-2025,30-11-2025,Uttarpradesh,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023504245,23135499582,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Uttar Pradesh - Reach - 20 Secs,,,Uttarpradesh,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023504245,23135543727,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Uttar Pradesh - TF - 10 Secs,,,Uttarpradesh,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023504245,23140989065,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - Uttar Pradesh - TF - 20 Secs,,,Uttarpradesh,"1,894,737",,,4,,720000,7578947,,,,,,,,,,95,64,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,Mobile,,56185960,1023941266,23136710388,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - West Bengal - Reach - 10 Secs,17-10-2025,30-11-2025,WestBengal,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941266,23142031427,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - West Bengal - Reach - 20 Secs,,,WestBengal,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941266,23142030392,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - West Bengal - TF - 10 Secs,,,WestBengal,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Maxo Vaporiser,,,F 25- 44 + HHI Top 50%,,,56185960,1023941266,23142031595,Est 212 _Maxo Liquid Vaporiser_Non-skip_Mobile_Oct-Nov'25 - West Bengal - TF- 20 Secs,,,WestBengal,"1,130,435",,,4,,520000,4521739,,,,,,,,,,115,83,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Marico (Parachute),Nihar Hair Oil (NHO),YT NSK,,F 25-44 ABC,Both,,56232372,1023597608,23151296380,Bihar District|Vid|YT|Non Skip|ABCD|||N Skip|15Sec|Nihar|||ABCD|||||1.80L|F|25|44|MAD|Oct-Nov_2025-TF,15-10-2025,27-11-2025,Bihar 1,288505,"1,03,516",,5,,180316,1442525,,,,,,,,,,125,105,All media plan sheet,,,
+Delivered,,,,Nihar Hair Oil (NHO),YT NSK,,F 25-44 ABC,Both,,56205026,1023604988,23142357015,YT|Non Skip|Nihar|Naturals Hair oil|F|25|44|Bihar 2|All HHI||Hair care|RnF|Reach|1.80L|Sustenance|MAD|Oct-Nov-2025_TF,15-10-2025,27-11-2025,Bihar 2,260627,93513,,5,,162892,1303135,,,,,,,,,,125,110,,,,
+Delivered,,,,Nihar Hair Oil (NHO),YT NSK,,F 25-44 ABC,Both,,56233059,1023605777,23147675483,YT|Non Skip|Nihar|Naturals Hair oil|F|25|44|Bihar 3|All HHI||Hair care|RnF|Reach|1.72L|Sustenance|MAD|Oct-Nov-2025_TF,15-10-2025,27-11-2025,Bihar 3,276688,99276,,5,,172930,1383440,,,,,,,,,,125,106,,,,
+Delivered,,,,Nihar Hair Oil (NHO),YT NSK,,F 25-44 ABC,Both,,56231880,1023605309,23142456663,Bihar District|Vid|YT|Non Skip|ABCD|||N Skip|15Sec|Nihar|||ABCD|||||1.91L|F|25|44|MAD|Oct-Nov_2025-TF,15-10-2025,27-11-2025,Bihar 4,383139,"1,37,470",,4,,191570,1532556,,,,,,,,,,125,91,,,,
+Active,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,madison,Margo,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1024142920,23193523801,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Bihar - Reach,27-10-2025,26-11-2025,Bihar Reach,"15,49,479",,,4,,595000,"61,97,917",,,,,,,,,,96,63,All media plan sheet,,,
+Delivered,,,,,,,,,,56238380,1024142920,23193508288,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Bihar - TF,27-10-2025,26-11-2025,Bihar TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1023801549,23189260694,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Jharkhand - Reach,27-10-2025,26-11-2025,Jharkhand Reach,"6,08,696",,,4,,280000,"24,34,783",,,,,,,,,,115,75,,,,
+Delivered,,,,,,,,,,56238380,1023801549,23184044325,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Jharkhand - TF,27-10-2025,26-11-2025,Jharkhand TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1023793076,23193963514,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - West Bengal - Reach,27-10-2025,26-11-2025,West Bengal Reach,"23,82,813",,,4,,915000,"95,31,250",,,,,,,,,,96,70,,,,
+Delivered,,,,,,,,,,,,23189616368,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - West Bengal - TF,27-10-2025,26-11-2025,West Bengal TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1024150459,23189311901,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Uttar Pradesh - Reach,27-10-2025,26-11-2025,Uttar Pradesh Reach,"61,32,813",,,4,,2355000,"2,45,31,250",,,,,,,,,,96,77,,,,
+Delivered,,,,,,,,,,,,23193656308,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Uttar Pradesh - TF,27-10-2025,26-11-2025,Uttar Pradesh TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1023798209,23190539243,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Maharashtra - Reach,27-10-2025,26-11-2025,Maharashtra Reach,"29,56,522",,,4,,1360000,"1,18,26,087",,,,,,,,,,115,76,,,,
+Delivered,,,,,,,,,,56238380,1023798209,23194904629,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Maharashtra - TF,27-10-2025,26-11-2025,Maharashtra TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1023799790,23190629231,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - AP+TL - Reach,27-10-2025,26-11-2025,Andhra Pradesh + Telangana Reach,"1,351,563",,,4,,519000,"5,406,250",,,,,,,,,,96,65,,,,
+Delivered,,,,,,,,,,56238380,1023799790,23185426023,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - AP+TL - TF,27-10-2025,26-11-2025,Andhra Pradesh + Telangana TF,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,Margo Orignal Neem,Non-skippable,,TG: F 25-44 + HHI 50%,Mobile,,56238380,1023806358,23190816902,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Karnataka - Reach,27-10-2025,26-11-2025,Karnataka Reach,"14,19,271",,,4,,545000,"56,77,083",,,,,,,,,,96,78,,,,
+Delivered,,,,,,,,,,56238380,1023806358,23185619928,Est 211+214_Margo Original Neem_Non-skip_Mobile_OND'25 - Karnataka - TF,27-10-2025,26-11-2025,Karnataka TF,,,,,,,,,,,,,,,,,,,,,,
+,A/B test,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,GroupM,HUL,Bru (Bidvid),Non-skippable,,HHI Top 21% to 50%,,,56249675,1023848363,,,3-11-2025,30-11-25,Andhra Pradesh +Telengana,1053895,,,3.2,,397950,3372464,,,,,,,,,,118,80.27,,,,
+Delivered,,,,Bru (Bidvid),,,HHI Top 21% to 50%,,,56249675,1023848366,,,3-11-2025,30-11-25, Kerala,413392,,,3.2,,123025,103025,,,,,,,,,,93,64.72,,,,
+Delivered,,,,Pears Soap (Bidvid),Bumper + Shorts,,HHI Top 21% to 50%,,,56269980,1023856925,,,3-11-2025,30-11-25,"Lucknow, Kanpur, Agra, Varanasi, Aligarh, Allahabad, Barreilly, Meerut, Muradabad",1093747,,,2.7,,88725,2945824,,,,,,,,,,30,19.37,,,,
+Delivered,,,,Pears Soap(Bidvid),Bumper + Shorts,,HHI Top 21% to 50%,,,56269980,1024215985,,,3-11-2025,30-11-25,"Aurangabad, Nagpur, Nanded, Nashik, Solapur",657194,,,2.7,,60786,1779533,,,,,,,,,,34,22.15,,,,
+Delivered,,,,Surf Excel Value 10(Bidvid),Non-skippable + Bumper + YT shorts,,YT Rural,,,56218234,1023835611,,,3-11-2025,30-11-25,Bihar - Jharkhand ,37033337,,,3,,1412544,11170142,,,,,,,,,,126,90.49,,,,
+Delivered,,,,Surf Excel Value 10(Bidvid),Non-skippable + Bumper + YT shorts,,YT Rural,,,56218234,1023836943,,,3-11-2025,30-11-25,Madhya Pradesh,4108242,,,3,,1793830,1793830,,,,,,,,,,145,108.43,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Marico,PAJAS,YT NSK,,F18-34 AB,both,,56235754,1024211827,23199213252,YT|Non Skip|Parachute Advanced|PA Adv Jasmine|F|18|34UP|HHI Top 50%|Hair care|RnF|Reach|Sustenance|MAD-NOV-2025,1-11-2025,30-11-2025,UP,839582,369953,,5,,503749,4197910,,,,,,,,,,125,67,https://docs.google.com/spreadsheets/d/1sD7Q2S7h6YZSuPANwVd0SK5YJrISL4SRw1yXLFieJa4/edit?usp=sharing,,,
+Delivered,,,,PAJAS,YT NSK,,F18-34 AB,both,,56234911,1023851981,23208668092,YT|Non Skip|Parachute Advanced|PA Adv Jasmine|F|18|34|Mumbai+Pune|HHI Top 50%|Hair care|RnF|Reach|Sustenance|MAD-NOV-2025,1-11-2025,30-11-2025,Mah,3341116,1411287,,5,,3090532,16705580,,,,,,,,,,185,146,,,,
+Delivered,,,,PAJAS,YT NSK,,F18-34 AB,both,,56249594,1023839315,23208664984,YT|Non Skip|Parachute Advanced|PA Adv Jasmine|F|18|34|WB|HHI Top 50%|Hair care|RnF|Reach|Sustenance|MAD-NOV2025,1-11-2025,30-11-2025,WB,1391575,557186,,5,,904523,6957875,,,,,,,,,,130,87,,,,
+Delivered,,,,PAJAS,YT NSK,,F18-34 AB,both,,56249597,1023869187,23208668137,YT|Non Skip|Parachute Advanced|PA Adv Jasmine|F|18|34|Bihar|HHI Top 50%|Hair care|RnF|Reach||Sustenance|MAD-NOV-2025,1-11-2025,30-11-2025,Bihar,284335,110558,,5,,177709,1421675,,,,,,,,,,125,104,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Marico,SPO,YT NSK,,F25-44,CTV,,56248214,1024208707,23198355267,Mumbai|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|5.91L|Reach|Sustenance|MAD| Nov_ 2025 CTV,1-11-2025,30-11-2025,Mumbai,739155,"3,55,031",,5,,591324,3695775,,,,,,,,,,160,69,https://docs.google.com/spreadsheets/d/1sD7Q2S7h6YZSuPANwVd0SK5YJrISL4SRw1yXLFieJa4/edit?usp=sharing,,,
+Delivered,,,,SPO,YT NSK,,F25-44,CTV,,56266926,1024206184,23207873992,Delhi NCR|YT|Non Skip|SPO|F|25|44|HHI Top 50%|RnF|8.15L|Reach|Sustenance|MAD| Nov_ 2025 CTV,1-11-2025,30-11-2025,Delhi NCR,1019285,"4,89,583",,5,,815428,5096425,,,,,,,,,,160,65,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Marico,Muesli,YT NSK,,Demo (F 25-44) | Geo | NCCS AB,CTV,,56248907,1024209664,23198545143,YT|NonSkip|Saffola|Muesli|F|25|44|AllHHI|VTR|Sustenance|20Sec|Delhi|CTV|Nov_2025 - TF,1-11-2025,30-11-2025,Delhi,1189166,"5,86,211",,4,,784849,4756664,,,,,,,,,,165,96,https://docs.google.com/spreadsheets/d/1sD7Q2S7h6YZSuPANwVd0SK5YJrISL4SRw1yXLFieJa4/edit?usp=sharing,,,
+Delivered,,,,Muesli,YT NSK,,Demo (F 25-44) | Geo | NCCS AB,CTV,,56248313,1024209709,23208042406,YT|NonSkip|Saffola|Muesli|F|25|44|AllHHI|VTR|Sustenance|20Sec|Mumbai|CTV|Nov_2025,1-11-2025,30-11-2025,Maharashtra,689878,"3,40,082",,4,,441522,2759512,,,,,,,,,,160,99,,,,
+Delivered,,,,Muesli,YT NSK,,Demo (F 25-44) | Geo | NCCS AB,CTV,,56235592,1023867255,23203846040,YT|NonSkip|Saffola|Muesli|F|25|44|AllHHI|VTR|Sustenance|20Sec|Bangalore|CTV|Nov_2025 - TF,1-11-2025,30-11-2025,Karnataka,300651,"1,48,209",,4,,186403,1202604,,,,,,,,,,155,88,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,Madison,Marico,Nihar Aloe Hair Oil,YT NSK,,F 25-44 ABCDE,CTV,,56269641,1023877478,23203642515,Nonskip+CTV_UP+UK_line item,1-11-2025,30-11-2025,UP+UTT,1757158,"7,69,635",,5,,1054295,8785790,,,,,,,,,,120,76,https://docs.google.com/spreadsheets/d/1sD7Q2S7h6YZSuPANwVd0SK5YJrISL4SRw1yXLFieJa4/edit?usp=sharing,,,
+Delivered,A/B Test,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Nov 2025,Dentsu/Amnet,Sattva,Aeropolis (Bidivid),,,,,Test,,1023960244,23230763445,,7-11-25,7-12-25,Bengaluru,1388889,,,4.5,,625000,6250000,,2500000,,,,0.25,0.12,,,105,,,,,
+,,,,Aeropolis (BAU),,,,,,,,,,,,,,,,,,,,,,,,,,0.15,,,,,,,,
+Delivered,,,,Lumina (Bidvid),,,,,Test,,1023991502,23230762521,,7-11-25,7-12-25,Bengaluru,533334,,,7.5,,400000,4000000,,1600000,,,,0.25,0.12,,,105,,,,,
+,,,,Lumina (BAU),,,,,,,,,,,,,,,,,,,,,,,,,,0.16,,,,,,,,
+Delivered,,,,Simplicity (Bidvid),,,,,Test,,1024346671,23230764408,,7-11-25,7-12-25,Bengaluru,1714285,,,3.5,,600000,6000000,,2400000,,,,0.25,0.12,,,105,,,,,
+Delivered,,,,Simplicity (BAU),,,,,,,,,,,,,,,,,,,,,,,,,,0.15,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,A/BTest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,Nov 2025,Group M,Haier,Water Heater,,,,,Test,56279692,1024085270,,,11-11-25,31-12-25,,3294117,,,3.5,,1210588,11529410,,8647057,,,,,,,,105,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Nov 2025,Madison,Jyothy Labs,Ujala Detergent Liquid,Smartphone,,F 25-44 + HHI Top 50%,,Paid,56280427,1024088312,23256740782,Est 217_Ujala Liquid Detergent_OND'25 - Kerala - Reach,11/11/25,21/12/25,Kerala,1725275,,,5,,785000,8626374,,,,,,,,,,99,,,,,
+Delivered,,,,,Smartphone,,,,,,,23252567162,Est 217_Ujala Liquid Detergent_OND'25 - Kerala - TF,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,,,,,Smartphone,,F 25-44 + HHI Top 50%,,,,1024089548,23247514308,Est 217_Ujala Liquid Detergent_OND'25 - Tamil Nadu - Reach,11/11/25,21/12/25,Tamilnadu,1398058,,,5,,720000,6990291,,,,,,,,,,103,,,,,
+Delivered,,,,,Smartphone,,,,,,,23247514758,Est 217_Ujala Liquid Detergent_OND'25 - Tamil Nadu - TF,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Skip,A/B Test,LS Digital,Axis Mutual Fund,Axis Mutual Fund (BAU),,,MF 35-64,,Test,56317147,1024639705,23278587264,Axis MF- Index Fund Campaign- BAU-Nov'25,20/11/25,21/12/25,Pan India," 55,55,556 ",,,1.2,,200000,6666667,,3333333,,,,0.06,,,,,,Axis MF- Index Fund- Media Plan- Nov'25 v2.xlsx,,,
+Skip,Nov 2025,LS Digital,Axis Mutual Fund,Axis Mutual Fund (Bidvid),,,MF 35-64,,Test,,1024645360,23288148403,Axis MF- Index Fund Campaign- BidVid- Nov'25,20/11/25,21/12/25,Pan India," 55,55,556 ",,,1.2,,200000,6666667,,3333333,,,,0.06,,,,,,,,Opted out because of low fitscore,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,A/B Test,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ITC_Mediaplan_Bidvid.docx,,,
+Delivered,Nov 2025,Interactive Avenues,ITC,ITC Dark Fantasy,CTV+ Mobile,,25-44 F| HHI Top 20%| Parent,,Test,56346003,1024327170,23292382759,Maharashtra (city list)_CAM-11399|||NOV|||Tar-93,21/11/25,21/12/25,Maharashtra (city list),907029,,,3,,200000,2721088,,952381,,,,0.21,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,A/B Test/Nov 2025,Group M,Aditya Birla,Aditya Birla Sunlife Mutual Fund,Trueview Instream (Mobile +Desktop),,22-45 M/F P1+P2,,Test,,,,,24/11/25,15/12/25,P1+P2,4500000,,,2,,1134000,9000000,,4050000,,,,0.28,,,,,,ABSLMF_SIP+SWP_Plan_17th Nov_rev.xlsx,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,Dec-25,Madison,Zouk,Bagful Campaign,,,,CTV,,56340784,1024570262,,,4/12/25,31/12/25,Banglore,"14,32,200",,,3,,"331,188","4,010,160",,,,,,,,,,97,,Zouk Budget Bagful Media Plan Dec - V4 - Bidvid (1).xlsx,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024697162,,,4/12/25,31/12/25,,"13,47,136",,,1.5,,"77,797",,,"7,07,246",,,,0.11,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024703105,,,4/12/25,31/12/25,,"8,08,282",,,2,,217363,"20,12,621",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024556562,,,4/12/25,31/12/25,Mumbai,"22,96,800",,,3,,618482,"75,79,440",,,,,,,,,,102,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024726986,,,4/12/25,31/12/25,,"22,65,503",,,1.5,,104621,,,"11,89,389",,,,0.13,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024733127,,,4/12/25,31/12/25,,"13,59,302",,,2,,341173,"33,84,661",,,,,,,,,,126,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024615458,,,4/12/25,31/12/25,Delhi,"38,56,500",,,3,,1035540,"1,31,12,100",,,,,,,,,,93,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066155,,,4/12/25,31/12/25,,"31,67,338",,,2,,243885,,,"22,17,137",,,,0.11,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024720011,,,4/12/25,31/12/25,,"19,00,403",,,2,,495914,"47,32,004",,,,,,,,,,131,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024610361,,,4/12/25,31/12/25,Chennai,"8,24,000",,,3,,139942,"23,07,200",,,,,,,,,,70.4,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066161,,,4/12/25,31/12/25,,"5,80,096",,,2,,"32,485",,,"4,06,067",,,,0.08,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024733232,,,4/12/25,31/12/25,,"3,48,058",,,2,,"72,661","8,66,663",,,,,,,,,,104.8,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024586519,,,4/12/25,31/12/25,Pune,"6,34,600",,,3,,111547,"17,13,420",,,,,,,,,,77,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025064091,,,4/12/25,31/12/25,,"4,18,836",,,2,,"26,387",,,"2,93,185",,,,0.09,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025071786,,,4/12/25,31/12/25,,"2,51,302",,,2,,"68,081","6,25,741",,,,,,,,,,136,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024613271,,,4/12/25,31/12/25,Hyderabad,"13,53,000",,,3,,231284,"43,29,600",,,,,,,,,,61,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024726803,,,4/12/25,31/12/25,,"10,77,982",,,2,,"52,821",,,"7,54,587",,,,0.07,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024702049,,,4/12/25,31/12/25,,"6,46,789",,,2,,164916,"16,10,505",,,,,,,,,,128,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024618047,,,4/12/25,31/12/25,Kolkata,"5,93,400",,,3,,142871,"17,80,200",,,,,,,,,,94,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066014,,,4/12/25,31/12/25,,"3,98,426",,,2,,"33,468",,,"2,78,898",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024733553,,,4/12/25,31/12/25,,"2,39,055",,,2,,"59,049","5,95,248",,,,,,,,,,124,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024619628,,,4/12/25,31/12/25,Ahmedabad,"5,86,019",,,3,,135018,"18,75,261",,,,,,,,,,84,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066017,,,4/12/25,31/12/25,,"4,50,063",,,2,,"31,504",,,"3,15,044",,,,0.1,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024703849,,,4/12/25,31/12/25,,"2,70,038",,,2,,"67,333","6,72,394",,,,,,,,,,126,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024598708,,,4/12/25,31/12/25,Coimbatore,"1,43,860",,,3,,"22,245","3,74,037",,,,,,,,,,71,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066011,,,4/12/25,31/12/25,,"75,876",,,2,,"5,311",,,"53,113",,,,0.1,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024704077,,,4/12/25,31/12/25,,"45,526",,,2,,"10,019","95,604",,,,,,,,,,131,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024622205,,,4/12/25,31/12/25,Lucknow,"5,34,870",,,3,,129667,"16,04,610",,,,,,,,,,94,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024726806,,,4/12/25,31/12/25,,"4,78,836",,,1.5,,"30,167",,,"2,51,389",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025071375,,,4/12/25,31/12/25,,"2,87,302",,,2,,"70,966","7,15,381",,,,,,,,,,124,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024971871,,,4/12/25,31/12/25,Indore,"4,32,000",,,3,,110643,"12,96,000",,,,,,,,,,99,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1025066158,,,4/12/25,31/12/25,,"3,49,127",,,1.5,,"25,661",,,"1,83,291",,,,0.14,,,,,,,,,
+Active,Dec-25,,,Bagful Campaign,,,,CTV,,56340784,1024733664,,,4/12/25,31/12/25,,"2,09,476",,,2,,"53,829","5,21,595",,,,,,,,,,129,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,Dec-25,Madison,Zouk,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1025112181,,,11/12/25,31/12/25,Bangalore,"10,21,428",,,2,,"294,171",,,"9,80,571",,,,0.11,,,,,,Zouk Budget Xmas Media Plan Dec - V4 - Bidvid (1).xlsx,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784778,,,11/12/25,31/12/25,,"2,74,982",,,3,,"123,742","8,24,947",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024776648,,,11/12/25,31/12/25,Mumbai,"21,72,309",,,2,,"625,625",,,"20,85,416",,,,0.14,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1025123380,,,11/12/25,31/12/25,,"5,41,389",,,3,,"243,625","16,24,166",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024671815,,,11/12/25,31/12/25,Delhi,"27,72,741",,,2,,"798,549",,,"26,61,832",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024743233,,,11/12/25,31/12/25,,"6,46,239",,,3,,"290,808","19,38,718",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024778532,,,11/12/25,31/12/25,Chennai,"10,46,746",,,2,,"251,219",,,"8,37,396",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784958,,,11/12/25,31/12/25,,"1,03,824",,,3,,"46,721","3,11,472",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024772562,,,11/12/25,31/12/25,Pune,"6,02,569",,,2,,"144,617",,,"4,82,055",,,,0.1,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784772,,,11/12/25,31/12/25,,"77,104",,,3,,"34,697","2,31,312",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024778268,,,11/12/25,31/12/25,Hyderabad,"9,37,484",,,2,,"224,996",,,"7,49,987",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784961,,,11/12/25,31/12/25,,"1,85,554",,,3,,"83,499","5,56,663",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024744205,,,11/12/25,31/12/25,Kolkata,"1,15,500",,,2,,"27,720",,,"92,400",,,,0.12,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784775,,,11/12/25,31/12/25,,"91,553",,,3,,"41,199","2,74,659",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024745129,,,11/12/25,31/12/25,Ahmedabad,"4,85,967",,,2,,"138,072",,,"4,47,090",,,,0.1,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024784781,,,11/12/25,31/12/25,,"88,405",,,3,,"39,782","2,65,216",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024781367,,,11/12/25,31/12/25,Coimbatore,"1,34,246",,,2,,"28,997",,,"96,657",,,,0.1,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024776885,,,11/12/25,31/12/25,,"17,633",,,3,,"7,935","52,900",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1024733639,,,11/12/25,31/12/25,Lucknow,"1,86,290",,,2,,"40,239",,,"1,34,129",,,,0.09,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1025123314,,,11/12/25,31/12/25,,"1,10,030",,,3,,"49,514","3,30,091",,,,,,,,,,135,,,,,
+Active,Dec-25,,,Xmas campaign,,,Affinity+ Inmarket+Custom Intent+ Custom Url,All Devices,,56383076,1025119546,,,11/12/25,31/12/25,Indore,"1,77,190",,,2,,"38,273",,,"1,27,577",,,,0.08,,,,,,,,,
+Active,Dec-25,,,Xmas campaign,,,Targeting Bagful Campaign Cookie Pool,CTV,,56383076,1024751675,,,11/12/25,31/12/25,,"88,869",,,3,,"39,991","2,66,606",,,,,,,,,,135,,,,,
+,A/BTest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Delivered,Dec-25,,,B4U Movies (BAU),,,Bhojpuri speaking NRI audience,All Devices,,,,,,18/12/25,24/12/25,NRI,,,,,,50000,,,,,,,0.3,,,,,,,,,
+Delivered,,,,B4U Movies (Bidvid),,,,,,,1025218678,,,18/12/25,24/12/25,NRI,,,,,,40000,,,,,,,,,,,,,,,,
+,Test,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,,Dentsu,Lenovo,Lenovo (BAU),,,,,Test,56420834,1024937840,,,22/12/25,31/12/25,Australia,,,,,,"$4,000",,,,,,,,,,,$11,,,,,
+Active,,,,Lenovo (Bidvid),,,,,Test,56420834,1025357209,,,22/12/25,31/12/25,Australia,,,,,,"$4,000",,,,,,,,,,,$11,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,A/BTest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Active,,WPP(Indonesia),HUL ,Pond's (BAU),,,,,Test,55866123,1025331025,,,22/12/25,31/12/25,Indonesia,6124018,,,,,Idr 186675000,,,,,4302392,,,,Idr 43,,,,,,,
+Active,,WPP(Indonesia),HUL ,Pond's (Bidvid),,,,,Test,55866123,1024902463,,,22/12/25,31/12/25,Indonesia,6124018,,,,,Idr 186675000,,,,,4302392,,,,Idr 43,,,,,,,
