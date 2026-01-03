@@ -14,6 +14,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://cpm-predictor-production.up.railway.app",
+        "https://cpm-predictor.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
