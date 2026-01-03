@@ -1,50 +1,126 @@
-import UploadPlanCard from "../components/upload/UploadPlanCard";
+import { useState } from "react";
+
 import { predictCPM } from "../services/api";
-import { usePredictionStore } from "../state/predictionStore";
+import { PredictResponse } from "../types/api";
+
+import UploadPlanCard from "../components/upload/UploadPlanCard";
+import CampaignSummary from "../components/campaign/CampaignSummary";
 
 import ModelCPMCard from "../components/prediction/ModelCPMCard";
 import LLMCPMCard from "../components/prediction/LLMCPMCard";
 import FinalCPMCard from "../components/prediction/FinalCPMCard";
-import ConfidenceMeter from "../components/prediction/ConfidenceMeter";
+
 import ExplanationAccordion from "../components/explanation/ExplanationAccordion";
 import SimilarCampaignTable from "../components/similarity/SimilarCampaignTable";
 import AdminPanel from "../components/admin/AdminPanel";
 
-export default function App() {
-  const { result, setResult, setLoading } = usePredictionStore();
+import Loader from "../components/common/Loader";
 
-  const run = async (row: any) => {
+export default function App() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const [csvData, setCsvData] = useState<Record<string, any> | null>(null);
+  const [result, setResult] = useState<PredictResponse | null>(null);
+
+  // -----------------------------
+  // Handle CSV Upload → Predict
+  // -----------------------------
+  const handleCsvSubmit = async (parsedCsv: Record<string, any>) => {
     setLoading(true);
-    const res = await predictCPM(row);
-    setResult(res);
-    setLoading(false);
+    setError(null);
+    setResult(null);
+
+    try {
+      setCsvData(parsedCsv);
+
+      const response = await predictCPM(parsedCsv);
+      setResult(response);
+    } catch (e: any) {
+      console.error(e);
+      setError(
+        e?.message ??
+          "Prediction failed. Please check CSV format and backend logs."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 space-y-8">
-      <h1 className="text-2xl font-bold">CPM Prediction Tool</h1>
+    <div className="app-container">
+      {/* ============================
+          Header
+      ============================ */}
+      <header className="app-header">
+        <h1>CPM Prediction Tool</h1>
+        <p className="muted">
+          ML + LLM assisted CPM estimation for programmatic video campaigns
+        </p>
+      </header>
 
-      <UploadPlanCard onParsed={run} />
+      {/* ============================
+          Upload Section
+      ============================ */}
+      <UploadPlanCard onSubmit={handleCsvSubmit} />
 
-      {result && (
+      {/* ============================
+          CSV Preview
+      ============================ */}
+      {csvData && (
+        <CampaignSummary campaign={csvData} />
+      )}
+
+      {/* ============================
+          Loading / Error
+      ============================ */}
+      {loading && <Loader text="Running prediction…" />}
+
+      {error && (
+        <div className="card error">
+          <strong>Error</strong>
+          <p>{error}</p>
+        </div>
+      )}
+
+      {/* ============================
+          Prediction Results
+      ============================ */}
+      {result && !loading && (
         <>
-          <div className="grid grid-cols-3 gap-6">
-            <ModelCPMCard value={result.model_range.p50} />
-            <LLMCPMCard value={result.llm_adjusted_range.llm_predicted_cpm.mid} />
+          {/* ---- CPM Cards ---- */}
+          <div className="grid-3">
+            <ModelCPMCard
+              model={result.model_range}
+              conformal={result.conformal_range}
+            />
+
+            <LLMCPMCard llm={result.llm_adjusted_range} />
+
             <FinalCPMCard value={result.final_blended_cpm} />
           </div>
 
-          <ConfidenceMeter value={result.conformal_range.coverage_target} />
+          {/* ---- Explanation ---- */}
+          <ExplanationAccordion llm={result.llm_adjusted_range} />
 
-          <ExplanationAccordion
-            impacts={result.llm_adjusted_range.tool_impacts}
+          {/* ---- Similar Campaigns ---- */}
+          <SimilarCampaignTable
+            campaigns={result.similar_campaigns}
           />
 
-          <SimilarCampaignTable rows={result.similar_campaigns} />
+          {/* ---- Admin Controls ---- */}
+          <AdminPanel />
         </>
       )}
 
-      <AdminPanel />
+      {/* ============================
+          Footer
+      ============================ */}
+      <footer className="app-footer">
+        <span className="muted">
+          Predictions include uncertainty. Use as a planning guide, not a guarantee.
+        </span>
+      </footer>
     </div>
   );
 }

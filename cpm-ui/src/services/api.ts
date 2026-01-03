@@ -1,6 +1,8 @@
+import { PredictResponse } from "../types/api";
+
 const API_BASE = import.meta.env.VITE_API_BASE;
 
-export async function predictCPM(payload: any) {
+export async function predictCPM(payload: any): Promise<PredictResponse> {
   const res = await fetch(`${API_BASE}/api/predict`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -8,22 +10,23 @@ export async function predictCPM(payload: any) {
   });
 
   if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.detail || "Prediction failed");
+    const text = await res.text();
+    throw new Error(text);
   }
 
-  return res.json();
+  return res.json(); // ⛔ DO NOT modify response
 }
-
-export async function refreshHistorical() {
+export async function refreshHistorical(): Promise<{ status: string }> {
   const res = await fetch(
     `${API_BASE}/api/admin/refresh-historical-from-gsheet`,
-    { method: "POST" }
+    {
+      method: "POST",
+    }
   );
 
   if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.detail || "Refresh failed");
+    const text = await res.text();
+    throw new Error(text || "Failed to refresh historical data");
   }
 
   return res.json();
