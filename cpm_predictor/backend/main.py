@@ -25,4 +25,4 @@ def startup_event():
     # Warm load ML artifacts
     load_models()
 
-app.include_router(api_router, prefix="/api")
+app.include_router(api_router)
