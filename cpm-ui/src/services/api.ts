@@ -18,7 +18,7 @@ export async function predictCPM(payload: any): Promise<PredictResponse> {
 }
 export async function refreshHistorical(): Promise<{ status: string }> {
   const res = await fetch(
-    `${API_BASE}/api/admin/refresh-historical-from-gsheet`,
+    `${API_BASE}/admin/refresh-historical-from-gsheet`,
     {
       method: "POST",
     }
