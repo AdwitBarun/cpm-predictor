@@ -148,6 +148,7 @@ export default function App() {
 
   const [csvData, setCsvData] = useState<Record<string, any> | null>(null);
   const [result, setResult] = useState<PredictResponse | null>(null);
+  const [plannedCPM, setPlannedCPM] = useState<number | null>(null);
 
   // -----------------------------
   // Handle CSV Upload → Predict
@@ -156,6 +157,7 @@ export default function App() {
     setLoading(true);
     setError(null);
     setResult(null);
+    setPlannedCPM(null);
 
     try {
       setCsvData(parsedCsv);
@@ -173,13 +175,18 @@ export default function App() {
     }
   };
 
+  const isAccept =
+    plannedCPM !== null &&
+    result &&
+    plannedCPM >= result.final_blended_cpm;
+
   return (
     <div className="app-container">
       {/* ============================
           Header
       ============================ */}
       <header className="app-header">
-        <h1>CPM Prediction Tool</h1>
+        <h1>BidVid Benchmarking Tool</h1>
         <p className="muted">
           ML + LLM assisted CPM estimation for programmatic video campaigns
         </p>
@@ -191,9 +198,29 @@ export default function App() {
       <UploadPlanCard onSubmit={handleCsvSubmit} />
 
       {/* ============================
-          CSV Preview
+          Campaign Summary
       ============================ */}
       {csvData && <CampaignSummary campaign={csvData} />}
+
+      {/* ============================
+          Planned CPM Input
+      ============================ */}
+      {csvData && (
+        <div className="card mt-4">
+          <h3>Enter Planned CPM</h3>
+          <input
+            type="number"
+            placeholder="Type planned CPM..."
+            className="mt-2 p-2 border rounded w-full"
+            value={plannedCPM ?? ""}
+            onChange={(e) =>
+              setPlannedCPM(
+                e.target.value ? Number(e.target.value) : null
+              )
+            }
+          />
+        </div>
+      )}
 
       {/* ============================
           Loading / Error
@@ -208,12 +235,55 @@ export default function App() {
       )}
 
       {/* ============================
-          Prediction Results
+          Decision + Results
       ============================ */}
-      {result && !loading && (
+      {result && !loading && plannedCPM !== null && (
         <>
           {/* ----------------------------------
-              FINAL CPM (Hero Section)
+              ACCEPT / REJECT DECISION
+          ---------------------------------- */}
+          <div
+            className="card highlight text-center"
+            style={{
+              backgroundColor: isAccept ? "#e6f7ed" : "#fdecea",
+              border:
+                isAccept
+                  ? "1px solid #2e7d32"
+                  : "1px solid #c62828",
+            }}
+          >
+            <h2>Campaign Decision</h2>
+
+            {isAccept ? (
+              <div
+                style={{
+                  color: "#2e7d32",
+                  fontWeight: 700,
+                  fontSize: "20px",
+                }}
+              >
+                ✅ ACCEPT CAMPAIGN
+              </div>
+            ) : (
+              <div
+                style={{
+                  color: "#c62828",
+                  fontWeight: 700,
+                  fontSize: "20px",
+                }}
+              >
+                ❌ REJECT CAMPAIGN
+              </div>
+            )}
+
+            <p className="muted mt-2">
+              Planned CPM: ₹{plannedCPM} | Recommended: ₹
+              {result.final_blended_cpm}
+            </p>
+          </div>
+
+          {/* ----------------------------------
+              FINAL CPM (Hero)
           ---------------------------------- */}
           <FinalCPMCard value={result.final_blended_cpm} />
 
@@ -224,21 +294,20 @@ export default function App() {
             <ModelCPMCard
               conformal={result.conformal_range}
             />
-
             <LLMCPMCard
               llm={result.llm_adjusted_range}
             />
           </div>
 
           {/* ----------------------------------
-              Why This CPM (Toggle)
+              Why This CPM
           ---------------------------------- */}
           <ExplanationAccordion
             llm={result.llm_adjusted_range}
           />
 
           {/* ----------------------------------
-              Similar Historical Campaigns (Toggle)
+              Similar Campaigns
           ---------------------------------- */}
           <SimilarCampaignTable
             campaigns={result.similar_campaigns}
@@ -258,7 +327,4 @@ export default function App() {
         <span className="muted">
           Predictions include uncertainty. Use as a planning guide, not a guarantee.
         </span>
-      </footer>
-    </div>
-  );
-}
+      </foote
