@@ -10,7 +10,7 @@ export default function AdminPanel() {
 
   return (
     <Card title="Admin Controls">
-      <Button onClick={refresh}>Refresh GSheet Data</Button>
+      <Button onClick={refresh}>Fetch Gsheet Data</Button>
     </Card>
   );
 }
