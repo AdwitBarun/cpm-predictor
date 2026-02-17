@@ -55,12 +55,11 @@ def apply_llm_adjustment(base_cpm, adjustment_factor):
 def compute_final_cpm(
     pred,
     similar_campaigns,
-    llm_adjustment_factor,
+    llm_result,
     hist_weight=0.35
 ):
     model_range = pred["model_range"]
     conformal_range = pred["conformal_range"]
-    llm_range = pred["llm_adjusted_range"]
 
     ml_cpm = float(model_range["p90"])
 
@@ -74,11 +73,11 @@ def compute_final_cpm(
 
     adjusted_cpm = apply_llm_adjustment(
         blended_cpm,
-        llm_adjustment_factor
+        llm_result["adjustment_factor"]
     )
 
     conformal_high = float(conformal_range["high"])
-    llm_high = float(llm_range["llm_predicted_cpm"]["high"])
+    llm_high = float(llm_result["llm_predicted_cpm"]["high"])
 
     final_cpm = max(conformal_high, adjusted_cpm)
     final_cpm = min(final_cpm, llm_high)

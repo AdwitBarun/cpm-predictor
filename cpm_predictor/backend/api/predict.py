@@ -76,8 +76,9 @@ def predict_cpm(payload: CampaignInput):
         final_cpm = compute_final_cpm(
             pred=pred,
             similar_campaigns=similar,
-            llm_adjustment_factor=llm_result["adjustment_factor"]
+            llm_result=llm_result
         )
+
 
 
             
