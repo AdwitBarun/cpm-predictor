@@ -2,11 +2,9 @@ import { useState } from "react";
 import Papa from "papaparse";
 import Card from "../common/Card";
 
-
 export default function UploadPlanCard({ onSubmit }: any) {
   const [fileName, setFileName] = useState("");
-  const [preview, setPreview] = useState<any | null>(null);
-  
+
   const handleFile = (file: File) => {
     setFileName(file.name);
 
@@ -35,17 +33,15 @@ export default function UploadPlanCard({ onSubmit }: any) {
 
         console.log("✅ Normalized payload:", normalized);
 
-        setPreview(raw);        // for CSV preview table
-        onSubmit(normalized);   // 🔴 THIS goes to backend
+        onSubmit(normalized); // send to backend
       },
-
     });
   };
 
   return (
     <Card title="Upload Your Media Plan">
       <div
-        className="border-2 border-dashed rounded p-6 text-center cursor-pointer bg-gray-50"
+        className="border-2 border-dashed rounded p-6 text-center cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
         onClick={() => document.getElementById("file")?.click()}
       >
         <input
@@ -57,6 +53,7 @@ export default function UploadPlanCard({ onSubmit }: any) {
             e.target.files && handleFile(e.target.files[0])
           }
         />
+
         <p className="font-medium">
           Drag & drop your CSV or click to upload
         </p>
@@ -79,24 +76,9 @@ export default function UploadPlanCard({ onSubmit }: any) {
       </div>
 
       {fileName && (
-        <p className="mt-2 text-green-700">
+        <p className="mt-3 text-green-700 font-medium">
           ✅ Uploaded: {fileName}
         </p>
-      )}
-
-      {preview && (
-        <table className="mt-4 w-full text-sm border rounded">
-          <tbody>
-            {Object.entries(preview).map(([k, v]) => (
-              <tr key={k} className="border-t">
-                <td className="p-2 font-medium bg-gray-50">
-                  {k}
-                </td>
-                <td className="p-2">{String(v)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       )}
     </Card>
   );

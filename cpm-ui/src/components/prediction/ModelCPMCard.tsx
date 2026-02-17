@@ -39,9 +39,9 @@ export default function ModelCPMCard({
     <div className="card">
       <h3>Historical Suggested CPM</h3>
 
-      <div className="muted">
+      {/* <div className="muted">
         ({Math.round(conformal.coverage_target * 100)}% Conformal Max)
-      </div>
+      </div> */}
 
       <div className="price" style={{ fontWeight: 700 }}>
         ₹{conformal.high}
