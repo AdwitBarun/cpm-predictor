@@ -74,10 +74,12 @@ def predict_cpm(payload: CampaignInput):
             similarity_output=similar,
         )
         final_cpm = compute_final_cpm(
-            model_range=pred["model_range"],
+            pred=pred,
             similar_campaigns=similar,
             llm_adjustment_factor=llm_result["adjustment_factor"]
         )
+
+
             
         # -----------------------------
         # 5. Final response
