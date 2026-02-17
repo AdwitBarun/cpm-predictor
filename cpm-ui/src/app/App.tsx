@@ -327,4 +327,7 @@ export default function App() {
         <span className="muted">
           Predictions include uncertainty. Use as a planning guide, not a guarantee.
         </span>
-      </foote
+      </footer>
+    </div>
+  );
+}
