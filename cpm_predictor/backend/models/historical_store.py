@@ -113,6 +113,23 @@ def _load_feature_columns():
     return feature_columns
 
 
+# def _build_meta_df(df_raw: pd.DataFrame, df_processed: pd.DataFrame) -> pd.DataFrame:
+#     meta = pd.DataFrame(index=df_processed.index)
+
+#     meta["campaign_name"] = df_raw.get("Campaign Name", "")
+#     meta["markets"] = df_raw.get("Markets", "")
+#     meta["device_summary"] = df_raw.get("Device", "")
+#     meta["tg_summary"] = df_raw.get("TG", "")
+#     meta["delivered_cpm"] = pd.to_numeric(
+#         df_raw.get("Del Cpm/\nBidvid  cpm", np.nan),
+#         errors="coerce"
+#     )
+
+#     # 🔥 derived features from processed DF (SAFE)
+#     meta["start_month"] = df_processed["start_month"]
+#     meta["campaign_intensity"] = df_processed["campaign_intensity"]
+
+#     return meta.reset_index(drop=True)
 def _build_meta_df(df_raw: pd.DataFrame, df_processed: pd.DataFrame) -> pd.DataFrame:
     meta = pd.DataFrame(index=df_processed.index)
 
@@ -120,12 +137,23 @@ def _build_meta_df(df_raw: pd.DataFrame, df_processed: pd.DataFrame) -> pd.DataF
     meta["markets"] = df_raw.get("Markets", "")
     meta["device_summary"] = df_raw.get("Device", "")
     meta["tg_summary"] = df_raw.get("TG", "")
+
+    # 🔥 Normalize column names (removes newline + trims spaces)
+    df_raw.columns = df_raw.columns.str.replace("\n", " ").str.strip()
+
+    # 🔥 Find delivered CPM column robustly
+    cpm_col = None
+    for col in df_raw.columns:
+        if "del cpm" in col.lower():
+            cpm_col = col
+            break
+
     meta["delivered_cpm"] = pd.to_numeric(
-        df_raw.get("Del Cpm/\nBidvid  cpm", np.nan),
+        df_raw.get(cpm_col, np.nan),
         errors="coerce"
     )
 
-    # 🔥 derived features from processed DF (SAFE)
+    # Derived features
     meta["start_month"] = df_processed["start_month"]
     meta["campaign_intensity"] = df_processed["campaign_intensity"]
 
