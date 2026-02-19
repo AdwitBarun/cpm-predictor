@@ -67,10 +67,10 @@ def preprocess_input(
     X_model = X_model.reindex(columns=feature_columns, fill_value=0.0)
 
     # =====================================================
-    # 2️⃣ SIMILARITY FEATURES (BUSINESS LOGIC)
+    # SIMILARITY FEATURES (STRICT NUMERIC + ENCODED ONLY)
     # =====================================================
 
-    # 🔹 Numeric drivers of similarity
+   
     numeric_similarity_cols = [
         "planned_budget",
         "planned_freq",
@@ -80,23 +80,29 @@ def preprocess_input(
     ]
 
     numeric_similarity_cols = [
-        c for c in numeric_similarity_cols if c in df.columns
+        c for c in numeric_similarity_cols
+        if c in df.columns
     ]
 
-    # 🔹 Encoded categorical drivers
     categorical_similarity_cols = [
         c for c in df.columns
-        if c.startswith("tg_")
-        or c.startswith("geo_")
-        or c.startswith("device_")
+        if (
+            c.startswith("tg_")
+            or c.startswith("geo_")
+            or c.startswith("device_")
+        )
     ]
 
     similarity_cols = numeric_similarity_cols + categorical_similarity_cols
 
+
     X_similarity = df[similarity_cols].copy()
 
+
+    X_similarity = X_similarity.select_dtypes(include=["number"]).astype(float)
+
     # -----------------------------
-    # Normalize numeric similarity features
+
     # -----------------------------
     from sklearn.preprocessing import StandardScaler
 
@@ -107,7 +113,7 @@ def preprocess_input(
         )
 
     # =====================================================
-    # 3️⃣ LLM PAYLOAD
+
     # =====================================================
     llm_payload = _build_llm_payload(df)
 
