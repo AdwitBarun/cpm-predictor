@@ -52,6 +52,38 @@ def apply_llm_adjustment(base_cpm, adjustment_factor):
     return base_cpm * adjustment_factor
 
 
+# def compute_final_cpm(
+#     pred,
+#     similar_campaigns,
+#     llm_result,
+#     hist_weight=0.35
+# ):
+#     model_range = pred["model_range"]
+#     conformal_range = pred["conformal_range"]
+
+#     ml_cpm = float(model_range["p90"])
+
+#     hist_cpm = get_historical_anchor(similar_campaigns)
+
+#     blended_cpm = blend_ml_and_history(
+#         ml_cpm=ml_cpm,
+#         hist_cpm=hist_cpm,
+#         hist_weight=hist_weight
+#     )
+
+#     adjusted_cpm = apply_llm_adjustment(
+#         blended_cpm,
+#         llm_result["adjustment_factor"]
+#     )
+
+#     conformal_high = float(conformal_range["high"])
+#     llm_high = float(llm_result["llm_predicted_cpm"]["high"])
+
+#     final_cpm = max(conformal_high, adjusted_cpm)
+#     final_cpm = min(final_cpm, llm_high)
+
+#     return round(final_cpm, 2)
+
 def compute_final_cpm(
     pred,
     similar_campaigns,
@@ -61,26 +93,38 @@ def compute_final_cpm(
     model_range = pred["model_range"]
     conformal_range = pred["conformal_range"]
 
-    ml_cpm = float(model_range["p90"])
+    # ---- ML Risk-Aware Estimate ----
+    ml_mid = float(model_range["p50"])
+    ml_p90 = float(model_range["p90"])
+    ml_spread = ml_p90 - ml_mid
 
+    ml_cpm = ml_mid + 0.7 * ml_spread
+
+    # ---- Historical Anchor ----
     hist_cpm = get_historical_anchor(similar_campaigns)
+    n = len(similar_campaigns) if similar_campaigns else 0
+    dynamic_hist_weight = min(0.6, hist_weight * (n / (n + 3)))
 
-    blended_cpm = blend_ml_and_history(
-        ml_cpm=ml_cpm,
-        hist_cpm=hist_cpm,
-        hist_weight=hist_weight
-    )
+    if hist_cpm:
+        blended_cpm = (
+            (1 - dynamic_hist_weight) * ml_cpm +
+            dynamic_hist_weight * hist_cpm
+        )
+    else:
+        blended_cpm = ml_cpm
 
-    adjusted_cpm = apply_llm_adjustment(
-        blended_cpm,
-        llm_result["adjustment_factor"]
-    )
+    # ---- LLM Adjustment (Soft) ----
+    adj_factor = llm_result["adjustment_factor"]
+    adj_factor = max(0.85, min(adj_factor, 1.15))
 
+    adjusted_cpm = blended_cpm * adj_factor
+
+    # ---- Confidence Anchoring ----
     conformal_high = float(conformal_range["high"])
     llm_high = float(llm_result["llm_predicted_cpm"]["high"])
 
-    final_cpm = max(conformal_high, adjusted_cpm)
-    final_cpm = min(final_cpm, llm_high)
+    upper_anchor = 0.6 * conformal_high + 0.4 * llm_high
+
+    final_cpm = min(adjusted_cpm, upper_anchor)
 
     return round(final_cpm, 2)
-
