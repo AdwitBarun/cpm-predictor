@@ -41,14 +41,10 @@ def find_similar_campaigns(
         X_new_clean.values,
         X_hist_clean.values
     )[0]
+    min_len = min(len(meta_df), len(similarities))
 
-    sim_df = meta_df.copy()
-    # Remove exact same campaign if present
-    sim_df = sim_df[
-        sim_df["campaign_name"] != meta_df.iloc[0]["campaign_name"]
-    ]
-
-    sim_df["similarity_score"] = similarities
+    sim_df = meta_df.iloc[:min_len].copy()
+    sim_df["similarity_score"] = similarities[:min_len]
 
     # Filter weak matches
     sim_df = sim_df[sim_df["similarity_score"] >= min_similarity]

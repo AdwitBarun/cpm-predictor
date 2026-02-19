@@ -78,6 +78,9 @@ def _load_historical_data():
 
         X_similarity = X_similarity.iloc[:min_len]
         meta_df = meta_df.iloc[:min_len]
+        print("X_similarity:", len(X_similarity))
+        print("meta_df:", len(meta_df))
+
         _CACHE.update(
             {
                 "X_hist": X_similarity,
