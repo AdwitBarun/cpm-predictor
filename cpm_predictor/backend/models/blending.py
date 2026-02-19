@@ -84,6 +84,8 @@ def apply_llm_adjustment(base_cpm, adjustment_factor):
 
 #     return round(final_cpm, 2)
 
+import numpy as np
+
 def compute_final_cpm(
     pred,
     similar_campaigns,
@@ -93,17 +95,40 @@ def compute_final_cpm(
     model_range = pred["model_range"]
     conformal_range = pred["conformal_range"]
 
-    # ---- ML Risk-Aware Estimate ----
+    # -----------------------------
+    # 1️⃣ ML Risk-Aware Estimate
+    # -----------------------------
     ml_mid = float(model_range["p50"])
     ml_p90 = float(model_range["p90"])
-    ml_spread = ml_p90 - ml_mid
+    ml_spread = max(0, ml_p90 - ml_mid)
 
-    ml_cpm = ml_mid + 0.7 * ml_spread
+    # More stable than raw p90
+    ml_cpm = ml_mid + 0.6 * ml_spread
 
-    # ---- Historical Anchor ----
-    hist_cpm = get_historical_anchor(similar_campaigns)
-    n = len(similar_campaigns) if similar_campaigns else 0
-    dynamic_hist_weight = min(0.6, hist_weight * (n / (n + 3)))
+
+    # -----------------------------
+    # 2️⃣ Historical Anchor
+    # -----------------------------
+    hist_cpms = [
+        float(c["delivered_cpm"])
+        for c in similar_campaigns
+        if c.get("delivered_cpm") is not None
+    ]
+
+    hist_cpm = None
+    hist_std = None
+
+    if len(hist_cpms) >= 2:
+        hist_cpm = float(np.median(hist_cpms))
+        hist_std = float(np.std(hist_cpms))
+    elif len(hist_cpms) == 1:
+        hist_cpm = hist_cpms[0]
+        hist_std = 0
+
+
+    # Reliability weight grows with volume
+    n = len(hist_cpms)
+    dynamic_hist_weight = min(0.7, hist_weight * (n / (n + 2)))
 
     if hist_cpm:
         blended_cpm = (
@@ -113,18 +138,35 @@ def compute_final_cpm(
     else:
         blended_cpm = ml_cpm
 
-    # ---- LLM Adjustment (Soft) ----
+
+    # -----------------------------
+    # 3️⃣ Downside Protection Rule
+    # -----------------------------
+    # If history strongly contradicts ML, prevent underpricing
+    if hist_cpm:
+        if hist_cpm > ml_cpm * 1.12:
+            blended_cpm = max(blended_cpm, 0.9 * hist_cpm)
+
+
+    # -----------------------------
+    # 4️⃣ LLM Adjustment (Soft Clamp)
+    # -----------------------------
     adj_factor = llm_result["adjustment_factor"]
-    adj_factor = max(0.85, min(adj_factor, 1.15))
+    adj_factor = max(0.9, min(adj_factor, 1.1))
 
     adjusted_cpm = blended_cpm * adj_factor
 
-    # ---- Confidence Anchoring ----
+
+    # -----------------------------
+    # 5️⃣ Smooth Upper Anchoring
+    # -----------------------------
     conformal_high = float(conformal_range["high"])
     llm_high = float(llm_result["llm_predicted_cpm"]["high"])
 
-    upper_anchor = 0.6 * conformal_high + 0.4 * llm_high
+    upper_anchor = 0.65 * conformal_high + 0.35 * llm_high
 
+    # Instead of hard min, apply soft cap
     final_cpm = min(adjusted_cpm, upper_anchor)
 
     return round(final_cpm, 2)
+
