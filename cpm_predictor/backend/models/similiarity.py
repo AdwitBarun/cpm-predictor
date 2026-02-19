@@ -9,7 +9,7 @@ def find_similar_campaigns(
     X_new: pd.DataFrame,
     X_hist: pd.DataFrame,
     meta_df: pd.DataFrame,
-    k: int = 5,
+    k: int = 10,
     min_similarity: float = 0.2,
     verbose: bool = False
 ):
