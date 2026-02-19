@@ -40,10 +40,8 @@ def safe_col(df: pd.DataFrame, col: str, default="") -> pd.Series:
 def preprocess_input(
     raw_input: Dict[str, Any] | pd.DataFrame,
     feature_columns: List[str],
-    city_tier_lookup: dict | None = None,   
+    city_tier_lookup: dict | None = None,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, Dict[str, Any]]:
-
-
 
     df = _normalize_input(raw_input)
 
@@ -57,28 +55,60 @@ def preprocess_input(
     df = _derive_device_features(df)
     df = _derive_campaign_intensity(df)
 
-    # -----------------------------
-    # MODEL FEATURES (STRICT)
-    # -----------------------------
+    # =====================================================
+    # 1️⃣ MODEL FEATURES (STRICT - DO NOT TOUCH)
+    # =====================================================
     X_model = df.reindex(columns=feature_columns, fill_value=0)
 
-    # 🚨 HARD NUMERIC FIREWALL (final guarantee)
+    # Hard numeric firewall
     X_model = X_model.select_dtypes(include=["number"]).astype(float)
 
-    # Ensure column order is preserved
+    # Preserve order
     X_model = X_model.reindex(columns=feature_columns, fill_value=0.0)
 
+    # =====================================================
+    # 2️⃣ SIMILARITY FEATURES (BUSINESS LOGIC)
+    # =====================================================
 
-    # -----------------------------
-    # SIMILARITY FEATURES
-    # -----------------------------
-    similarity_cols = list(set(feature_columns) & set(df.columns))
-    # similarity_cols += [c for c in df.columns if c.endswith("_summary")]
+    # 🔹 Numeric drivers of similarity
+    numeric_similarity_cols = [
+        "planned_budget",
+        "planned_freq",
+        "planned_impressions",
+        "planned_reach_1_plus",
+        "campaign_intensity",
+    ]
+
+    numeric_similarity_cols = [
+        c for c in numeric_similarity_cols if c in df.columns
+    ]
+
+    # 🔹 Encoded categorical drivers
+    categorical_similarity_cols = [
+        c for c in df.columns
+        if c.startswith("tg_")
+        or c.startswith("geo_")
+        or c.startswith("device_")
+    ]
+
+    similarity_cols = numeric_similarity_cols + categorical_similarity_cols
+
     X_similarity = df[similarity_cols].copy()
 
     # -----------------------------
-    # LLM PAYLOAD
+    # Normalize numeric similarity features
     # -----------------------------
+    from sklearn.preprocessing import StandardScaler
+
+    if numeric_similarity_cols:
+        scaler = StandardScaler()
+        X_similarity[numeric_similarity_cols] = scaler.fit_transform(
+            X_similarity[numeric_similarity_cols]
+        )
+
+    # =====================================================
+    # 3️⃣ LLM PAYLOAD
+    # =====================================================
     llm_payload = _build_llm_payload(df)
 
     return X_model, X_similarity, df, llm_payload
@@ -123,18 +153,24 @@ def _normalize_input(raw_input):
 # =========================================================
 
 def _derive_numeric_features(df):
-    numeric_cols = [
-        "Planned Reach 1+",
-        "Planned Freq",
-        "Planned Budget",
-        "Planned Impressions",
-    ]
-    for col in numeric_cols:
-        series = safe_col(df,col)
+
+    # Original raw columns
+    raw_cols = {
+        "planned_reach_1_plus": "Planned Reach 1+",
+        "planned_freq": "Planned Freq",
+        "planned_budget": "Planned Budget",
+        "planned_impressions": "Planned Impressions",
+    }
+
+    for new_col, raw_col in raw_cols.items():
+        series = safe_col(df, raw_col)
         if series is None:
-            df[col] = 0.0
+            df[new_col] = 0.0
         else:
-            df[col] = pd.to_numeric(series, errors="coerce").fillna(0.0)
+            df[new_col] = (
+                pd.to_numeric(series, errors="coerce")
+                .fillna(0.0)
+            )
 
     return df
 
