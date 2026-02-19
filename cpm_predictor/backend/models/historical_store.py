@@ -71,7 +71,13 @@ def _load_historical_data():
 
         # 🔹 Step 3: Build metadata
         meta_df = _build_meta_df(df_raw, df_processed)
+        X_similarity = X_similarity.reset_index(drop=True)
+        meta_df = meta_df.reset_index(drop=True)
 
+        min_len = min(len(X_similarity), len(meta_df))
+
+        X_similarity = X_similarity.iloc[:min_len]
+        meta_df = meta_df.iloc[:min_len]
         _CACHE.update(
             {
                 "X_hist": X_similarity,
@@ -79,6 +85,7 @@ def _load_historical_data():
                 "last_loaded": time.time(),
             }
         )
+
 
         print("✅ Historical data loaded successfully")
 
